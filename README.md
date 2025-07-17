@@ -1,4 +1,4 @@
-# 🤖 Building an AI Chatbot with LangChain and Python
+# 🤖 Building an AI Chatbot with LangChain and Python -
 
 ## 🔄 Agentic RAG Architecture 
 
