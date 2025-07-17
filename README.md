@@ -70,13 +70,6 @@ The project supports two data collection methods:
   ```
 
 ### 2. Data Processing
-
-<p align="center">
-  <img src="7c09d10bda9c68c2318d.jpg" alt="Data Processing Pipeline" width="700"/>
-  <br>
-  <em>Data Processing Workflow</em>
-</p>
-
 The processing is carried out through the following steps:
 
 1. **Chunking**: Splits long text into smaller segments for efficient processing
@@ -129,12 +122,6 @@ def hybrid_search(query, top_k=5, alpha=0.5):
 ```
 
 ### 4. Agent System
-
-<p align="center">
-  <img src="Sơ đồ Multi-Agent RAG.drawio.png" alt="Agentic Workflows" width="700"/>
-  <br>
-  <em>Agent Workflows</em>
-</p>
 
 Agent system structure:
 
@@ -378,12 +365,6 @@ Build-An-LLM-RAG-Chatbot-With-LangChain-Python/
   3. Check directory access permissions
 
 ## 📊 Detailed Agentic RAG Model
-
-<p align="center">
-  <img src="RAPTOR.drawio.png" alt="RAPTOR Model" width="700"/>
-  <br>
-  <em>RAPTOR model for text clustering and summarization</em>
-</p>
 
 ### Agentic Patterns
 
