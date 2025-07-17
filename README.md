@@ -123,7 +123,7 @@ Agent system structure:
 
 2. **Specialized Agents**:
    - **MedicalAgent**: Specializes in general health and medical domains
-   - **BoYTeAgent**: Specializes in Ministry of Health regulations and policies
+   - **MOHAgent**: Specializes in Ministry of Health regulations and policies
    - **LiverDiseaseAgent**: Specializes in liver disease diagnosis and treatment
    - **PreeclampsiaAgent**: Specializes in preeclampsia diagnosis
    - **CustomAgent**: Custom agent for new domains
@@ -291,7 +291,7 @@ Build-An-LLM-RAG-Chatbot-With-LangChain-Python/
 │   │   ├── base_agent.py         # Abstract base class for agents
 │   │   ├── custom_agent.py       # Agent for custom domains
 │   │   ├── medical_agent.py      # Agent specializing in general medical and health
-│   │   ├── boyte_agent.py        # Agent specializing in Ministry of Health policies
+│   │   ├── MOH_agent.py        # Agent specializing in Ministry of Health policies
 │   │   ├── liver_agent.py        # Agent specializing in liver disease
 │   │   └── preeclampsia_agent.py # Agent specializing in preeclampsia
 │   ├── app/                      # Web application
