@@ -1,0 +1,902 @@
+[
+  {
+    "query": "Thông tư mới nhất về quản lý bệnh truyền nhiễm là gì?",
+    "expected_answer": "Theo quy định của Bộ Y tế, ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Làm thế nào để giảm nguy cơ mắc tiểu đường?",
+    "expected_answer": "Các nghiên cứu y khoa cho thấy ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những xét nghiệm chẩn đoán bệnh gan nhiễm mỡ?",
+    "expected_answer": "Các triệu chứng điển hình của bệnh gan bao gồm ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các xét nghiệm chẩn đoán tiền sản giật?",
+    "expected_answer": "Phác đồ điều trị tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về sử dụng kháng sinh trong điều trị của Bộ Y tế?",
+    "expected_answer": "Quy định hiện hành của Bộ Y tế về vấn đề này bao gồm ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phòng tránh thiếu hụt vitamin D?",
+    "expected_answer": "Để cải thiện sức khỏe, bạn nên ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Biểu hiện của ung thư gan giai đoạn đầu?",
+    "expected_answer": "Xét nghiệm chức năng gan cho thấy ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các chỉ số sinh hóa bất thường trong tiền sản giật?",
+    "expected_answer": "Khi xuất hiện các dấu hiệu cảnh báo như ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Thông tư về quản lý thuốc kê đơn?",
+    "expected_answer": "Theo chính sách mới nhất của Bộ Y tế ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phòng ngừa loãng xương ở người cao tuổi?",
+    "expected_answer": "Theo khuyến cáo của chuyên gia, việc duy trì ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các phương pháp chẩn đoán hình ảnh cho bệnh gan?",
+    "expected_answer": "Chẩn đoán bệnh gan cần dựa vào các dấu hiệu ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách theo dõi huyết áp ở thai phụ nghi ngờ tiền sản giật?",
+    "expected_answer": "Các yếu tố nguy cơ tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chính sách hỗ trợ y tế vùng cao và vùng khó khăn?",
+    "expected_answer": "Bộ Y tế đã ban hành hướng dẫn về ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Tác hại của thuốc lá điện tử đối với sức khỏe?",
+    "expected_answer": "Để phòng ngừa bệnh này, bạn cần chú ý ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phân biệt gan nhiễm mỡ và viêm gan?",
+    "expected_answer": "Chẩn đoán phân biệt cần loại trừ ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các dấu hiệu cảnh báo trên siêu âm Doppler?",
+    "expected_answer": "Tiền sản giật được chẩn đoán khi ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về xử phạt vi phạm trong lĩnh vực y tế?",
+    "expected_answer": "Thông tư số ... của Bộ Y tế quy định rằng ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Làm thế nào để giảm stress trong cuộc sống hàng ngày?",
+    "expected_answer": "Chế độ dinh dưỡng hợp lý bao gồm ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Tiêu chuẩn chẩn đoán gan nhiễm mỡ không do rượu (NAFLD)?",
+    "expected_answer": "Để đánh giá tình trạng gan, cần thực hiện ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Phác đồ sử dụng Magnesium sulfate trong tiền sản giật?",
+    "expected_answer": "Để phòng ngừa tiền sản giật, thai phụ cần ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về quản lý và sử dụng vaccine?",
+    "expected_answer": "Theo quy định của Bộ Y tế, ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những phương pháp phòng ngừa bệnh trĩ?",
+    "expected_answer": "Các nghiên cứu y khoa cho thấy ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Biểu hiện của bệnh Wilson trên gan?",
+    "expected_answer": "Các triệu chứng điển hình của bệnh gan bao gồm ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Biểu hiện của tiền sản giật trên thai phụ mang thai đôi?",
+    "expected_answer": "Phác đồ điều trị tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Hướng dẫn về phòng chống lây nhiễm trong bệnh viện?",
+    "expected_answer": "Quy định hiện hành của Bộ Y tế về vấn đề này bao gồm ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phòng ngừa bệnh tim mạch hiệu quả?",
+    "expected_answer": "Để cải thiện sức khỏe, bạn nên ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Làm thế nào để phát hiện sớm bệnh xơ gan?",
+    "expected_answer": "Xét nghiệm chức năng gan cho thấy ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phân biệt tiền sản giật và tăng huyết áp thai kỳ?",
+    "expected_answer": "Khi xuất hiện các dấu hiệu cảnh báo như ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Thông tư hướng dẫn khám bệnh, chữa bệnh từ xa có những nội dung chính gì?",
+    "expected_answer": "Theo chính sách mới nhất của Bộ Y tế ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những thực phẩm tốt cho sức khỏe tim mạch?",
+    "expected_answer": "Theo khuyến cáo của chuyên gia, việc duy trì ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phân biệt viêm gan A, B và C?",
+    "expected_answer": "Chẩn đoán bệnh gan cần dựa vào các dấu hiệu ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách theo dõi thai phụ có nguy cơ tiền sản giật?",
+    "expected_answer": "Các yếu tố nguy cơ tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về cấp chứng chỉ hành nghề y?",
+    "expected_answer": "Bộ Y tế đã ban hành hướng dẫn về ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những dấu hiệu cảnh báo sớm của đột quỵ?",
+    "expected_answer": "Để phòng ngừa bệnh này, bạn cần chú ý ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách đọc kết quả xét nghiệm chức năng gan?",
+    "expected_answer": "Chẩn đoán phân biệt cần loại trừ ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Triệu chứng của hội chứng HELLP?",
+    "expected_answer": "Tiền sản giật được chẩn đoán khi ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định mới về điều kiện hoạt động của phòng khám tư nhân?",
+    "expected_answer": "Thông tư số ... của Bộ Y tế quy định rằng ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Làm thế nào để duy trì cân nặng hợp lý?",
+    "expected_answer": "Chế độ dinh dưỡng hợp lý bao gồm ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Phân loại mức độ xơ gan theo Child-Pugh?",
+    "expected_answer": "Để đánh giá tình trạng gan, cần thực hiện ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách đánh giá chức năng gan, thận trong tiền sản giật?",
+    "expected_answer": "Để phòng ngừa tiền sản giật, thai phụ cần ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Thông tư về quản lý chất thải y tế?",
+    "expected_answer": "Theo quy định của Bộ Y tế, ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các dấu hiệu thiếu hụt vitamin và khoáng chất?",
+    "expected_answer": "Các nghiên cứu y khoa cho thấy ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các dấu hiệu cảnh báo sớm của ung thư gan?",
+    "expected_answer": "Các triệu chứng điển hình của bệnh gan bao gồm ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những biểu hiện thần kinh trong tiền sản giật nặng?",
+    "expected_answer": "Phác đồ điều trị tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Hướng dẫn thực hiện gói dịch vụ y tế cơ bản?",
+    "expected_answer": "Quy định hiện hành của Bộ Y tế về vấn đề này bao gồm ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chế độ ăn uống cho người tập thể thao?",
+    "expected_answer": "Để cải thiện sức khỏe, bạn nên ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các triệu chứng của viêm đường mật?",
+    "expected_answer": "Xét nghiệm chức năng gan cho thấy ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chiến lược dự phòng tiền sản giật bằng aspirin liều thấp?",
+    "expected_answer": "Khi xuất hiện các dấu hiệu cảnh báo như ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về khám sức khỏe định kỳ cho người lao động?",
+    "expected_answer": "Theo chính sách mới nhất của Bộ Y tế ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những thực phẩm nên tránh khi bị viêm khớp?",
+    "expected_answer": "Theo khuyến cáo của chuyên gia, việc duy trì ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các triệu chứng của bệnh viêm gan B?",
+    "expected_answer": "Chẩn đoán bệnh gan cần dựa vào các dấu hiệu ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những yếu tố nguy cơ của tiền sản giật?",
+    "expected_answer": "Các yếu tố nguy cơ tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những quy định về an toàn thực phẩm của Bộ Y tế là gì?",
+    "expected_answer": "Bộ Y tế đã ban hành hướng dẫn về ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các bài tập thể dục tốt cho người bị đau lưng?",
+    "expected_answer": "Để phòng ngừa bệnh này, bạn cần chú ý ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Triệu chứng của viêm gan tự miễn?",
+    "expected_answer": "Chẩn đoán phân biệt cần loại trừ ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những biến chứng nguy hiểm của tiền sản giật?",
+    "expected_answer": "Tiền sản giật được chẩn đoán khi ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chính sách về phòng chống dịch bệnh của Bộ Y tế?",
+    "expected_answer": "Thông tư số ... của Bộ Y tế quy định rằng ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chế độ dinh dưỡng phù hợp cho người mắc bệnh gout?",
+    "expected_answer": "Chế độ dinh dưỡng hợp lý bao gồm ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những yếu tố rủi ro gây bệnh gan?",
+    "expected_answer": "Để đánh giá tình trạng gan, cần thực hiện ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phòng ngừa tiền sản giật ở thai phụ có yếu tố nguy cơ?",
+    "expected_answer": "Để phòng ngừa tiền sản giật, thai phụ cần ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về quảng cáo thực phẩm chức năng?",
+    "expected_answer": "Theo quy định của Bộ Y tế, ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các biện pháp tăng cường hệ miễn dịch?",
+    "expected_answer": "Các nghiên cứu y khoa cho thấy ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Tiêu chuẩn chẩn đoán viêm gan siêu vi?",
+    "expected_answer": "Các triệu chứng điển hình của bệnh gan bao gồm ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những thay đổi về nước tiểu trong tiền sản giật?",
+    "expected_answer": "Phác đồ điều trị tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy trình tiếp nhận bệnh nhân cấp cứu theo quy định mới?",
+    "expected_answer": "Quy định hiện hành của Bộ Y tế về vấn đề này bao gồm ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phòng ngừa bệnh hô hấp trong mùa lạnh?",
+    "expected_answer": "Để cải thiện sức khỏe, bạn nên ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Biểu hiện của tăng áp lực tĩnh mạch cửa?",
+    "expected_answer": "Xét nghiệm chức năng gan cho thấy ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Mối liên quan giữa tiền sản giật và thai chậm phát triển?",
+    "expected_answer": "Khi xuất hiện các dấu hiệu cảnh báo như ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về giá dịch vụ y tế?",
+    "expected_answer": "Theo chính sách mới nhất của Bộ Y tế ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phòng tránh bệnh về mắt do sử dụng máy tính?",
+    "expected_answer": "Theo khuyến cáo của chuyên gia, việc duy trì ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách phân biệt vàng da do bệnh gan và bệnh khác?",
+    "expected_answer": "Chẩn đoán bệnh gan cần dựa vào các dấu hiệu ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các yếu tố tiên lượng tiền sản giật sớm?",
+    "expected_answer": "Các yếu tố nguy cơ tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chính sách bảo hiểm y tế cho người nghèo?",
+    "expected_answer": "Bộ Y tế đã ban hành hướng dẫn về ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Làm thế nào để cải thiện sức khỏe tâm thần?",
+    "expected_answer": "Để phòng ngừa bệnh này, bạn cần chú ý ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách đánh giá mức độ xơ hóa gan?",
+    "expected_answer": "Chẩn đoán phân biệt cần loại trừ ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các dấu hiệu cảnh báo tiền sản giật?",
+    "expected_answer": "Tiền sản giật được chẩn đoán khi ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy định về tiêm chủng mở rộng hiện nay như thế nào?",
+    "expected_answer": "Thông tư số ... của Bộ Y tế quy định rằng ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chế độ ăn uống tốt cho người cao huyết áp?",
+    "expected_answer": "Chế độ dinh dưỡng hợp lý bao gồm ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các dấu hiệu của bệnh gan do rượu?",
+    "expected_answer": "Để đánh giá tình trạng gan, cần thực hiện ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Dấu hiệu chuyển từ tiền sản giật sang sản giật?",
+    "expected_answer": "Để phòng ngừa tiền sản giật, thai phụ cần ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Quy trình thanh toán bảo hiểm y tế mới nhất?",
+    "expected_answer": "Theo quy định của Bộ Y tế, ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Làm sao để cải thiện chất lượng giấc ngủ?",
+    "expected_answer": "Các nghiên cứu y khoa cho thấy ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các chỉ số men gan bất thường thể hiện điều gì?",
+    "expected_answer": "Các triệu chứng điển hình của bệnh gan bao gồm ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Phác đồ điều trị tiền sản giật nhẹ?",
+    "expected_answer": "Phác đồ điều trị tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Tiêu chuẩn đánh giá chất lượng bệnh viện hiện nay?",
+    "expected_answer": "Quy định hiện hành của Bộ Y tế về vấn đề này bao gồm ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những thay đổi lối sống để phòng ngừa ung thư?",
+    "expected_answer": "Để cải thiện sức khỏe, bạn nên ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những dấu hiệu của suy gan?",
+    "expected_answer": "Xét nghiệm chức năng gan cho thấy ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Tiêu chuẩn chẩn đoán tiền sản giật nặng?",
+    "expected_answer": "Khi xuất hiện các dấu hiệu cảnh báo như ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Danh mục thuốc được bảo hiểm y tế chi trả?",
+    "expected_answer": "Theo chính sách mới nhất của Bộ Y tế ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chế độ ăn uống cho người bị viêm loét dạ dày?",
+    "expected_answer": "Theo khuyến cáo của chuyên gia, việc duy trì ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những triệu chứng của u gan lành tính?",
+    "expected_answer": "Chẩn đoán bệnh gan cần dựa vào các dấu hiệu ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Thời điểm chấm dứt thai kỳ khi bị tiền sản giật?",
+    "expected_answer": "Các yếu tố nguy cơ tiền sản giật bao gồm ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Chính sách khám chữa bệnh cho người cao tuổi?",
+    "expected_answer": "Bộ Y tế đã ban hành hướng dẫn về ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những thực phẩm tốt cho sức khỏe não bộ?",
+    "expected_answer": "Để phòng ngừa bệnh này, bạn cần chú ý ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những xét nghiệm cần làm khi nghi ngờ bệnh gan?",
+    "expected_answer": "Chẩn đoán phân biệt cần loại trừ ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách theo dõi sau sinh đối với sản phụ bị tiền sản giật?",
+    "expected_answer": "Tiền sản giật được chẩn đoán khi ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Thông tư về đấu thầu thuốc trong các cơ sở y tế?",
+    "expected_answer": "Thông tư số ... của Bộ Y tế quy định rằng ...",
+    "domain": "bo_y_te",
+    "agent_type": "document",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Cách chăm sóc sức khỏe tiêu hóa?",
+    "expected_answer": "Chế độ dinh dưỡng hợp lý bao gồm ...",
+    "domain": "suc_khoe",
+    "agent_type": "diagnosis",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Những triệu chứng gan to do nguyên nhân khác nhau?",
+    "expected_answer": "Để đánh giá tình trạng gan, cần thực hiện ...",
+    "domain": "chan_doan_gan",
+    "agent_type": "treatment",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Các xét nghiệm tiên đoán tiền sản giật?",
+    "expected_answer": "Để phòng ngừa tiền sản giật, thai phụ cần ...",
+    "domain": "tien_san_giat",
+    "agent_type": "qa",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  }
+]

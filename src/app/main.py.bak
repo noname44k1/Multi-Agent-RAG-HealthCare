@@ -1,0 +1,354 @@
+"""
+File chính để chạy ứng dụng Chatbot AI với Agentic RAG
+Chức năng: 
+- Tạo giao diện web với Streamlit
+- Xử lý tương tác chat với người dùng
+- Kết nối với AI model để trả lời
+- Tích hợp Agentic RAG với nhiều agent chuyên biệt
+"""
+
+# === IMPORT CÁC THƯ VIỆN CẦN THIẾT ===
+import streamlit as st  # Thư viện tạo giao diện web
+from dotenv import load_dotenv  # Đọc file .env chứa API key
+import sys
+import os
+import logging
+
+# Thêm thư mục cha (src) vào đường dẫn để có thể import các module từ thư mục gốc
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Sau khi đã thêm đường dẫn, chúng ta có thể import các module từ thư mục gốc
+from seed_data import seed_milvus, seed_milvus_live  # Hàm xử lý dữ liệu
+from agents.agent_manager import AgentManager  # Quản lý agents
+from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
+from langchain_community.chat_message_histories import StreamlitChatMessageHistory
+from data_processing.pipeline import DataPipeline
+from streamlit_chat import message  # Giả định rằng bạn dùng streamlit_chat để hiển thị tin nhắn (hoặc sử dụng st.chat_message của Streamlit)
+
+# === THIẾT LẬP LOGGING ===
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("agentic_rag_chatbot")
+
+# === THIẾT LẬP GIAO DIỆN TRANG WEB ===
+def setup_page():
+    """
+    Cấu hình trang web cơ bản
+    """
+    st.set_page_config(
+        page_title="Trợ lý AI SOICT | Agentic RAG",  # Tiêu đề tab trình duyệt
+        page_icon="🤖",  # Icon tab
+        layout="wide"  # Giao diện rộng
+    )
+
+# === KHỞI TẠO ỨNG DỤNG ===
+def initialize_app():
+    """
+    Khởi tạo các cài đặt cần thiết:
+    - Đọc file .env chứa API key
+    - Cấu hình trang web
+    - Khởi tạo Agent Manager
+    """
+    load_dotenv()  # Đọc API key từ file .env
+    setup_page()  # Thiết lập giao diện
+    
+    # Khởi tạo Agent Manager nếu chưa có
+    if "agent_manager" not in st.session_state:
+        st.session_state.agent_manager = None
+
+# === THANH CÔNG CỤ BÊN TRÁI ===
+def setup_sidebar():
+    """
+    Tạo thanh công cụ bên trái với các tùy chọn
+    """
+    with st.sidebar:
+        st.title("⚙️ Cấu hình")
+        
+        # Phần 1: Chọn Model để trả lời
+        st.header("🤖 Model AI")
+        model_choice = st.radio(
+            "Chọn AI Model để trả lời:",
+            ["OpenAI GPT-4", "OpenAI GPT-4o-mini-2024-07-18", "OpenAI o3-mini"]
+        )
+        
+        # Phần 2: Cấu hình Data
+        st.header("📚 Nguồn dữ liệu")
+        data_source = st.radio(
+            "Chọn nguồn dữ liệu:",
+            ["File Local", "URL trực tiếp"]
+        )
+        
+        # Xử lý nguồn dữ liệu
+        if data_source == "File Local":
+            handle_local_file()
+        else:
+            handle_url_input()
+            
+        # Phần 3: Chọn lĩnh vực và collection tương ứng
+        st.header("🔍 Lĩnh vực truy vấn")
+        domain_choice = st.radio(
+            "Chọn lĩnh vực muốn truy vấn:",
+            ["Stack AI", "Thuế", "Y Tế", "Tùy chỉnh"]
+        )
+        
+        # Khởi tạo Agent Manager với model đã chọn
+        if st.session_state.agent_manager is None or st.session_state.agent_manager.model_choice != model_choice:
+            logger.info(f"Khởi tạo Agent Manager với model: {model_choice}")
+            st.session_state.agent_manager = AgentManager(model_choice)
+        
+        # Lấy collection tương ứng với lĩnh vực
+        collections_to_query = st.session_state.agent_manager.get_collections_for_domain(domain_choice)
+        
+        # Nếu chọn tùy chỉnh, cho phép người dùng chọn collection
+        if domain_choice == "Tùy chỉnh":
+        # Danh sách collection mặc định
+            default_collections = ["stack_ai_docs", "QA_Thue_test", "medical_QA"]
+        selected_collections = st.multiselect(
+            "Chọn các collection từ danh sách:",
+            options=default_collections,
+                default=[],
+            help="Chọn một hoặc nhiều collection để truy vấn thông tin"
+        )
+        
+        # Ô nhập tùy ý để thêm collection khác
+        custom_collection = st.text_input(
+            "Thêm collection tùy ý (ấn Enter để thêm):",
+            "",
+            help="Nhập tên collection khác nếu không có trong danh sách"
+        )
+        
+        # Kết hợp danh sách collection đã chọn và tùy ý
+        collections_to_query = selected_collections
+        if custom_collection and custom_collection not in collections_to_query:
+            collections_to_query.append(custom_collection)
+        
+        # Hiển thị danh sách collection đã chọn
+        if collections_to_query:
+            st.write("Collections sẽ được truy vấn:", ", ".join(collections_to_query))
+        else:
+            st.warning("Chưa chọn collection nào!")
+        
+        # Cập nhật session state với lựa chọn lĩnh vực
+        if "domain" not in st.session_state or st.session_state.domain != domain_choice:
+            st.session_state.domain = domain_choice
+            # Khởi tạo agent cho lĩnh vực được chọn
+            try:
+                logger.info(f"Chuyển đổi sang lĩnh vực: {domain_choice}")
+                st.session_state.agent_manager.switch_domain(domain_choice, collections_to_query)
+                # Reset cuộc trò chuyện khi chuyển lĩnh vực
+                if "current_conversation" in st.session_state:
+                    intro_message = get_intro_message(domain_choice)
+                    st.session_state.current_conversation = [{"role": "assistant", "content": intro_message}]
+            except ValueError as e:
+                st.error(str(e))
+        
+        return domain_choice, collections_to_query
+
+def get_intro_message(domain):
+    """
+    Trả về thông điệp chào mừng tương ứng với lĩnh vực
+    """
+    intro_messages = {
+        "Stack AI": "Xin chào! Tôi là trợ lý AI về Stack AI. Bạn có thể hỏi tôi về các tính năng, cách sử dụng hoặc thông tin về nền tảng Stack AI.",
+        "Thuế": "Xin chào! Tôi là trợ lý AI về thuế. Bạn có thể hỏi tôi về các quy định thuế, kê khai thuế, hoặc các vấn đề liên quan đến thuế.",
+        "Y Tế": "Xin chào! Tôi là trợ lý AI y tế. Bạn có thể hỏi tôi về các thông tin y tế, triệu chứng bệnh, hoặc kiến thức y khoa phổ biến.",
+        "Tùy chỉnh": "Tôi có thể giúp gì cho bạn? Bạn có thể hỏi tôi về bất kỳ chủ đề nào trong các collection bạn đã chọn."
+    }
+    return intro_messages.get(domain, "Tôi có thể giúp gì cho bạn?")
+
+def handle_local_file():
+    """
+    Xử lý khi người dùng chọn tải file
+    """
+    collection_name = st.text_input(
+        "Tên collection trong Milvus:", 
+        "data_test",
+        help="Nhập tên collection bạn muốn lưu trong Milvus"
+    )
+    filename = st.text_input("Tên file JSON:", "stack.json")
+    directory = st.text_input("Thư mục chứa file:", "data")
+    
+    if st.button("Tải dữ liệu từ file"):
+        if not collection_name:
+            st.error("Vui lòng nhập tên collection!")
+            return
+            
+        with st.spinner("Đang tải dữ liệu..."):
+            try:
+                seed_milvus(
+                    'http://localhost:19530', 
+                    collection_name, 
+                    filename, 
+                    directory
+                )
+                st.success(f"Đã tải dữ liệu thành công vào collection '{collection_name}'!")
+            except Exception as e:
+                st.error(f"Lỗi khi tải dữ liệu: {str(e)}")
+
+def handle_url_input():
+    """
+    Xử lý khi người dùng chọn crawl URL
+    """
+    collection_name = st.text_input(
+        "Tên collection trong Milvus:", 
+        "data_test_live",
+        help="Nhập tên collection bạn muốn lưu trong Milvus"
+    )
+    url = st.text_input("Nhập URL:", "https://www.stack-ai.com/docs")
+    
+    if st.button("Crawl dữ liệu"):
+        if not collection_name:
+            st.error("Vui lòng nhập tên collection!")
+            return
+            
+        with st.spinner("Đang crawl dữ liệu..."):
+            try:
+                seed_milvus_live(
+                    url, 
+                    'http://localhost:19530', 
+                    collection_name, 
+                    'stack-ai'
+                )
+                st.success(f"Đã crawl dữ liệu thành công vào collection '{collection_name}'!")
+            except Exception as e:
+                st.error(f"Lỗi khi crawl dữ liệu: {str(e)}")
+
+# === GIAO DIỆN CHAT CHÍNH ===
+def setup_conversation_history(domain_choice):
+    # Nếu chưa có, khởi tạo biến lưu trữ lịch sử các cuộc trò chuyện (là dictionary)
+    if "conversations" not in st.session_state:
+        st.session_state.conversations = {}
+    # Khởi tạo cuộc trò chuyện hiện tại nếu chưa có
+    if "current_conversation" not in st.session_state:
+        intro_message = get_intro_message(domain_choice)
+        st.session_state.current_conversation = [{"role": "assistant", "content": intro_message}]
+    # Trong sidebar, hiển thị lịch sử các cuộc trò chuyện và cho phép chuyển đổi
+    st.sidebar.header("🗂 Lịch sử cuộc trò chuyện")
+    # Tạo danh sách các tùy chọn: "Cuộc trò chuyện hiện tại" và tên các cuộc trò chuyện đã lưu
+    conv_options = ["Cuộc trò chuyện hiện tại"] + list(st.session_state.conversations.keys())
+    selected_conv = st.sidebar.selectbox("Chọn cuộc trò chuyện:", conv_options)
+    if selected_conv != "Cuộc trò chuyện hiện tại":
+        # Nếu người dùng chọn cuộc trò chuyện đã lưu, load lại tin nhắn vào current_conversation
+        st.session_state.current_conversation = st.session_state.conversations[selected_conv].copy()
+    # Nút tạo cuộc trò chuyện mới
+    if st.sidebar.button("Tạo cuộc trò chuyện mới"):
+        # Nếu current_conversation có nhiều tin nhắn (không phải mới chỉ chứa tin chào), lưu lại vào lịch sử
+        if len(st.session_state.current_conversation) > 1:
+            new_conv_name = st.sidebar.text_input("Nhập tên cuộc trò chuyện mới:", key="new_conv_name")
+            if new_conv_name:
+                st.session_state.conversations[new_conv_name] = st.session_state.current_conversation.copy()
+                st.sidebar.success(f"Đã lưu cuộc trò chuyện '{new_conv_name}'.")
+        # Reset cuộc trò chuyện hiện tại với thông điệp chào mừng tương ứng với lĩnh vực
+        intro_message = get_intro_message(domain_choice)
+        st.session_state.current_conversation = [{"role": "assistant", "content": intro_message}]
+    return st.session_state.current_conversation
+
+def setup_chat_interface(domain_choice):
+    st.title(f"🤖 Agentic RAG Chatbot - {domain_choice}")
+
+    # Hiển thị thông tin về lĩnh vực hiện tại
+    domain_descriptions = {
+        "Stack AI": "Hỏi đáp về nền tảng Stack AI và cách sử dụng nó.",
+        "Thuế": "Hỏi đáp về các vấn đề liên quan đến thuế, kê khai thuế và quy định thuế.",
+        "Y Tế": "Hỏi đáp về các vấn đề y tế, thông tin y khoa và sức khỏe.",
+        "Tùy chỉnh": "Hỏi đáp về bất kỳ chủ đề nào trong các collections bạn đã chọn."
+    }
+    
+    st.info(domain_descriptions.get(domain_choice, "Trợ lý AI đa lĩnh vực."))
+    
+    # Kết hợp tính năng quản lý lịch sử cuộc trò chuyện
+    current_convo = setup_conversation_history(domain_choice)
+    
+    # Ví dụ hiển thị tin nhắn qua StreamlitChatMessageHistory
+    msgs = StreamlitChatMessageHistory(key="langchain_messages")
+    
+    # Nếu current_conversation được load từ lịch sử thì hiển thị tất cả các tin nhắn đó
+    for msg in current_convo:
+        role = "assistant" if msg["role"] == "assistant" else "human"
+        st.chat_message(role).write(msg["content"])
+    
+    return msgs, current_convo
+
+# === XỬ LÝ TIN NHẮN NGƯỜI DÙNG ===
+def handle_user_input(msgs, current_convo):
+    """
+    Xử lý khi người dùng gửi tin nhắn:
+      1. Hiển thị tin nhắn người dùng
+      2. Gọi AI để xử lý và trả lời
+      3. Cập nhật cả current_conversation và hiển thị
+    """
+    if prompt := st.chat_input("Hãy hỏi tôi bất cứ điều gì!"):
+        # Cập nhật current conversation và hiển thị tin nhắn người dùng
+        current_convo.append({"role": "human", "content": prompt})
+        st.chat_message("human").write(prompt)
+        msgs.add_user_message(prompt)
+
+        # Xử lý và hiển thị câu trả lời của AI với callback và lịch sử chat
+        with st.chat_message("assistant"):
+            # Thiết lập callback để theo dõi sự kiện trong quá trình tương tác
+            st_callback = StreamlitCallbackHandler(st.container())
+            
+            # Lấy lịch sử chat (trừ tin nhắn người dùng mới nhất)
+            chat_history = [
+                {"role": msg["role"], "content": msg["content"]}
+                for msg in current_convo[:-1]
+            ]
+
+            try:
+                # Gọi Agent Manager để xử lý câu hỏi
+                response = st.session_state.agent_manager.query(
+                    prompt,
+                    chat_history
+                )
+
+                # Lưu và hiển thị câu trả lời từ AI
+                output = response["output"]
+                current_convo.append({"role": "assistant", "content": output})  # Cập nhật lịch sử
+                msgs.add_ai_message(output)  # Gửi tin nhắn AI vào giao diện
+                st.write(output)  # Hiển thị câu trả lời trên giao diện
+                
+            except Exception as e:
+                error_message = f"Đã xảy ra lỗi khi xử lý câu hỏi: {str(e)}"
+                logger.error(error_message)
+                current_convo.append({"role": "assistant", "content": error_message})
+                msgs.add_ai_message(error_message)
+                st.write(error_message)
+
+# === HÀM CHÍNH ===
+def main():
+    """
+    Hàm chính điều khiển luồng chương trình
+    """
+    initialize_app()
+    domain_choice, collections_to_query = setup_sidebar()
+    msgs, current_convo = setup_chat_interface(domain_choice)
+    
+    # Xử lý input từ người dùng
+    handle_user_input(msgs, current_convo)
+
+def process_new_documents():
+    """
+    Xử lý tài liệu mới và chuẩn bị để đưa vào vector database
+    """
+    # Khởi tạo pipeline
+    pipeline = DataPipeline()
+    
+    # Xử lý documents
+    results_df = pipeline.process_documents(
+        directory="/Users/daomanh/Desktop/Build-An-LLM-RAG-Chatbot-With-LangChain-Python/src/qa_data"
+    )
+    
+    # Chuẩn bị data cho Milvus
+    milvus_records = pipeline.prepare_for_milvus(results_df)
+    
+    # Lưu vào Milvus (sử dụng code hiện tại của bạn)
+    # store_in_milvus(milvus_records)
+
+# Chạy ứng dụng
+if __name__ == "__main__":
+    main() 

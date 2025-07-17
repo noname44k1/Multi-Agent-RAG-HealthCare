@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đánh Giá Hiệu Suất GPT-3.5-Turbo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .metrics-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .metric-box {
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .metric-title {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        .performance-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .performance-value {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .badge-excellent {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .badge-good {
+            background-color: #e8f4f8;
+            color: #3498db;
+        }
+        .badge-average {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .badge-warning {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .chart-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .comparison-table th {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+        }
+        .comparison-table td {
+            text-align: center;
+        }
+        .best {
+            background-color: #d4edda;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Báo Cáo Đánh Giá GPT-3.5-Turbo</h1>
+        
+        <div class="card">
+            <h2>Tổng Quan</h2>
+            <p>GPT-3.5-Turbo là mô hình phổ biến của OpenAI, được thiết kế để cân bằng giữa hiệu suất và chi phí. Báo cáo này trình bày kết quả đánh giá hiệu suất của GPT-3.5-Turbo trên bộ test case RAG Chatbot gồm 100 câu hỏi đa dạng.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <span class="badge badge-good">Điểm tổng thể: 0.793</span>
+                <span class="badge badge-good">Factual Consistency: 0.82</span>
+                <span class="badge badge-good">Answer Relevancy: 0.81</span>
+                <span class="badge badge-warning">Hallucination Rate: 0.15</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Metrics Đánh Giá</h2>
+            <p>Đánh giá dựa trên 8 metrics chính về hiệu suất retrieval và chất lượng response:</p>
+            
+            <div class="metrics-container">
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Relevancy</h3>
+                    <div class="metric-value">0.77</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 77%;"></div>
+                    </div>
+                    <p>Độ phù hợp của ngữ cảnh được truy xuất với câu hỏi.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Recall</h3>
+                    <div class="metric-value">0.75</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 75%;"></div>
+                    </div>
+                    <p>Khả năng truy xuất thông tin liên quan từ kho kiến thức.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Precision</h3>
+                    <div class="metric-value">0.80</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 80%;"></div>
+                    </div>
+                    <p>Độ chính xác của thông tin được truy xuất.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Answer Relevancy</h3>
+                    <div class="metric-value">0.81</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 81%;"></div>
+                    </div>
+                    <p>Độ phù hợp của câu trả lời với câu hỏi.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Factual Consistency</h3>
+                    <div class="metric-value">0.82</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 82%;"></div>
+                    </div>
+                    <p>Độ nhất quán với sự thật của câu trả lời.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Hallucination Rate</h3>
+                    <div class="metric-value">0.15</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 15%;"></div>
+                    </div>
+                    <p>Tỷ lệ tạo ra thông tin sai lệch (càng thấp càng tốt).</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Response Correctness</h3>
+                    <div class="metric-value">0.79</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 79%;"></div>
+                    </div>
+                    <p>Độ chính xác tổng thể của câu trả lời.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Response Completeness</h3>
+                    <div class="metric-value">0.77</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 77%;"></div>
+                    </div>
+                    <p>Độ đầy đủ của câu trả lời đối với yêu cầu.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Hiệu Suất Theo Lĩnh Vực</h2>
+            <p>GPT-3.5-Turbo được đánh giá trên 4 lĩnh vực y tế khác nhau để đánh giá tính đa dạng và khả năng áp dụng:</p>
+            
+            <table>
+                <tr>
+                    <th>Lĩnh Vực</th>
+                    <th>Điểm Số</th>
+                    <th>Đánh Giá</th>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp Bộ Y Tế</td>
+                    <td>0.81</td>
+                    <td>Tốt</td>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp về Sức Khoẻ</td>
+                    <td>0.76</td>
+                    <td>Khá</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán bệnh Gan</td>
+                    <td>0.73</td>
+                    <td>Khá</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán nguy cơ Tiền Sản Giật</td>
+                    <td>0.79</td>
+                    <td>Khá</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>Điểm Mạnh và Điểm Yếu</h2>
+            
+            <h3>Điểm Mạnh</h3>
+            <ul>
+                <li><strong>Chi phí thấp:</strong> Chi phí vận hành thấp nhất trong số các mô hình được đánh giá.</li>
+                <li><strong>Tốc độ phản hồi:</strong> Thời gian xử lý nhanh, chỉ chậm hơn O3-mini.</li>
+                <li><strong>Hiệu suất tương đối tốt trong các tác vụ thông thường:</strong> Đạt kết quả khá trong lĩnh vực general (0.81).</li>
+                <li><strong>Khả năng tiếp cận:</strong> Dễ dàng triển khai và phổ biến rộng rãi trong nhiều ứng dụng.</li>
+            </ul>
+            
+            <h3>Điểm Yếu</h3>
+            <ul>
+                <li><strong>Hallucination cao:</strong> Tỷ lệ hallucination (0.15) cao nhất trong tất cả các mô hình so sánh.</li>
+                <li><strong>Hiệu suất thấp trong lĩnh vực chẩn đoán bệnh Gan:</strong> Lĩnh vực chẩn đoán bệnh Gan có điểm thấp nhất (0.73), thiếu độ chính xác trong xử lý thông tin chuyên sâu về bệnh gan.</li>
+                <li><strong>Factual Consistency thấp:</strong> Độ nhất quán với sự thật (0.82) thấp hơn so với các mô hình khác, dẫn đến thông tin kém tin cậy hơn.</li>
+                <li><strong>Response Correctness thấp:</strong> Độ chính xác tổng thể của câu trả lời (0.79) thấp nhất trong các mô hình so sánh.</li>
+                <li><strong>Thiếu độ chính xác trong các lĩnh vực y tế chuyên sâu:</strong> Hiệu suất ở các lĩnh vực chẩn đoán cần được cải thiện đáng kể.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Với Các Mô Hình Khác</h2>
+            <p>Bảng so sánh hiệu suất của GPT-3.5-Turbo với các mô hình khác trong cùng bộ test case:</p>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>GPT-3.5</th>
+                    <th>O3-mini</th>
+                    <th>GPT-4</th>
+                    <th>GPT-4o</th>
+                    <th>GPT-4.5</th>
+                </tr>
+                <tr>
+                    <td>Context Relevancy</td>
+                    <td>0.77</td>
+                    <td>0.79</td>
+                    <td>0.81</td>
+                    <td>0.83</td>
+                    <td class="best">0.85</td>
+                </tr>
+                <tr>
+                    <td>Factual Consistency</td>
+                    <td>0.82</td>
+                    <td>0.84</td>
+                    <td>0.86</td>
+                    <td>0.88</td>
+                    <td class="best">0.91</td>
+                </tr>
+                <tr>
+                    <td>Hallucination Rate</td>
+                    <td>0.15</td>
+                    <td>0.12</td>
+                    <td>0.10</td>
+                    <td>0.09</td>
+                    <td class="best">0.07</td>
+                </tr>
+                <tr>
+                    <td>Điểm Tổng Thể</td>
+                    <td>0.793</td>
+                    <td>0.815</td>
+                    <td>0.845</td>
+                    <td>0.870</td>
+                    <td class="best">0.895</td>
+                </tr>
+                <tr>
+                    <td>Chi Phí Tương Đối</td>
+                    <td class="best">Thấp nhất</td>
+                    <td>Thấp</td>
+                    <td>Trung bình</td>
+                    <td>Cao</td>
+                    <td>Cao nhất</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>Biểu Đồ Hiệu Suất</h2>
+            
+            <div class="chart-container">
+                <img src="charts/metrics_comparison.png" alt="Biểu đồ so sánh các metrics" style="max-width: 100%; height: auto;">
+                <p><em>Biểu đồ so sánh các metrics hiệu suất của GPT-3.5-Turbo</em></p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../gpt4o/evaluation_report.html" class="btn">So Sánh Với GPT-4o</a>
+                <a href="../o3mini/evaluation_report.html" class="btn">So Sánh Với O3-mini</a>
+                <a href="../../reports/index.html" class="btn">Quay Lại Trang Chính</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Kết Luận</h2>
+            <p>GPT-3.5-Turbo là một lựa chọn tốt cho các ứng dụng RAG Chatbot có ngân sách hạn chế hoặc yêu cầu phản hồi nhanh. Mặc dù hiệu suất của mô hình này không cao bằng các mô hình mới hơn như GPT-4o hay GPT-4.5, nhưng nó vẫn cung cấp khả năng xử lý thông tin tương đối tốt với chi phí thấp hơn đáng kể.</p>
+            
+            <p>Mô hình này phù hợp nhất cho:</p>
+            <ul>
+                <li>Các ứng dụng chatbot với lưu lượng truy cập cao và yêu cầu tiết kiệm chi phí</li>
+                <li>Các dự án thử nghiệm và phát triển ban đầu</li>
+                <li>Các ứng dụng xử lý thông tin tổng quát không yêu cầu độ chính xác cao</li>
+                <li>Các hệ thống với lưu lượng truy cập lớn cần cân bằng chi phí vận hành</li>
+            </ul>
+            
+            <p>Tuy nhiên, nên cân nhắc nâng cấp lên mô hình cao cấp hơn cho:</p>
+            <ul>
+                <li>Các ứng dụng trong lĩnh vực pháp lý, y tế cần độ chính xác cao</li>
+                <li>Các hệ thống cần giảm thiểu tỷ lệ hallucination</li>
+                <li>Các ứng dụng yêu cầu khả năng suy luận phức tạp</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Báo Cáo Đánh Giá GPT-3.5-Turbo - 13/04/2025</p>
+            <p>Build-An-LLM-RAG-Chatbot-With-LangChain-Python</p>
+            <p>Automated RAG Evaluation Framework v2.0</p>
+        </div>
+    </div>
+</body>
+</html>

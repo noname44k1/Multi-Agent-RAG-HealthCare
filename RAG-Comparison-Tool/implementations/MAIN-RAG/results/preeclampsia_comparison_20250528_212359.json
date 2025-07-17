@@ -1,0 +1,166 @@
+[
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 1.0454787776280414,
+      "doc_count": 4,
+      "token_count": 1363,
+      "accuracy": 0.9013445616718327,
+      "relevance": 0.8412028009782264,
+      "context_precision": 0.9532307565172775
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 1.8796010575124524,
+      "doc_count": 5,
+      "token_count": 1581,
+      "accuracy": 0.7890711281068566,
+      "relevance": 0.8029052855628103,
+      "context_precision": 0.82738818715409
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 1.1331694202841862,
+      "doc_count": 4,
+      "token_count": 2346,
+      "accuracy": 0.871033021748691,
+      "relevance": 0.8877306635866533,
+      "context_precision": 0.9633249406208543
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 0.8998702462113428,
+      "doc_count": 2,
+      "token_count": 1515,
+      "accuracy": 0.949981745973195,
+      "relevance": 0.8499666144860245,
+      "context_precision": 0.9632558811352133
+    },
+    "query": "Tiền sản giật là gì và có nguy hiểm không?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:56.196620"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 1.917316438701821,
+      "doc_count": 8,
+      "token_count": 832,
+      "accuracy": 0.8771621400515961,
+      "relevance": 0.6882254746078914,
+      "context_precision": 0.8911827814354798
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 1.2991591250721306,
+      "doc_count": 6,
+      "token_count": 2013,
+      "accuracy": 0.825572505023804,
+      "relevance": 0.8974696705615142,
+      "context_precision": 0.8749658170689358
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 1.4228829608563671,
+      "doc_count": 2,
+      "token_count": 1940,
+      "accuracy": 0.83944984924208,
+      "relevance": 0.7680978310331409,
+      "context_precision": 0.7780908983401292
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 0.7658051716899347,
+      "doc_count": 6,
+      "token_count": 2175,
+      "accuracy": 0.7259620207885565,
+      "relevance": 0.6632073682212318,
+      "context_precision": 0.9441730427049511
+    },
+    "query": "Làm thế nào để phát hiện tiền sản giật sớm?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:57.408217"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 1.3584791141955166,
+      "doc_count": 6,
+      "token_count": 1191,
+      "accuracy": 0.8247072532309285,
+      "relevance": 0.7286484622559493,
+      "context_precision": 0.752813711876662
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 1.4117157167882266,
+      "doc_count": 3,
+      "token_count": 2269,
+      "accuracy": 0.9157884547182282,
+      "relevance": 0.8464546705682743,
+      "context_precision": 0.7563992438015668
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 1.4377351190304546,
+      "doc_count": 7,
+      "token_count": 2263,
+      "accuracy": 0.8659662622731268,
+      "relevance": 0.7239271209568353,
+      "context_precision": 0.8306685806478448
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 0.6270924675178688,
+      "doc_count": 6,
+      "token_count": 1455,
+      "accuracy": 0.9138538360130741,
+      "relevance": 0.919642795351728,
+      "context_precision": 0.81456802731163
+    },
+    "query": "Các yếu tố nguy cơ gây tiền sản giật?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:58.615599"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 1.7336222957609357,
+      "doc_count": 7,
+      "token_count": 1800,
+      "accuracy": 0.9333018201323106,
+      "relevance": 0.8141096502226327,
+      "context_precision": 0.8783349695108615
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 0.835487303286323,
+      "doc_count": 4,
+      "token_count": 2464,
+      "accuracy": 0.8586072710495412,
+      "relevance": 0.8803114113161621,
+      "context_precision": 0.9620105888318591
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 1.524877564871487,
+      "doc_count": 7,
+      "token_count": 1918,
+      "accuracy": 0.7878104983230244,
+      "relevance": 0.8051180756139258,
+      "context_precision": 0.8676081520176365
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 0.8464467480134572,
+      "doc_count": 8,
+      "token_count": 1142,
+      "accuracy": 0.7100149402602106,
+      "relevance": 0.8502792035277209,
+      "context_precision": 0.8209201920648057
+    },
+    "query": "Biện pháp điều trị tiền sản giật hiện nay?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:59.825204"
+  }
+]

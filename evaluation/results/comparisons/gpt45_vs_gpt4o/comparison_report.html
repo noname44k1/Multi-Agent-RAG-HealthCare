@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>So Sánh GPT-4.5 và GPT-4o</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .best {
+            background-color: #d4edda;
+            font-weight: bold;
+        }
+        .chart-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .model-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .model-col {
+            flex: 1;
+            padding: 0 15px;
+        }
+        .model-col h3 {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .diff-highlight {
+            background-color: #f8f4e5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .positive {
+            color: #28a745;
+        }
+        .negative {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>So Sánh Chi Tiết: GPT-4.5 vs GPT-4o</h1>
+        
+        <div class="card">
+            <h2>Tổng Quan</h2>
+            <p>Báo cáo này trình bày so sánh chi tiết giữa hai mô hình mới nhất của OpenAI: GPT-4.5 và GPT-4o. GPT-4.5 là phiên bản cải tiến của GPT-4o với khả năng suy luận mạnh mẽ hơn và độ chính xác cao hơn. So sánh dựa trên bộ test case RAG Chatbot gồm 100 câu hỏi đa dạng.</p>
+            
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>GPT-4.5</th>
+                    <th>GPT-4o</th>
+                    <th>Chênh lệch</th>
+                </tr>
+                <tr>
+                    <td>Điểm tổng thể</td>
+                    <td class="best">0.895</td>
+                    <td>0.870</td>
+                    <td class="positive">+0.025 (2.9%)</td>
+                </tr>
+                <tr>
+                    <td>Context Relevancy</td>
+                    <td class="best">0.85</td>
+                    <td>0.83</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+                <tr>
+                    <td>Context Recall</td>
+                    <td class="best">0.83</td>
+                    <td>0.81</td>
+                    <td class="positive">+0.02 (2.5%)</td>
+                </tr>
+                <tr>
+                    <td>Context Precision</td>
+                    <td class="best">0.88</td>
+                    <td>0.86</td>
+                    <td class="positive">+0.02 (2.3%)</td>
+                </tr>
+                <tr>
+                    <td>Answer Relevancy</td>
+                    <td class="best">0.89</td>
+                    <td>0.87</td>
+                    <td class="positive">+0.02 (2.3%)</td>
+                </tr>
+                <tr>
+                    <td>Factual Consistency</td>
+                    <td class="best">0.91</td>
+                    <td>0.88</td>
+                    <td class="positive">+0.03 (3.4%)</td>
+                </tr>
+                <tr>
+                    <td>Hallucination Rate</td>
+                    <td class="best">0.07</td>
+                    <td>0.09</td>
+                    <td class="positive">-0.02 (22.2%)</td>
+                </tr>
+                <tr>
+                    <td>Response Correctness</td>
+                    <td class="best">0.90</td>
+                    <td>0.87</td>
+                    <td class="positive">+0.03 (3.4%)</td>
+                </tr>
+                <tr>
+                    <td>Response Completeness</td>
+                    <td class="best">0.86</td>
+                    <td>0.84</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+                <tr>
+                    <td>Thời gian phản hồi (ms)</td>
+                    <td>2100</td>
+                    <td class="best">1800</td>
+                    <td class="negative">+300 (16.7%)</td>
+                </tr>
+                <tr>
+                    <td>Chi phí tương đối</td>
+                    <td>10</td>
+                    <td class="best">8</td>
+                    <td class="negative">+2 (25%)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Hiệu Suất Theo Lĩnh Vực</h2>
+            
+            <table>
+                <tr>
+                    <th>Lĩnh Vực</th>
+                    <th>GPT-4.5</th>
+                    <th>GPT-4o</th>
+                    <th>Chênh lệch</th>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp Bộ Y Tế</td>
+                    <td class="best">0.89</td>
+                    <td>0.87</td>
+                    <td class="positive">+0.02 (2.3%)</td>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp về Sức Khoẻ</td>
+                    <td class="best">0.84</td>
+                    <td>0.82</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán bệnh Gan</td>
+                    <td class="best">0.81</td>
+                    <td>0.79</td>
+                    <td class="positive">+0.02 (2.5%)</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán nguy cơ Tiền Sản Giật</td>
+                    <td class="best">0.87</td>
+                    <td>0.85</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Chi Tiết</h2>
+            
+            <div class="model-comparison">
+                <div class="model-col">
+                    <h3>GPT-4.5</h3>
+                    <h4>Điểm mạnh</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Factual Consistency cao hơn (0.91)</span>: Độ tin cậy của thông tin cung cấp cao hơn đáng kể</li>
+                        <li><span class="diff-highlight">Hallucination thấp hơn (0.07)</span>: Giảm 22.2% tỷ lệ tạo thông tin sai lệch</li>
+                        <li><span class="diff-highlight">Response Correctness cao hơn (0.90)</span>: Độ chính xác tổng thể cao hơn 3.4%</li>
+                        <li>Hiệu suất tốt hơn trong các lĩnh vực chuyên môn (y tế, pháp lý)</li>
+                    </ul>
+                    
+                    <h4>Điểm yếu</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Thời gian phản hồi chậm hơn (2100ms)</span>: Chậm hơn 16.7% so với GPT-4o</li>
+                        <li><span class="diff-highlight">Chi phí cao hơn 25%</span>: Yêu cầu ngân sách lớn hơn</li>
+                        <li>Yêu cầu tài nguyên tính toán lớn hơn</li>
+                    </ul>
+                </div>
+                
+                <div class="model-col">
+                    <h3>GPT-4o</h3>
+                    <h4>Điểm mạnh</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Phản hồi nhanh hơn (1800ms)</span>: Thời gian xử lý nhanh hơn 16.7%</li>
+                        <li><span class="diff-highlight">Chi phí thấp hơn 25%</span>: Tiết kiệm chi phí vận hành</li>
+                        <li>Khả năng xử lý đa phương thức tốt (hình ảnh, âm thanh)</li>
+                        <li>Hiệu quả về chi phí cao hơn (hiệu suất/chi phí)</li>
+                    </ul>
+                    
+                    <h4>Điểm yếu</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Factual Consistency thấp hơn (0.88)</span>: Độ tin cậy của thông tin thấp hơn 3.4%</li>
+                        <li><span class="diff-highlight">Hallucination cao hơn (0.09)</span>: Tỷ lệ tạo thông tin sai lệch cao hơn 22.2%</li>
+                        <li><span class="diff-highlight">Response Correctness thấp hơn (0.87)</span>: Độ chính xác tổng thể thấp hơn 3.4%</li>
+                        <li>Hiệu suất thấp hơn trong các lĩnh vực chuyên môn</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Phân Tích Trường Hợp Sử Dụng</h2>
+            
+            <h3>Khi nên sử dụng GPT-4.5</h3>
+            <ul>
+                <li><strong>Ứng dụng yêu cầu độ chính xác cao</strong>: Các lĩnh vực y tế cần thông tin chính xác và đáng tin cậy</li>
+                <li><strong>Cần giảm thiểu hallucination</strong>: Các ứng dụng mà việc tạo thông tin sai lệch có thể gây hậu quả nghiêm trọng</li>
+                <li><strong>Câu hỏi phức tạp</strong>: Các tình huống đòi hỏi suy luận sâu và phân tích phức tạp</li>
+                <li><strong>Hướng dẫn chuyên sâu</strong>: Trả lời các câu hỏi chuyên môn cao, cần độ chính xác tuyệt đối</li>
+            </ul>
+            
+            <h3>Khi nên sử dụng GPT-4o</h3>
+            <ul>
+                <li><strong>Yêu cầu phản hồi nhanh</strong>: Ứng dụng cần thời gian phản hồi tối thiểu</li>
+                <li><strong>Cân nhắc chi phí</strong>: Các dự án có ngân sách hạn chế nhưng vẫn cần hiệu suất cao</li>
+                <li><strong>Xử lý đa phương thức</strong>: Ứng dụng cần xử lý đầu vào đa dạng (văn bản, hình ảnh, âm thanh)</li>
+                <li><strong>Lưu lượng truy cập cao</strong>: Hệ thống cần xử lý nhiều yêu cầu đồng thời với hiệu suất tốt</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Kết Luận</h2>
+            <p>GPT-4.5 cung cấp hiệu suất tổng thể cao hơn GPT-4o với mức cải thiện 2.9% (điểm số 0.895 so với 0.870). Cải tiến rõ ràng nhất là trong factual consistency (tăng 3.4%), response correctness (tăng 3.4%) và giảm hallucination rate (giảm 22.2%).</p>
+            
+            <p>Tuy nhiên, những cải tiến này đi kèm với chi phí cao hơn 25% và thời gian phản hồi chậm hơn 16.7% so với GPT-4o. Việc lựa chọn giữa hai mô hình phụ thuộc vào ưu tiên của ứng dụng cụ thể:</p>
+            
+            <ul>
+                <li>Nếu ưu tiên độ chính xác và độ tin cậy cao nhất, GPT-4.5 là lựa chọn tốt hơn.</li>
+                <li>Nếu ưu tiên tốc độ phản hồi và chi phí hợp lý hơn trong khi vẫn duy trì hiệu suất cao, GPT-4o là lựa chọn phù hợp.</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="../all_models/comparison_report.html" class="btn">Xem So Sánh Tất Cả Các Mô Hình</a>
+            <a href="../../reports/index.html" class="btn">Quay Lại Trang Chính</a>
+        </div>
+        
+        <div class="footer">
+            <p>Báo Cáo So Sánh GPT-4.5 vs GPT-4o - 13/04/2025</p>
+            <p>Build-An-LLM-RAG-Chatbot-With-LangChain-Python</p>
+            <p>Automated RAG Evaluation Framework v2.0</p>
+        </div>
+    </div>
+</body>
+</html>

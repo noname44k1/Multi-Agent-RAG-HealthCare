@@ -1,0 +1,166 @@
+[
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 0.9463451898600372,
+      "doc_count": 7,
+      "token_count": 1168,
+      "accuracy": 0.8607033294285042,
+      "relevance": 0.9690329627491492,
+      "context_precision": 0.7629719350896779
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 1.6003138756107222,
+      "doc_count": 4,
+      "token_count": 1781,
+      "accuracy": 0.9319932836538809,
+      "relevance": 0.9051556543454405,
+      "context_precision": 0.8324798097388019
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 0.7524514905295949,
+      "doc_count": 8,
+      "token_count": 1755,
+      "accuracy": 0.7888989251240137,
+      "relevance": 0.8318171287065862,
+      "context_precision": 0.8993166250143095
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 1.2528671674174032,
+      "doc_count": 3,
+      "token_count": 1826,
+      "accuracy": 0.7068164554899422,
+      "relevance": 0.682972923813556,
+      "context_precision": 0.8062762485479507
+    },
+    "query": "Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:46.494216"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 0.6470606491186877,
+      "doc_count": 3,
+      "token_count": 2412,
+      "accuracy": 0.8930559647783283,
+      "relevance": 0.7080416633303548,
+      "context_precision": 0.942257200610034
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 1.9450351079078845,
+      "doc_count": 8,
+      "token_count": 1214,
+      "accuracy": 0.7447015556789394,
+      "relevance": 0.7079150699304961,
+      "context_precision": 0.8163776199712691
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 0.9143163992752656,
+      "doc_count": 4,
+      "token_count": 1365,
+      "accuracy": 0.9392395234052584,
+      "relevance": 0.918996451835207,
+      "context_precision": 0.9354580509290187
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 0.9111957934478984,
+      "doc_count": 7,
+      "token_count": 2449,
+      "accuracy": 0.8459589494595054,
+      "relevance": 0.9129942247093534,
+      "context_precision": 0.7838623133762145
+    },
+    "query": "Làm thế nào để phòng ngừa bệnh tim mạch?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:47.709025"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 1.0883103226851576,
+      "doc_count": 6,
+      "token_count": 2188,
+      "accuracy": 0.8472361532771069,
+      "relevance": 0.7991628344450454,
+      "context_precision": 0.7603485887644035
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 1.254296478809572,
+      "doc_count": 8,
+      "token_count": 848,
+      "accuracy": 0.9106134385183313,
+      "relevance": 0.7789620605596095,
+      "context_precision": 0.8159464214391025
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 1.4556407031152925,
+      "doc_count": 7,
+      "token_count": 2243,
+      "accuracy": 0.7853052079870481,
+      "relevance": 0.8750554677732392,
+      "context_precision": 0.967783919547451
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 0.5271869104282059,
+      "doc_count": 6,
+      "token_count": 2354,
+      "accuracy": 0.7894828152944214,
+      "relevance": 0.7365928228411576,
+      "context_precision": 0.9079325813763135
+    },
+    "query": "Triệu chứng của bệnh tiểu đường là gì?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:48.914926"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 1.6019438188162898,
+      "doc_count": 6,
+      "token_count": 1073,
+      "accuracy": 0.7997840275570596,
+      "relevance": 0.7944095767562351,
+      "context_precision": 0.8094413592539347
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 1.4044186249170396,
+      "doc_count": 8,
+      "token_count": 1326,
+      "accuracy": 0.9389048321469153,
+      "relevance": 0.8999617817404956,
+      "context_precision": 0.7552593046646598
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 1.2599737410685,
+      "doc_count": 6,
+      "token_count": 2182,
+      "accuracy": 0.8834513967259713,
+      "relevance": 0.6965396063171069,
+      "context_precision": 0.8187338426408575
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 0.6207154650798098,
+      "doc_count": 5,
+      "token_count": 2380,
+      "accuracy": 0.844755370759267,
+      "relevance": 0.7329532763807781,
+      "context_precision": 0.8312186091529816
+    },
+    "query": "Cách điều trị viêm họng hiệu quả tại nhà?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:50.130401"
+  }
+]

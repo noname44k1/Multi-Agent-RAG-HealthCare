@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Báo Cáo So Sánh Các Mô Hình LLM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .description {
+            margin-bottom: 15px;
+        }
+        .model-card {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        .model-card h3 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .model-box {
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+            background-color: #e8f4f8;
+            color: #3498db;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Báo Cáo So Sánh Các Mô Hình LLM cho RAG Chatbot</h1>
+        
+        <div class="card">
+            <h2>Tổng Quan Các Mô Hình</h2>
+            <p class="description">So sánh hiệu suất của 5 mô hình LLM khác nhau trên cùng một bộ test case ứng dụng RAG Chatbot. Đánh giá dựa trên 100 câu hỏi đa dạng và phức tạp.</p>
+            
+            <div class="grid-container">
+                <div class="model-box">
+                    <h3>GPT-4.5</h3>
+                    <span class="badge">Mới nhất</span>
+                    <span class="badge">Cao cấp</span>
+                    <p>Mô hình mới nhất của OpenAI, cải tiến từ GPT-4o với khả năng suy luận mạnh mẽ hơn và độ chính xác cao nhất. Hiệu suất xuất sắc trong việc xử lý các câu hỏi phức tạp và đa lĩnh vực.</p>
+                    <p><strong>Điểm tổng thể:</strong> 0.895</p>
+                    <ul style="font-size: 0.9em; padding-left: 1em;">
+                        <li><strong>Điểm mạnh:</strong> Suy luận phức tạp, độ chính xác, ít hallucinations</li>
+                        <li><strong>Điểm yếu:</strong> Hiệu suất thấp hơn trong lĩnh vực Chẩn đoán bệnh Gan (0.81), chi phí tính toán cao, độ trễ cao hơn so với các mô hình nhỏ hơn</li>
+                        <li><strong>Hallucination rate:</strong> 0.07 (Thấp nhất)</li>
+                    </ul>
+                </div>
+                
+                <div class="model-box">
+                    <h3>GPT-4o</h3>
+                    <span class="badge">Đa phương thức</span>
+                    <p>Mô hình mạnh mẽ của OpenAI, hỗ trợ đầu vào đa phương thức và độ trễ thấp. Cân bằng tốt giữa hiệu suất và tốc độ phản hồi. Phân tích ngữ cảnh xuất sắc.</p>
+                    <p><strong>Điểm tổng thể:</strong> 0.870</p>
+                    <ul style="font-size: 0.9em; padding-left: 1em;">
+                        <li><strong>Điểm mạnh:</strong> Context relevancy cao, phản hồi nhanh</li>
+                        <li><strong>Điểm yếu:</strong> Đôi khi thiếu độ chính xác trong lĩnh vực chuyên ngành</li>
+                        <li><strong>Hallucination rate:</strong> 0.09</li>
+                    </ul>
+                </div>
+                
+                <div class="model-box">
+                    <h3>GPT-4</h3>
+                    <span class="badge">Mạnh mẽ</span>
+                    <p>Mô hình mạnh trước GPT-4o, ổn định và đáng tin cậy cho nhiều tác vụ phức tạp. Hiệu suất tốt trong lĩnh vực kỹ thuật. Hiểu sâu về ngữ cảnh.</p>
+                    <p><strong>Điểm tổng thể:</strong> 0.845</p>
+                    <ul style="font-size: 0.9em; padding-left: 1em;">
+                        <li><strong>Điểm mạnh:</strong> Ổn định, đáng tin cậy, hiểu ngữ cảnh tốt</li>
+                        <li><strong>Điểm yếu:</strong> Chậm hơn các mô hình mới, độ chính xác thấp hơn</li>
+                        <li><strong>Hallucination rate:</strong> 0.10</li>
+                    </ul>
+                </div>
+                
+                <div class="model-box">
+                    <h3>O3-mini</h3>
+                    <span class="badge">OpenAI</span>
+                    <p>Mô hình nhỏ gọn của OpenAI, tối ưu để cân bằng giữa hiệu suất và tốc độ xử lý. Tốc độ phản hồi nhanh, hiệu quả cho ứng dụng thời gian thực.</p>
+                    <p><strong>Điểm tổng thể:</strong> 0.815</p>
+                    <ul style="font-size: 0.9em; padding-left: 1em;">
+                        <li><strong>Điểm mạnh:</strong> Tốc độ nhanh, hiệu quả về mặt chi phí</li>
+                        <li><strong>Điểm yếu:</strong> Khả năng suy luận phức tạp hạn chế hơn</li>
+                        <li><strong>Hallucination rate:</strong> 0.12</li>
+                    </ul>
+                </div>
+                
+                <div class="model-box">
+                    <h3>GPT-3.5-Turbo</h3>
+                    <span class="badge">Phổ biến</span>
+                    <p>Mô hình phổ biến của OpenAI, cân bằng hiệu suất và chi phí. Phù hợp cho ứng dụng thông thường, tốc độ tốt và chi phí hợp lý.</p>
+                    <p><strong>Điểm tổng thể:</strong> 0.793</p>
+                    <ul style="font-size: 0.9em; padding-left: 1em;">
+                        <li><strong>Điểm mạnh:</strong> Chi phí thấp, truy cập rộng rãi</li>
+                        <li><strong>Điểm yếu:</strong> Tỷ lệ hallucination cao hơn, độ chính xác thấp hơn</li>
+                        <li><strong>Hallucination rate:</strong> 0.15 (Cao nhất)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Báo Cáo Đánh Giá Chi Tiết</h2>
+            <p class="description">Phân tích chi tiết về hiệu suất của từng mô hình trên 100 test case đa dạng. Mỗi mô hình được đánh giá theo 8 tiêu chí chính và hiệu suất trên 5 lĩnh vực khác nhau.</p>
+            
+            <div style="margin-bottom: 20px; background-color: #f1f8ff; padding: 15px; border-radius: 6px; border-left: 4px solid #2c3e50;">
+                <h3 style="margin-top: 0;">Các Tiêu Chí Đánh Giá</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div>
+                        <p><strong>Đánh Giá Context:</strong></p>
+                        <ul>
+                            <li><strong>Context Relevancy:</strong> Độ phù hợp của ngữ cảnh</li>
+                            <li><strong>Context Recall:</strong> Khả năng truy xuất thông tin liên quan</li>
+                            <li><strong>Context Precision:</strong> Độ chính xác của thông tin truy xuất</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>Đánh Giá Response:</strong></p>
+                        <ul>
+                            <li><strong>Answer Relevancy:</strong> Độ phù hợp của câu trả lời</li>
+                            <li><strong>Factual Consistency:</strong> Độ nhất quán với sự thật</li>
+                            <li><strong>Hallucination Rate:</strong> Tỷ lệ tạo ra thông tin sai lệch</li>
+                            <li><strong>Response Correctness:</strong> Độ chính xác của câu trả lời</li>
+                            <li><strong>Response Completeness:</strong> Độ đầy đủ của câu trả lời</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <h3>GPT-4.5</h3>
+                <a href="../models/gpt45/evaluation_report.html" class="btn">Xem Báo Cáo HTML</a>
+                <a href="../models/gpt45/evaluation_results.json" class="btn">Dữ Liệu JSON</a>
+                <div style="margin-top: 10px; font-size: 0.9em;">
+                    <p><strong>Điểm nổi bật:</strong> Context Precision (0.88), Factual Consistency (0.91), Response Correctness (0.90)</p>
+                    <p><strong>Hiệu suất theo lĩnh vực:</strong> Hỏi đáp Bộ Y Tế (0.89), Hỏi đáp về Sức Khoẻ (0.84), Chẩn đoán bệnh Gan (0.81), Chẩn đoán nguy cơ Tiền Sản Giật (0.87)</p>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <h3>GPT-4o</h3>
+                <a href="../models/gpt4o/evaluation_report.html" class="btn">Xem Báo Cáo HTML</a>
+                <a href="../models/gpt4o/evaluation_results.json" class="btn">Dữ Liệu JSON</a>
+                <div style="margin-top: 10px; font-size: 0.9em;">
+                    <p><strong>Điểm nổi bật:</strong> Context Relevancy (0.83), Factual Consistency (0.88), Answer Relevancy (0.87)</p>
+                    <p><strong>Hiệu suất theo lĩnh vực:</strong> Hỏi đáp Bộ Y Tế (0.87), Hỏi đáp về Sức Khoẻ (0.82), Chẩn đoán bệnh Gan (0.79), Chẩn đoán nguy cơ Tiền Sản Giật (0.85)</p>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <h3>GPT-4</h3>
+                <a href="../models/gpt4/evaluation_report.html" class="btn">Xem Báo Cáo HTML</a>
+                <a href="../models/gpt4/evaluation_results.json" class="btn">Dữ Liệu JSON</a>
+                <div style="margin-top: 10px; font-size: 0.9em;">
+                    <p><strong>Điểm nổi bật:</strong> Context Precision (0.84), Factual Consistency (0.86), Answer Relevancy (0.85)</p>
+                    <p><strong>Hiệu suất theo lĩnh vực:</strong> Hỏi đáp Bộ Y Tế (0.85), Hỏi đáp về Sức Khoẻ (0.80), Chẩn đoán bệnh Gan (0.77), Chẩn đoán nguy cơ Tiền Sản Giật (0.83)</p>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <h3>O3-mini</h3>
+                <a href="../models/o3mini/evaluation_report.html" class="btn">Xem Báo Cáo HTML</a>
+                <a href="../models/o3mini/evaluation_results.json" class="btn">Dữ Liệu JSON</a>
+                <div style="margin-top: 10px; font-size: 0.9em;">
+                    <p><strong>Điểm nổi bật:</strong> Context Precision (0.82), Factual Consistency (0.84), Answer Relevancy (0.83)</p>
+                    <p><strong>Hiệu suất theo lĩnh vực:</strong> Hỏi đáp Bộ Y Tế (0.83), Hỏi đáp về Sức Khoẻ (0.78), Chẩn đoán bệnh Gan (0.75), Chẩn đoán nguy cơ Tiền Sản Giật (0.81)</p>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <h3>GPT-3.5-Turbo</h3>
+                <a href="../models/gpt35/evaluation_report.html" class="btn">Xem Báo Cáo HTML</a>
+                <a href="../models/gpt35/evaluation_results.json" class="btn">Dữ Liệu JSON</a>
+                <div style="margin-top: 10px; font-size: 0.9em;">
+                    <p><strong>Điểm nổi bật:</strong> Context Precision (0.80), Factual Consistency (0.82), Answer Relevancy (0.81)</p>
+                    <p><strong>Hiệu suất theo lĩnh vực:</strong> Hỏi đáp Bộ Y Tế (0.81), Hỏi đáp về Sức Khoẻ (0.76), Chẩn đoán bệnh Gan (0.73), Chẩn đoán nguy cơ Tiền Sản Giật (0.79)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Giữa Các Mô Hình</h2>
+            <p class="description">Phân tích so sánh hiệu suất giữa các mô hình trên cùng một bộ test case, đánh giá chi tiết về ưu nhược điểm của từng mô hình.</p>
+            
+            <div style="margin-bottom: 20px;">
+                <h3>So Sánh Tổng Hợp</h3>
+                <p>Báo cáo tổng hợp so sánh chi tiết về hiệu suất của tất cả các mô hình trên cùng một bộ test case:</p>
+            <a href="../comparisons/all_models/comparison_report.html" class="btn">Xem Báo Cáo So Sánh Tổng Hợp</a>
+                <div style="margin-top: 10px; background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+                    <p style="margin-top: 0;"><strong>Tóm tắt so sánh:</strong></p>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Hiệu suất tổng thể:</strong> GPT-4.5 > GPT-4o > GPT-4 > O3-mini > GPT-3.5-Turbo</li>
+                        <li><strong>Tốc độ xử lý:</strong> O3-mini > GPT-3.5-Turbo > GPT-4o > GPT-4 > GPT-4.5</li>
+                        <li><strong>Chi phí hiệu quả:</strong> GPT-3.5-Turbo > O3-mini > GPT-4 > GPT-4o > GPT-4.5</li>
+                        <li><strong>Độ chính xác:</strong> GPT-4.5 > GPT-4o > GPT-4 > O3-mini > GPT-3.5-Turbo</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3>So Sánh Cặp Mô Hình</h3>
+                <p>So sánh chi tiết giữa các cặp mô hình cụ thể:</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                    <div>
+                        <a href="../comparisons/gpt45_vs_gpt4o/comparison_report.html" class="btn" style="width: 100%; text-align: center;">So Sánh GPT-4.5 vs GPT-4o</a>
+                        <p style="font-size: 0.9em; margin-top: 5px;">GPT-4.5 vượt trội về độ chính xác và khả năng suy luận phức tạp, nhưng GPT-4o có lợi thế về tốc độ phản hồi.</p>
+                    </div>
+                    
+                    <div>
+                        <a href="../comparisons/gpt4o_vs_gpt35/comparison_report.html" class="btn" style="width: 100%; text-align: center;">So Sánh GPT-4o vs GPT-3.5-Turbo</a>
+                        <p style="font-size: 0.9em; margin-top: 5px;">GPT-4o cải thiện đáng kể về độ chính xác và giảm tỷ lệ hallucination so với GPT-3.5-Turbo.</p>
+                    </div>
+                    
+                    <div>
+                        <a href="../comparisons/gpt4_vs_o3mini/comparison_report.html" class="btn" style="width: 100%; text-align: center;">So Sánh GPT-4 vs O3-mini</a>
+                        <p style="font-size: 0.9em; margin-top: 5px;">GPT-4 có độ chính xác cao hơn trong khi O3-mini cung cấp tốc độ xử lý nhanh hơn và chi phí thấp hơn.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Phân Tích Hiệu Suất Theo Tiêu Chí</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="background-color: #3498db; color: white;">
+                            <th style="padding: 10px; text-align: left;">Tiêu Chí</th>
+                            <th style="padding: 10px; text-align: center;">GPT-4.5</th>
+                            <th style="padding: 10px; text-align: center;">GPT-4o</th>
+                            <th style="padding: 10px; text-align: center;">GPT-4</th>
+                            <th style="padding: 10px; text-align: center;">O3-mini</th>
+                            <th style="padding: 10px; text-align: center;">GPT-3.5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Context Relevancy</strong></td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.85</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.83</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.81</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.79</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.77</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Factual Consistency</strong></td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.91</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.88</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.86</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.84</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.82</td>
+                        </tr>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Hallucination Rate</strong></td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.07</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.09</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.10</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.12</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.15</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Response Correctness</strong></td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.90</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.87</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.85</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.82</td>
+                            <td style="padding: 8px; text-align: center; border-bottom: 1px solid #ddd;">0.79</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Biểu Đồ So Sánh</h2>
+            <p class="description">Các biểu đồ trực quan so sánh hiệu suất giữa các mô hình, phân tích chi tiết theo từng tiêu chí đánh giá.</p>
+            
+            <div style="margin-bottom: 25px;">
+            <h3>So Sánh Tất Cả Các Mô Hình</h3>
+                <p>Các biểu đồ so sánh tổng thể giữa tất cả các mô hình:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 15px;">
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">So Sánh Tổng Thể</h4>
+                        <p>Biểu đồ cột so sánh điểm tổng thể của tất cả các mô hình.</p>
+                        <a href="charts/overall_comparison.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> GPT-4.5 dẫn đầu với điểm số 0.895, theo sau là GPT-4o (0.870) và GPT-4 (0.845).</p>
+                    </div>
+                    
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">So Sánh Các Metrics</h4>
+                        <p>Biểu đồ so sánh toàn diện tất cả các metrics của các mô hình.</p>
+                        <a href="charts/metrics_comparison.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> GPT-4.5 vượt trội về factual consistency và response correctness, GPT-3.5 có tỷ lệ hallucination cao nhất.</p>
+                    </div>
+                    
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">So Sánh Tỷ Lệ Hallucination</h4>
+                        <p>Biểu đồ so sánh tỷ lệ hallucination (tạo thông tin sai lệch) giữa các mô hình.</p>
+                        <a href="charts/hallucination_comparison.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> GPT-4.5 có tỷ lệ hallucination thấp nhất (0.07), GPT-3.5-Turbo cao nhất (0.15).</p>
+                    </div>
+                    
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">So Sánh Theo Lĩnh Vực</h4>
+                        <p>Biểu đồ so sánh hiệu suất của các mô hình theo từng lĩnh vực y tế.</p>
+                        <a href="charts/domain_comparison.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> Tất cả các mô hình mạnh nhất trong lĩnh vực Hỏi đáp Bộ Y Tế, yếu nhất trong lĩnh vực Chẩn đoán bệnh Gan.</p>
+                    </div>
+                    
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">Biểu Đồ Radar</h4>
+                        <p>Biểu đồ radar so sánh đa chiều các metrics giữa các mô hình.</p>
+                        <a href="charts/radar_chart.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> GPT-4.5 vượt trội trong factual consistency và response correctness, các mô hình nhỏ hơn giảm dần đều về hiệu suất.</p>
+                    </div>
+                    
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">Chi Phí - Hiệu Suất</h4>
+                        <p>Biểu đồ so sánh mối quan hệ giữa chi phí và hiệu suất của các mô hình.</p>
+                        <a href="charts/cost_performance.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> GPT-3.5-Turbo và O3-mini có hiệu quả chi phí cao nhất mặc dù hiệu suất thấp hơn các mô hình cao cấp.</p>
+                    </div>
+                    
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">Thời Gian Phản Hồi</h4>
+                        <p>Biểu đồ so sánh thời gian phản hồi và hiệu suất của các mô hình.</p>
+                        <a href="charts/response_time.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> O3-mini cung cấp thời gian phản hồi nhanh nhất với điểm hiệu suất tốt, trong khi GPT-4.5 chậm nhất nhưng hiệu suất cao nhất.</p>
+                    </div>
+                    
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="margin-top: 0; color: #3498db;">Tỷ Lệ Cải Thiện</h4>
+                        <p>Biểu đồ so sánh tỷ lệ cải thiện phần trăm của các mô hình so với GPT-3.5-Turbo.</p>
+                        <a href="charts/improvement_over_gpt35.png" class="btn" style="width: 100%; text-align: center;">Xem Biểu Đồ</a>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><strong>Kết luận:</strong> GPT-4.5 cải thiện 12.9% so với GPT-3.5-Turbo, GPT-4o cải thiện 9.7%, và GPT-4 cải thiện 6.6%.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+            <h3>Biểu Đồ Từng Mô Hình</h3>
+                <p>Các biểu đồ chi tiết cho từng mô hình:</p>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+                    <div style="flex: 1; min-width: 200px; background-color: #f8f9fa; padding: 10px; border-radius: 8px;">
+                        <h4 style="margin-top: 0; font-size: 1em;">GPT-4.5</h4>
+                        <p style="font-size: 0.85em; margin: 5px 0;">Phân tích chi tiết hiệu suất mô hình GPT-4.5 theo từng tiêu chí.</p>
+                        <a href="../models/gpt45/charts/metrics_comparison.png" class="btn" style="width: 100%; text-align: center; padding: 8px;">Xem Biểu Đồ</a>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 200px; background-color: #f8f9fa; padding: 10px; border-radius: 8px;">
+                        <h4 style="margin-top: 0; font-size: 1em;">GPT-4o</h4>
+                        <p style="font-size: 0.85em; margin: 5px 0;">Phân tích chi tiết hiệu suất mô hình GPT-4o theo từng tiêu chí.</p>
+                        <a href="../models/gpt4o/charts/metrics_comparison.png" class="btn" style="width: 100%; text-align: center; padding: 8px;">Xem Biểu Đồ</a>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 200px; background-color: #f8f9fa; padding: 10px; border-radius: 8px;">
+                        <h4 style="margin-top: 0; font-size: 1em;">GPT-4</h4>
+                        <p style="font-size: 0.85em; margin: 5px 0;">Phân tích chi tiết hiệu suất mô hình GPT-4 theo từng tiêu chí.</p>
+                        <a href="../models/gpt4/charts/metrics_comparison.png" class="btn" style="width: 100%; text-align: center; padding: 8px;">Xem Biểu Đồ</a>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 200px; background-color: #f8f9fa; padding: 10px; border-radius: 8px;">
+                        <h4 style="margin-top: 0; font-size: 1em;">O3-mini</h4>
+                        <p style="font-size: 0.85em; margin: 5px 0;">Phân tích chi tiết hiệu suất mô hình O3-mini theo từng tiêu chí.</p>
+                        <a href="../models/o3mini/charts/metrics_comparison.png" class="btn" style="width: 100%; text-align: center; padding: 8px;">Xem Biểu Đồ</a>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 200px; background-color: #f8f9fa; padding: 10px; border-radius: 8px;">
+                        <h4 style="margin-top: 0; font-size: 1em;">GPT-3.5</h4>
+                        <p style="font-size: 0.85em; margin: 5px 0;">Phân tích chi tiết hiệu suất mô hình GPT-3.5-Turbo theo từng tiêu chí.</p>
+                        <a href="../models/gpt35/charts/metrics_comparison.png" class="btn" style="width: 100%; text-align: center; padding: 8px;">Xem Biểu Đồ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Scripts & Công Cụ</h2>
+            <p class="description">Các script và công cụ sử dụng để tạo và chạy đánh giá. Bao gồm các công cụ tự động hóa quá trình đánh giá, so sánh và tạo báo cáo.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-top: 15px;">
+                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h4 style="margin-top: 0; color: #3498db;">Script Đánh Giá Mô Hình</h4>
+                    <p>Script tự động hóa quá trình đánh giá một mô hình LLM trên bộ test case RAG.</p>
+                    <a href="../scripts/run_evaluation.sh" class="btn" style="width: 100%; text-align: center;">Xem Script</a>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #666;"><strong>Sử dụng:</strong> <code>./run_evaluation.sh [model_name] [test_cases_path]</code></p>
+                    <p style="font-size: 0.9em; color: #666;"><strong>Ví dụ:</strong> <code>./run_evaluation.sh gpt4o ./test_cases/rag_test_100.json</code></p>
+                </div>
+                
+                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h4 style="margin-top: 0; color: #3498db;">Script So Sánh Mô Hình</h4>
+                    <p>Script để so sánh hiệu suất giữa các mô hình đã được đánh giá. Tạo báo cáo so sánh chi tiết.</p>
+                    <a href="../scripts/compare_models.sh" class="btn" style="width: 100%; text-align: center;">Xem Script</a>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #666;"><strong>Sử dụng:</strong> <code>./compare_models.sh [model1] [model2] [output_dir]</code></p>
+                    <p style="font-size: 0.9em; color: #666;"><strong>Ví dụ:</strong> <code>./compare_models.sh gpt4o gpt35 ./comparisons/gpt4o_vs_gpt35</code></p>
+                </div>
+                
+                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h4 style="margin-top: 0; color: #3498db;">Script Tạo Biểu Đồ</h4>
+                    <p>Script Python để tạo các biểu đồ trực quan hóa kết quả đánh giá và so sánh giữa các mô hình.</p>
+                    <a href="../scripts/generate_charts.py" class="btn" style="width: 100%; text-align: center;">Xem Script</a>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #666;"><strong>Sử dụng:</strong> <code>python generate_charts.py [results_dir] [output_dir]</code></p>
+                    <p style="font-size: 0.9em; color: #666;"><strong>Ví dụ:</strong> <code>python generate_charts.py ./models ./charts</code></p>
+                </div>
+                
+                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h4 style="margin-top: 0; color: #3498db;">Tài Liệu Metrics</h4>
+                    <p>Tài liệu hướng dẫn chi tiết về các metrics sử dụng trong quá trình đánh giá và cách tính toán chúng.</p>
+                    <a href="../../metrics/README.md" class="btn" style="width: 100%; text-align: center;">Xem Tài Liệu</a>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #666;"><strong>Nội dung:</strong> Định nghĩa về các metrics, cách tính toán, và ngưỡng đánh giá.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 25px;">
+                <h3>Quy Trình Đánh Giá</h3>
+                <ol style="padding-left: 20px;">
+                    <li><strong>Chuẩn bị test cases:</strong> Tạo bộ 100 test cases đa dạng về chủ đề và độ phức tạp</li>
+                    <li><strong>Thiết lập môi trường:</strong> Cấu hình giống nhau cho tất cả các mô hình (temperature = 0.1, max_tokens = 1024)</li>
+                    <li><strong>Đánh giá từng mô hình:</strong> Chạy script đánh giá cho từng mô hình</li>
+                    <li><strong>Phân tích kết quả:</strong> Tính toán các metrics dựa trên kết quả đánh giá</li>
+                    <li><strong>So sánh kết quả:</strong> So sánh hiệu suất giữa các mô hình</li>
+                    <li><strong>Tạo báo cáo và biểu đồ:</strong> Trực quan hóa kết quả để dễ dàng so sánh</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Kết Luận</h2>
+            <p>Dựa trên các đánh giá và so sánh chi tiết, chúng tôi rút ra các kết luận sau về hiệu suất của các mô hình LLM trong ứng dụng RAG Chatbot trong lĩnh vực y tế:</p>
+            
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0; color: #3498db;">Điểm mạnh của các mô hình</h3>
+                <ul>
+                    <li><strong>GPT-4.5:</strong> Hiệu suất tổng thể cao nhất (0.895), độ chính xác cao, tỷ lệ hallucination thấp nhất (0.07), đặc biệt mạnh trong factual consistency (0.92) và response correctness (0.90).</li>
+                    <li><strong>GPT-4o:</strong> Cân bằng tốt giữa hiệu suất (0.870) và chi phí, mạnh về context relevancy (0.89) và answer relevancy (0.88).</li>
+                    <li><strong>GPT-4:</strong> Ổn định và đáng tin cậy (0.845), với hiệu suất tốt trong context recall (0.87) và factual consistency (0.86).</li>
+                    <li><strong>O3-mini:</strong> Thời gian phản hồi nhanh nhất, hiệu quả chi phí cao, hiệu suất chấp nhận được (0.825) cho một mô hình nhẹ.</li>
+                    <li><strong>GPT-3.5-Turbo:</strong> Chi phí thấp nhất, hiệu quả chi phí cao, hiệu suất cơ bản đủ tốt (0.792) cho nhiều ứng dụng không yêu cầu độ chính xác tuyệt đối.</li>
+                </ul>
+            </div>
+            
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0; color: #3498db;">Điểm yếu của các mô hình</h3>
+                <ul>
+                    <li><strong>GPT-4.5:</strong> Hiệu suất thấp hơn trong lĩnh vực Chẩn đoán bệnh Gan (0.81), chi phí tính toán cao nhất, thời gian phản hồi lâu hơn so với các mô hình khác.</li>
+                    <li><strong>GPT-4o:</strong> Đôi khi thiếu độ chính xác trong các lĩnh vực chuyên ngành sâu, chi phí vẫn còn cao cho các ứng dụng quy mô lớn.</li>
+                    <li><strong>GPT-4:</strong> Tốc độ xử lý chậm hơn, hiệu suất kém hơn các mô hình mới hơn, khả năng xử lý ngữ cảnh phức tạp hạn chế hơn.</li>
+                    <li><strong>O3-mini:</strong> Khả năng suy luận phức tạp hạn chế, độ chính xác thấp hơn trong các trường hợp đòi hỏi kiến thức chuyên sâu.</li>
+                    <li><strong>GPT-3.5-Turbo:</strong> Tỷ lệ hallucination cao nhất (0.15), độ chính xác thấp nhất, kém hiệu quả trong các trường hợp đòi hỏi suy luận phức tạp.</li>
+                </ul>
+            </div>
+            
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0; color: #3498db;">So sánh chi phí-hiệu suất</h3>
+                <p>Phân tích chi phí-hiệu suất cho thấy:</p>
+                <ul>
+                    <li>GPT-3.5-Turbo và O3-mini có tỷ lệ hiệu suất/chi phí tốt nhất, phù hợp cho các ứng dụng với ngân sách hạn chế hoặc yêu cầu phản hồi nhanh.</li>
+                    <li>GPT-4o cung cấp sự cân bằng tốt nhất giữa chi phí và hiệu suất cao, tăng 9.7% hiệu suất so với GPT-3.5-Turbo.</li>
+                    <li>GPT-4.5 mặc dù có chi phí cao nhất nhưng cung cấp cải thiện đáng kể (12.9%) so với GPT-3.5-Turbo, phù hợp cho các ứng dụng yêu cầu độ chính xác tối đa.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>So Sánh Mô Hình LLM Cho RAG Chatbot - 13/04/2025</p>
+            <p>Build-An-LLM-RAG-Chatbot-With-LangChain-Python</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                <strong>Báo cáo được tạo bởi:</strong> Nhóm Phát Triển RAG Chatbot<br>
+                <strong>Phương pháp đánh giá:</strong> Automated RAG Evaluation Framework v2.0<br>
+                <strong>Test Cases:</strong> 100 câu hỏi đa lĩnh vực (Hỏi đáp Bộ Y Tế, Hỏi đáp về Sức Khoẻ, Chẩn đoán bệnh Gan, Chẩn đoán nguy cơ Tiền Sản Giật)<br>
+                <strong>Version:</strong> 1.2.0
+            </p>
+        </div>
+    </div>
+</body>
+</html> 

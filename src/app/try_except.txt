@@ -1,0 +1,14 @@
+            try:
+                # Gọi Agent Manager để xử lý câu hỏi
+                response = st.session_state.agent_manager.query(
+                    prompt,
+                    chat_history
+                )
+
+                # Lưu và hiển thị câu trả lời từ AI
+                output = response["output"]
+                current_convo.append({"role": "assistant", "content": output})  # Cập nhật lịch sử
+                msgs.add_ai_message(output)  # Gửi tin nhắn AI vào giao diện
+                st.write(output)  # Hiển thị câu trả lời trên giao diện
+                
+            except Exception as e:

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>So Sánh GPT-4 và O3-mini</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .best {
+            background-color: #d4edda;
+            font-weight: bold;
+        }
+        .chart-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .model-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .model-col {
+            flex: 1;
+            padding: 0 15px;
+        }
+        .model-col h3 {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .diff-highlight {
+            background-color: #f8f4e5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .positive {
+            color: #28a745;
+        }
+        .negative {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>So Sánh Chi Tiết: GPT-4 vs O3-mini</h1>
+        
+        <div class="card">
+            <h2>Tổng Quan</h2>
+            <p>Báo cáo này trình bày so sánh chi tiết giữa GPT-4, mô hình lớn và ổn định của OpenAI, và O3-mini, mô hình nhỏ gọn được tối ưu hóa cho tốc độ và hiệu quả chi phí. So sánh dựa trên bộ test case RAG Chatbot gồm 100 câu hỏi đa dạng.</p>
+            
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>GPT-4</th>
+                    <th>O3-mini</th>
+                    <th>Chênh lệch</th>
+                </tr>
+                <tr>
+                    <td>Điểm tổng thể</td>
+                    <td class="best">0.845</td>
+                    <td>0.815</td>
+                    <td class="positive">+0.030 (3.7%)</td>
+                </tr>
+                <tr>
+                    <td>Context Relevancy</td>
+                    <td class="best">0.81</td>
+                    <td>0.79</td>
+                    <td class="positive">+0.02 (2.5%)</td>
+                </tr>
+                <tr>
+                    <td>Context Recall</td>
+                    <td class="best">0.79</td>
+                    <td>0.77</td>
+                    <td class="positive">+0.02 (2.6%)</td>
+                </tr>
+                <tr>
+                    <td>Context Precision</td>
+                    <td class="best">0.84</td>
+                    <td>0.82</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+                <tr>
+                    <td>Answer Relevancy</td>
+                    <td class="best">0.85</td>
+                    <td>0.83</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+                <tr>
+                    <td>Factual Consistency</td>
+                    <td class="best">0.86</td>
+                    <td>0.84</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+                <tr>
+                    <td>Hallucination Rate</td>
+                    <td class="best">0.10</td>
+                    <td>0.12</td>
+                    <td class="positive">-0.02 (16.7%)</td>
+                </tr>
+                <tr>
+                    <td>Response Correctness</td>
+                    <td class="best">0.85</td>
+                    <td>0.82</td>
+                    <td class="positive">+0.03 (3.7%)</td>
+                </tr>
+                <tr>
+                    <td>Response Completeness</td>
+                    <td class="best">0.82</td>
+                    <td>0.80</td>
+                    <td class="positive">+0.02 (2.5%)</td>
+                </tr>
+                <tr>
+                    <td>Thời gian phản hồi (ms)</td>
+                    <td>2500</td>
+                    <td class="best">1200</td>
+                    <td class="negative">+1300 (108.3%)</td>
+                </tr>
+                <tr>
+                    <td>Chi phí tương đối</td>
+                    <td>7</td>
+                    <td class="best">3</td>
+                    <td class="negative">+4 (133.3%)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Hiệu Suất Theo Lĩnh Vực</h2>
+            
+            <table>
+                <tr>
+                    <th>Lĩnh Vực</th>
+                    <th>GPT-4</th>
+                    <th>O3-mini</th>
+                    <th>Chênh lệch</th>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp Bộ Y Tế</td>
+                    <td class="best">0.85</td>
+                    <td>0.83</td>
+                    <td class="positive">+0.02 (2.4%)</td>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp về Sức Khoẻ</td>
+                    <td class="best">0.80</td>
+                    <td>0.78</td>
+                    <td class="positive">+0.02 (2.6%)</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán bệnh Gan</td>
+                    <td class="best">0.77</td>
+                    <td>0.75</td>
+                    <td class="positive">+0.02 (2.7%)</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán nguy cơ Tiền Sản Giật</td>
+                    <td class="best">0.83</td>
+                    <td>0.81</td>
+                    <td class="positive">+0.02 (2.5%)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Chi Tiết</h2>
+            
+            <div class="model-comparison">
+                <div class="model-col">
+                    <h3>GPT-4</h3>
+                    <h4>Điểm mạnh</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Hiệu suất tổng thể tốt hơn (0.845)</span>: Vượt trội 3.7% so với O3-mini</li>
+                        <li><span class="diff-highlight">Hallucination thấp hơn (0.10)</span>: Giảm 16.7% tỷ lệ tạo thông tin sai lệch</li>
+                        <li><span class="diff-highlight">Response Correctness cao hơn (0.85)</span>: Độ chính xác cao hơn 3.7%</li>
+                        <li>Khả năng xử lý yêu cầu phức tạp tốt hơn</li>
+                        <li>Hiệu suất ổn định hơn trong các lĩnh vực chuyên ngành</li>
+                    </ul>
+                    
+                    <h4>Điểm yếu</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Thời gian phản hồi chậm hơn (2500ms)</span>: Chậm hơn 108.3% so với O3-mini</li>
+                        <li><span class="diff-highlight">Chi phí cao hơn 133.3%</span>: Chi phí vận hành cao hơn đáng kể</li>
+                        <li>Yêu cầu tài nguyên tính toán lớn hơn</li>
+                        <li>Hiệu quả chi phí/hiệu suất thấp hơn</li>
+                    </ul>
+                </div>
+                
+                <div class="model-col">
+                    <h3>O3-mini</h3>
+                    <h4>Điểm mạnh</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Phản hồi nhanh hơn (1200ms)</span>: Nhanh hơn 108.3% so với GPT-4</li>
+                        <li><span class="diff-highlight">Chi phí thấp hơn 133.3%</span>: Tiết kiệm đáng kể chi phí vận hành</li>
+                        <li>Hiệu quả tài nguyên cao hơn</li>
+                        <li>Phù hợp cho ứng dụng real-time</li>
+                        <li>Hiệu quả chi phí/hiệu suất tốt hơn</li>
+                    </ul>
+                    
+                    <h4>Điểm yếu</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Hiệu suất tổng thể thấp hơn (0.815)</span>: Kém 3.7% so với GPT-4</li>
+                        <li><span class="diff-highlight">Hallucination cao hơn (0.12)</span>: Tỷ lệ tạo thông tin sai lệch cao hơn 16.7%</li>
+                        <li><span class="diff-highlight">Response Correctness thấp hơn (0.82)</span>: Độ chính xác thấp hơn 3.7%</li>
+                        <li>Khả năng xử lý yêu cầu phức tạp kém hơn</li>
+                        <li>Hiệu suất thấp hơn trong các lĩnh vực chuyên ngành</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Phân Tích Chi Phí-Hiệu Suất</h2>
+            
+            <p>Khi so sánh tỷ lệ hiệu suất/chi phí, O3-mini cho thấy ưu thế rõ rệt. Dưới đây là phân tích chi phí-hiệu suất giữa hai mô hình:</p>
+            
+            <table>
+                <tr>
+                    <th>Chỉ số</th>
+                    <th>GPT-4</th>
+                    <th>O3-mini</th>
+                </tr>
+                <tr>
+                    <td>Điểm hiệu suất</td>
+                    <td>0.845</td>
+                    <td>0.815</td>
+                </tr>
+                <tr>
+                    <td>Chi phí tương đối</td>
+                    <td>7</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Tỷ lệ hiệu suất/chi phí</td>
+                    <td>0.121</td>
+                    <td class="best">0.272</td>
+                </tr>
+                <tr>
+                    <td>Hiệu quả chi phí</td>
+                    <td>100%</td>
+                    <td class="best">225%</td>
+                </tr>
+            </table>
+            
+            <p>O3-mini cung cấp hiệu quả chi phí cao hơn 125% so với GPT-4. Điều này có nghĩa là với cùng một ngân sách, bạn có thể xử lý nhiều yêu cầu hơn khi sử dụng O3-mini, mặc dù với độ chính xác thấp hơn một chút.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Phân Tích Trường Hợp Sử Dụng</h2>
+            
+            <h3>Khi nên sử dụng GPT-4</h3>
+            <ul>
+                <li><strong>Độ chính xác là ưu tiên hàng đầu</strong>: Khi độ chính xác và nhất quán của thông tin quan trọng hơn tốc độ</li>
+                <li><strong>Yêu cầu phức tạp</strong>: Các tình huống đòi hỏi suy luận sâu và phân tích phức tạp</li>
+                <li><strong>Nội dung chuyên ngành</strong>: Ứng dụng trong lĩnh vực y tế cần độ tin cậy cao</li>
+                <li><strong>Chatbot hỗ trợ chuyên gia</strong>: Hệ thống hỗ trợ ra quyết định hoặc tư vấn chuyên môn</li>
+            </ul>
+            
+            <h3>Khi nên sử dụng O3-mini</h3>
+            <ul>
+                <li><strong>Tốc độ là yếu tố quan trọng</strong>: Ứng dụng cần thời gian phản hồi nhanh</li>
+                <li><strong>Ngân sách hạn chế</strong>: Các dự án có chi phí vận hành thấp</li>
+                <li><strong>Yêu cầu thông thường</strong>: Chatbot xử lý các yêu cầu đơn giản, thông tin chung</li>
+                <li><strong>Ứng dụng quy mô lớn</strong>: Hệ thống phải xử lý nhiều yêu cầu đồng thời</li>
+                <li><strong>Ứng dụng di động</strong>: Cần tối ưu hóa tài nguyên và thời gian phản hồi</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Kết Luận</h2>
+            <p>GPT-4 vượt trội O3-mini về hiệu suất tổng thể với điểm số cao hơn 3.7% (0.845 so với 0.815). Các metrics về chất lượng như factual consistency, response correctness và hallucination rate đều tốt hơn ở GPT-4.</p>
+            
+            <p>Tuy nhiên, O3-mini có ưu thế vượt trội về tốc độ phản hồi (nhanh hơn 108.3%) và chi phí vận hành (thấp hơn 133.3%). Khi xét về hiệu quả chi phí, O3-mini cung cấp giá trị tốt hơn 125% so với GPT-4.</p>
+            
+            <p>Việc lựa chọn giữa hai mô hình này phụ thuộc vào ưu tiên của từng ứng dụng cụ thể:</p>
+            
+            <ul>
+                <li>Nếu độ chính xác và độ tin cậy là ưu tiên cao nhất, GPT-4 là lựa chọn tốt hơn.</li>
+                <li>Nếu tốc độ phản hồi và hiệu quả chi phí quan trọng hơn một chút độ chính xác, O3-mini là lựa chọn phù hợp.</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="../all_models/comparison_report.html" class="btn">Xem So Sánh Tất Cả Các Mô Hình</a>
+            <a href="../../reports/index.html" class="btn">Quay Lại Trang Chính</a>
+        </div>
+        
+        <div class="footer">
+            <p>Báo Cáo So Sánh GPT-4 vs O3-mini - 13/04/2025</p>
+            <p>Build-An-LLM-RAG-Chatbot-With-LangChain-Python</p>
+            <p>Automated RAG Evaluation Framework v2.0</p>
+        </div>
+    </div>
+</body>
+</html>

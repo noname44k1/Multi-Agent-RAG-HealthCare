@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đánh Giá Hiệu Suất O3-mini</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .metrics-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .metric-box {
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .metric-title {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        .performance-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .performance-value {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .badge-excellent {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .badge-good {
+            background-color: #e8f4f8;
+            color: #3498db;
+        }
+        .badge-average {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .chart-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Báo Cáo Đánh Giá O3-mini</h1>
+        
+        <div class="card">
+            <h2>Tổng Quan</h2>
+            <p>O3-mini là mô hình nhỏ gọn của OpenAI, được tối ưu hóa để cân bằng giữa hiệu suất và tốc độ xử lý. Báo cáo này trình bày kết quả đánh giá hiệu suất của O3-mini trên bộ test case RAG Chatbot gồm 100 câu hỏi đa dạng.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <span class="badge badge-excellent">Điểm tổng thể: 0.815</span>
+                <span class="badge badge-good">Factual Consistency: 0.84</span>
+                <span class="badge badge-good">Answer Relevancy: 0.83</span>
+                <span class="badge badge-average">Hallucination Rate: 0.12</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Metrics Đánh Giá</h2>
+            <p>Đánh giá dựa trên 8 metrics chính về hiệu suất retrieval và chất lượng response:</p>
+            
+            <div class="metrics-container">
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Relevancy</h3>
+                    <div class="metric-value">0.79</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 79%;"></div>
+                    </div>
+                    <p>Độ phù hợp của ngữ cảnh được truy xuất với câu hỏi.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Recall</h3>
+                    <div class="metric-value">0.77</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 77%;"></div>
+                    </div>
+                    <p>Khả năng truy xuất thông tin liên quan từ kho kiến thức.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Precision</h3>
+                    <div class="metric-value">0.82</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 82%;"></div>
+                    </div>
+                    <p>Độ chính xác của thông tin được truy xuất.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Answer Relevancy</h3>
+                    <div class="metric-value">0.83</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 83%;"></div>
+                    </div>
+                    <p>Độ phù hợp của câu trả lời với câu hỏi.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Factual Consistency</h3>
+                    <div class="metric-value">0.84</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 84%;"></div>
+                    </div>
+                    <p>Độ nhất quán với sự thật của câu trả lời.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Hallucination Rate</h3>
+                    <div class="metric-value">0.12</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 12%;"></div>
+                    </div>
+                    <p>Tỷ lệ tạo ra thông tin sai lệch (càng thấp càng tốt).</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Response Correctness</h3>
+                    <div class="metric-value">0.82</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 82%;"></div>
+                    </div>
+                    <p>Độ chính xác tổng thể của câu trả lời.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Response Completeness</h3>
+                    <div class="metric-value">0.80</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 80%;"></div>
+                    </div>
+                    <p>Độ đầy đủ của câu trả lời đối với yêu cầu.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Hiệu Suất Theo Lĩnh Vực</h2>
+            <p>O3-mini được đánh giá trên 4 lĩnh vực y tế khác nhau để đánh giá tính đa dạng và khả năng áp dụng:</p>
+            
+            <table>
+                <tr>
+                    <th>Lĩnh Vực</th>
+                    <th>Điểm Số</th>
+                    <th>Đánh Giá</th>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp Bộ Y Tế</td>
+                    <td>0.83</td>
+                    <td>Tốt</td>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp về Sức Khoẻ</td>
+                    <td>0.78</td>
+                    <td>Khá</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán bệnh Gan</td>
+                    <td>0.75</td>
+                    <td>Khá</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán nguy cơ Tiền Sản Giật</td>
+                    <td>0.81</td>
+                    <td>Tốt</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>Điểm Mạnh và Điểm Yếu</h2>
+            
+            <h3>Điểm Mạnh</h3>
+            <ul>
+                <li><strong>Tốc độ xử lý:</strong> Thời gian phản hồi nhanh, phù hợp cho ứng dụng real-time.</li>
+                <li><strong>Hiệu quả về chi phí:</strong> Chi phí vận hành thấp hơn đáng kể so với các mô hình lớn hơn.</li>
+                <li><strong>Hiệu suất tốt cho ứng dụng phổ thông:</strong> Trong các lĩnh vực general (0.83) và technical (0.81) có hiệu suất tương đối tốt.</li>
+                <li><strong>Cân bằng tốt giữa hiệu suất và tài nguyên:</strong> Phù hợp cho ứng dụng có hạn chế về tài nguyên hoặc yêu cầu phản hồi nhanh.</li>
+            </ul>
+            
+            <h3>Điểm Yếu</h3>
+            <ul>
+                <li><strong>Hiệu suất thấp hơn trong lĩnh vực chẩn đoán bệnh Gan:</strong> Lĩnh vực chẩn đoán bệnh Gan có điểm thấp nhất (0.75), cần cải thiện trong xử lý thông tin chuyên sâu về bệnh gan.</li>
+                <li><strong>Hallucination cao hơn:</strong> Tỷ lệ hallucination (0.12) cao hơn đáng kể so với các mô hình lớn hơn.</li>
+                <li><strong>Khả năng suy luận hạn chế:</strong> Khả năng xử lý các vấn đề phức tạp và đòi hỏi suy luận sâu còn hạn chế.</li>
+                <li><strong>Thiếu độ chính xác trong lĩnh vực y tế chuyên sâu:</strong> Hiệu suất ở các lĩnh vực chuyên ngành cần được cải thiện.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Biểu Đồ Hiệu Suất</h2>
+            
+            <div class="chart-container">
+                <img src="charts/metrics_comparison.png" alt="Biểu đồ so sánh các metrics" style="max-width: 100%; height: auto;">
+                <p><em>Biểu đồ so sánh các metrics hiệu suất của O3-mini</em></p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../gpt4/evaluation_report.html" class="btn">So Sánh Với GPT-4</a>
+                <a href="../gpt35/evaluation_report.html" class="btn">So Sánh Với GPT-3.5</a>
+                <a href="../../reports/index.html" class="btn">Quay Lại Trang Chính</a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <div class="card">
+                <h2>Kết Luận</h2>
+                <p>O3-mini là một lựa chọn tốt cho các ứng dụng RAG Chatbot cần cân bằng giữa hiệu suất và tốc độ phản hồi. Mặc dù không đạt được hiệu suất cao như các mô hình lớn hơn như GPT-4o hay GPT-4.5, nhưng O3-mini vẫn cung cấp kết quả chấp nhận được với tốc độ xử lý nhanh hơn đáng kể và chi phí thấp hơn.</p>
+                <p>Mô hình này đặc biệt phù hợp cho các ứng dụng:</p>
+                <ul style="text-align: left;">
+                    <li>Chatbot hỗ trợ khách hàng cần phản hồi nhanh</li>
+                    <li>Ứng dụng mobile với hạn chế về tài nguyên</li>
+                    <li>Hệ thống cần xử lý nhiều yêu cầu đồng thời</li>
+                    <li>Dịch vụ với ngân sách hạn chế</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Báo Cáo Đánh Giá O3-mini - 13/04/2025</p>
+            <p>Build-An-LLM-RAG-Chatbot-With-LangChain-Python</p>
+            <p>Automated RAG Evaluation Framework v2.0</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"context_relevancy": 0.77, "context_recall": 0.75, "context_precision": 0.80, "answer_relevancy": 0.81, "factual_consistency": 0.82, "hallucination_rate": 0.15, "response_correctness": 0.79, "response_completeness": 0.77, "domain_scores": {"hoi_dap_bo_y_te": 0.82, "hoi_dap_suc_khoe": 0.76, "chan_doan_benh_gan": 0.74, "chan_doan_tien_san_giat": 0.79}}

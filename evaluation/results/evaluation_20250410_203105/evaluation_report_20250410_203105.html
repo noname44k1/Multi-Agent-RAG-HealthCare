@@ -1,0 +1,1317 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Kết quả đánh giá Chatbot RAG</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+                th, td { text-align: left; padding: 8px; border: 1px solid #ddd; }
+                th { background-color: #f2f2f2; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .header { background-color: #4CAF50; color: white; padding: 10px; margin-bottom: 20px; }
+                .summary { margin-bottom: 30px; }
+                .score-good { background-color: #DFF0D8; }
+                .score-medium { background-color: #FCF8E3; }
+                .score-poor { background-color: #F2DEDE; }
+                .container { display: flex; flex-direction: column; gap: 20px; }
+                .chart-container { margin-top: 30px; }
+                img { max-width: 100%; height: auto; margin-bottom: 20px; }
+                .tab { overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1; }
+                .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; }
+                .tab button:hover { background-color: #ddd; }
+                .tab button.active { background-color: #ccc; }
+                .tabcontent { display: none; padding: 6px 12px; border: 1px solid #ccc; border-top: none; }
+                .tabcontent.active { display: block; }
+            </style>
+            <script>
+                function openTab(evt, tabName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+                
+                window.onload = function() {
+                    // Mở tab đầu tiên theo mặc định
+                    document.getElementsByClassName("tablinks")[0].click();
+                };
+            </script>
+        </head>
+        <body>
+            <div class="header">
+                <h1>Báo cáo đánh giá Multi-agent Chatbot RAG</h1>
+                <p>Thời gian: 2025-04-10 20:31:05</p>
+            </div>
+            
+            <div class="summary">
+                <h2>Tóm tắt</h2>
+                <table>
+                    <tr>
+                        <th>Tổng số test case</th>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <th>Test case thành công</th>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <th>Điểm trung bình Retrieval</th>
+                        <td>0.81</td>
+                    </tr>
+                    <tr>
+                        <th>Điểm trung bình Response</th>
+                        <td>0.86</td>
+                    </tr>
+                    <tr>
+                        <th>Điểm trung bình tổng thể</th>
+                        <td>0.89</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'overall')">Tổng quan</button>
+                <button class="tablinks" onclick="openTab(event, 'domains')">Phân tích theo lĩnh vực</button>
+                <button class="tablinks" onclick="openTab(event, 'agents')">Phân tích theo Agent</button>
+                <button class="tablinks" onclick="openTab(event, 'details')">Chi tiết test case</button>
+            </div>
+            
+            <div id="overall" class="tabcontent">
+                <h2>Kết quả tổng quan</h2>
+                <div class="chart-container">
+                    <h3>Điểm số tổng hợp theo test case và lĩnh vực</h3>
+                    <img src="overall_scores_20250410_203105.png" alt="Điểm số tổng hợp">
+                    
+                    <h3>So sánh các loại điểm theo test case</h3>
+                    <img src="score_comparison_20250410_203105.png" alt="So sánh điểm số">
+                </div>
+            </div>
+            
+            <div id="domains" class="tabcontent">
+                <h2>Phân tích theo lĩnh vực</h2>
+        
+                <div class="chart-container">
+                    <h3>Phân tích điểm số theo lĩnh vực</h3>
+                    <img src="domain_scores_20250410_203105.png" alt="Điểm số theo lĩnh vực">
+                </div>
+                
+                <h3>Bảng điểm theo lĩnh vực</h3>
+                <table>
+                    <tr>
+                        <th>Lĩnh vực</th>
+                        <th>Retrieval</th>
+                        <th>Response</th>
+                        <th>Overall</th>
+                    </tr>
+            
+                    <tr>
+                        <td>bo_y_te</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.90</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+                
+                    <tr>
+                        <td>suc_khoe</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+                
+                    <tr>
+                        <td>chan_doan_gan</td>
+                        <td class="score-good">0.78</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+                
+                    <tr>
+                        <td>tien_san_giat</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+                
+                </table>
+            
+            </div>
+            
+            <div id="agents" class="tabcontent">
+                <h2>Phân tích theo Agent</h2>
+        
+                <div class="chart-container">
+                    <h3>Điểm số theo loại agent</h3>
+                    <img src="agent_scores_20250410_203105.png" alt="Điểm số theo loại agent">
+                    
+                    <h3>Ma trận hiệu suất agent theo lĩnh vực</h3>
+                    <img src="agent_domain_matrix_20250410_203105.png" alt="Ma trận hiệu suất">
+                </div>
+                
+                <h3>Bảng điểm theo loại agent</h3>
+                <table>
+                    <tr>
+                        <th>Loại Agent</th>
+                        <th>Retrieval</th>
+                        <th>Response</th>
+                        <th>Overall</th>
+                    </tr>
+            
+                    <tr>
+                        <td>document</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.90</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+                
+                    <tr>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+                
+                    <tr>
+                        <td>treatment</td>
+                        <td class="score-good">0.78</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+                
+                    <tr>
+                        <td>qa</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+                
+                </table>
+            
+            </div>
+            
+            <div id="details" class="tabcontent">
+                <h2>Kết quả chi tiết</h2>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Câu hỏi</th>
+                        <th>Lĩnh vực</th>
+                        <th>Agent</th>
+                        <th>Điểm Retrieval</th>
+                        <th>Điểm Response</th>
+                        <th>Điểm Agent</th>
+                        <th>Điểm tổng thể</th>
+                    </tr>
+        
+                    <tr>
+                        <td>1</td>
+                        <td>Thông tư mới nhất về quản lý bệnh truyền nhiễm là gì?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Làm thế nào để giảm nguy cơ mắc tiểu đường?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.915774342123622</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>3</td>
+                        <td>Những xét nghiệm chẩn đoán bệnh gan nhiễm mỡ?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.76</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.8894363873305745</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>4</td>
+                        <td>Các xét nghiệm chẩn đoán tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.78</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.9290264494599967</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>5</td>
+                        <td>Quy định về sử dụng kháng sinh trong điều trị của Bộ Y tế?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.94705968988509</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>6</td>
+                        <td>Cách phòng tránh thiếu hụt vitamin D?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>7</td>
+                        <td>Biểu hiện của ung thư gan giai đoạn đầu?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.75</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.9120826154061408</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>8</td>
+                        <td>Các chỉ số sinh hóa bất thường trong tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.76</td>
+                        <td class="score-good">0.91</td>
+                        <td class="score-good">0.9319482952525754</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>9</td>
+                        <td>Thông tư về quản lý thuốc kê đơn?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.92</td>
+                        <td class="score-good">0.9009338596713852</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>10</td>
+                        <td>Cách phòng ngừa loãng xương ở người cao tuổi?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.8843070423247507</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>11</td>
+                        <td>Các phương pháp chẩn đoán hình ảnh cho bệnh gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.71</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.9105472319732256</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>12</td>
+                        <td>Cách theo dõi huyết áp ở thai phụ nghi ngờ tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.75</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.8986472731455911</td>
+                        <td class="score-good">0.86</td>
+                    </tr>
+            
+                    <tr>
+                        <td>13</td>
+                        <td>Chính sách hỗ trợ y tế vùng cao và vùng khó khăn?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.9385664500312093</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>14</td>
+                        <td>Tác hại của thuốc lá điện tử đối với sức khỏe?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>15</td>
+                        <td>Cách phân biệt gan nhiễm mỡ và viêm gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.9363035855363455</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>16</td>
+                        <td>Các dấu hiệu cảnh báo trên siêu âm Doppler?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>17</td>
+                        <td>Quy định về xử phạt vi phạm trong lĩnh vực y tế?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>18</td>
+                        <td>Làm thế nào để giảm stress trong cuộc sống hàng ngày?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>19</td>
+                        <td>Tiêu chuẩn chẩn đoán gan nhiễm mỡ không do rượu (NAFLD)?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>20</td>
+                        <td>Phác đồ sử dụng Magnesium sulfate trong tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.8966799367175461</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>21</td>
+                        <td>Quy định về quản lý và sử dụng vaccine?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.8953648276296315</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>22</td>
+                        <td>Những phương pháp phòng ngừa bệnh trĩ?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.8822559782795588</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>23</td>
+                        <td>Biểu hiện của bệnh Wilson trên gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.9190463286557017</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>24</td>
+                        <td>Biểu hiện của tiền sản giật trên thai phụ mang thai đôi?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.8953447628287594</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>25</td>
+                        <td>Hướng dẫn về phòng chống lây nhiễm trong bệnh viện?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.9436051708430597</td>
+                        <td class="score-good">0.92</td>
+                    </tr>
+            
+                    <tr>
+                        <td>26</td>
+                        <td>Cách phòng ngừa bệnh tim mạch hiệu quả?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.8974770029658179</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>27</td>
+                        <td>Làm thế nào để phát hiện sớm bệnh xơ gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.73</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>28</td>
+                        <td>Cách phân biệt tiền sản giật và tăng huyết áp thai kỳ?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.8837188241715761</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>29</td>
+                        <td>Thông tư hướng dẫn khám bệnh, chữa bệnh từ xa có những nội dung chính gì?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.8983004887849126</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>30</td>
+                        <td>Những thực phẩm tốt cho sức khỏe tim mạch?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>31</td>
+                        <td>Cách phân biệt viêm gan A, B và C?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>32</td>
+                        <td>Cách theo dõi thai phụ có nguy cơ tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.901836921767783</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>33</td>
+                        <td>Quy định về cấp chứng chỉ hành nghề y?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.90</td>
+                        <td class="score-good">0.8818914174599352</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>34</td>
+                        <td>Những dấu hiệu cảnh báo sớm của đột quỵ?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>35</td>
+                        <td>Cách đọc kết quả xét nghiệm chức năng gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.9339161421139857</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>36</td>
+                        <td>Triệu chứng của hội chứng HELLP?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.78</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>37</td>
+                        <td>Quy định mới về điều kiện hoạt động của phòng khám tư nhân?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.90</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>38</td>
+                        <td>Làm thế nào để duy trì cân nặng hợp lý?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.91</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>39</td>
+                        <td>Phân loại mức độ xơ gan theo Child-Pugh?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.9112082632825163</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>40</td>
+                        <td>Cách đánh giá chức năng gan, thận trong tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.8905803996400565</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>41</td>
+                        <td>Thông tư về quản lý chất thải y tế?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.97</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>42</td>
+                        <td>Các dấu hiệu thiếu hụt vitamin và khoáng chất?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.9380108006295924</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>43</td>
+                        <td>Các dấu hiệu cảnh báo sớm của ung thư gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.75</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.9139889705331184</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>44</td>
+                        <td>Những biểu hiện thần kinh trong tiền sản giật nặng?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.913152634961532</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>45</td>
+                        <td>Hướng dẫn thực hiện gói dịch vụ y tế cơ bản?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.909699299983376</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>46</td>
+                        <td>Chế độ ăn uống cho người tập thể thao?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>47</td>
+                        <td>Các triệu chứng của viêm đường mật?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.9318835251232983</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>48</td>
+                        <td>Chiến lược dự phòng tiền sản giật bằng aspirin liều thấp?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>49</td>
+                        <td>Quy định về khám sức khỏe định kỳ cho người lao động?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.92</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.93</td>
+                    </tr>
+            
+                    <tr>
+                        <td>50</td>
+                        <td>Những thực phẩm nên tránh khi bị viêm khớp?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.892766052637806</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>51</td>
+                        <td>Các triệu chứng của bệnh viêm gan B?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.71</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.9002992783847484</td>
+                        <td class="score-good">0.86</td>
+                    </tr>
+            
+                    <tr>
+                        <td>52</td>
+                        <td>Những yếu tố nguy cơ của tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.76</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.9269935046263699</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>53</td>
+                        <td>Những quy định về an toàn thực phẩm của Bộ Y tế là gì?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.98</td>
+                        <td class="score-good">0.9148647332736372</td>
+                        <td class="score-good">0.92</td>
+                    </tr>
+            
+                    <tr>
+                        <td>54</td>
+                        <td>Các bài tập thể dục tốt cho người bị đau lưng?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.8805600455664595</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>55</td>
+                        <td>Triệu chứng của viêm gan tự miễn?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>56</td>
+                        <td>Những biến chứng nguy hiểm của tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.78</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>57</td>
+                        <td>Chính sách về phòng chống dịch bệnh của Bộ Y tế?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.76</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>58</td>
+                        <td>Chế độ dinh dưỡng phù hợp cho người mắc bệnh gout?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.933677846166046</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>59</td>
+                        <td>Những yếu tố rủi ro gây bệnh gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.8859996726601037</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>60</td>
+                        <td>Cách phòng ngừa tiền sản giật ở thai phụ có yếu tố nguy cơ?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>61</td>
+                        <td>Quy định về quảng cáo thực phẩm chức năng?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.92</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>62</td>
+                        <td>Các biện pháp tăng cường hệ miễn dịch?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>63</td>
+                        <td>Tiêu chuẩn chẩn đoán viêm gan siêu vi?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.73</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.910851527570528</td>
+                        <td class="score-good">0.86</td>
+                    </tr>
+            
+                    <tr>
+                        <td>64</td>
+                        <td>Những thay đổi về nước tiểu trong tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>65</td>
+                        <td>Quy trình tiếp nhận bệnh nhân cấp cứu theo quy định mới?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>66</td>
+                        <td>Cách phòng ngừa bệnh hô hấp trong mùa lạnh?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.90</td>
+                        <td class="score-good">0.9377289019990181</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>67</td>
+                        <td>Biểu hiện của tăng áp lực tĩnh mạch cửa?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.8931510911169883</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>68</td>
+                        <td>Mối liên quan giữa tiền sản giật và thai chậm phát triển?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.9190848096308912</td>
+                        <td class="score-good">0.92</td>
+                    </tr>
+            
+                    <tr>
+                        <td>69</td>
+                        <td>Quy định về giá dịch vụ y tế?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>70</td>
+                        <td>Cách phòng tránh bệnh về mắt do sử dụng máy tính?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.9102631030802666</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>71</td>
+                        <td>Cách phân biệt vàng da do bệnh gan và bệnh khác?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.9199032332646788</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>72</td>
+                        <td>Các yếu tố tiên lượng tiền sản giật sớm?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.9180115053512024</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>73</td>
+                        <td>Chính sách bảo hiểm y tế cho người nghèo?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.900068276698338</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>74</td>
+                        <td>Làm thế nào để cải thiện sức khỏe tâm thần?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.76</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.88536224590623</td>
+                        <td class="score-good">0.85</td>
+                    </tr>
+            
+                    <tr>
+                        <td>75</td>
+                        <td>Cách đánh giá mức độ xơ hóa gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>76</td>
+                        <td>Các dấu hiệu cảnh báo tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.75</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>77</td>
+                        <td>Quy định về tiêm chủng mở rộng hiện nay như thế nào?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.9151207481923691</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>78</td>
+                        <td>Chế độ ăn uống tốt cho người cao huyết áp?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>79</td>
+                        <td>Các dấu hiệu của bệnh gan do rượu?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.8870873496520995</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>80</td>
+                        <td>Dấu hiệu chuyển từ tiền sản giật sang sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.82</td>
+                        <td class="score-good">0.8894807339198779</td>
+                        <td class="score-good">0.86</td>
+                    </tr>
+            
+                    <tr>
+                        <td>81</td>
+                        <td>Quy trình thanh toán bảo hiểm y tế mới nhất?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.9270177789645632</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>82</td>
+                        <td>Làm sao để cải thiện chất lượng giấc ngủ?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.79</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.9466317567517238</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>83</td>
+                        <td>Các chỉ số men gan bất thường thể hiện điều gì?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.9474182003920231</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>84</td>
+                        <td>Phác đồ điều trị tiền sản giật nhẹ?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.9158827721378008</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>85</td>
+                        <td>Tiêu chuẩn đánh giá chất lượng bệnh viện hiện nay?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.73</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.8936201414875645</td>
+                        <td class="score-good">0.86</td>
+                    </tr>
+            
+                    <tr>
+                        <td>86</td>
+                        <td>Những thay đổi lối sống để phòng ngừa ung thư?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>87</td>
+                        <td>Những dấu hiệu của suy gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.9266232428296068</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>88</td>
+                        <td>Tiêu chuẩn chẩn đoán tiền sản giật nặng?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.78</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>89</td>
+                        <td>Danh mục thuốc được bảo hiểm y tế chi trả?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.78</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>90</td>
+                        <td>Chế độ ăn uống cho người bị viêm loét dạ dày?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.8865058638642158</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>91</td>
+                        <td>Những triệu chứng của u gan lành tính?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.76</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.9353207354423154</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>92</td>
+                        <td>Thời điểm chấm dứt thai kỳ khi bị tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.85</td>
+                        <td class="score-good">0.8880968901572485</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>93</td>
+                        <td>Chính sách khám chữa bệnh cho người cao tuổi?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.86</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.91</td>
+                    </tr>
+            
+                    <tr>
+                        <td>94</td>
+                        <td>Những thực phẩm tốt cho sức khỏe não bộ?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.90</td>
+                        <td class="score-good">0.9192066558194937</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>95</td>
+                        <td>Những xét nghiệm cần làm khi nghi ngờ bệnh gan?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.87</td>
+                        <td class="score-good">0.9305313470851535</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                    <tr>
+                        <td>96</td>
+                        <td>Cách theo dõi sau sinh đối với sản phụ bị tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.80</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.9129691758313342</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>97</td>
+                        <td>Thông tư về đấu thầu thuốc trong các cơ sở y tế?</td>
+                        <td>bo_y_te</td>
+                        <td>document</td>
+                        <td class="score-good">0.77</td>
+                        <td class="score-good">0.91</td>
+                        <td class="score-good">0.898218577443119</td>
+                        <td class="score-good">0.88</td>
+                    </tr>
+            
+                    <tr>
+                        <td>98</td>
+                        <td>Cách chăm sóc sức khỏe tiêu hóa?</td>
+                        <td>suc_khoe</td>
+                        <td>diagnosis</td>
+                        <td class="score-good">0.84</td>
+                        <td class="score-good">0.81</td>
+                        <td class="score-good">0.8909510366973104</td>
+                        <td class="score-good">0.87</td>
+                    </tr>
+            
+                    <tr>
+                        <td>99</td>
+                        <td>Những triệu chứng gan to do nguyên nhân khác nhau?</td>
+                        <td>chan_doan_gan</td>
+                        <td>treatment</td>
+                        <td class="score-good">0.75</td>
+                        <td class="score-good">0.89</td>
+                        <td class="score-good">0.95</td>
+                        <td class="score-good">0.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>100</td>
+                        <td>Các xét nghiệm tiên đoán tiền sản giật?</td>
+                        <td>tien_san_giat</td>
+                        <td>qa</td>
+                        <td class="score-good">0.83</td>
+                        <td class="score-good">0.88</td>
+                        <td class="score-good">0.929085077767865</td>
+                        <td class="score-good">0.90</td>
+                    </tr>
+            
+                </table>
+            </div>
+        </body>
+        </html>
+        

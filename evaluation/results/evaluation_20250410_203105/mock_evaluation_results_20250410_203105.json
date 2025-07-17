@@ -1,0 +1,5156 @@
+{
+  "timestamp": "2025-04-10 20:31:05",
+  "total_test_cases": 100,
+  "successful_evaluations": 100,
+  "average_scores": {
+    "retrieval": 0.8084906094322863,
+    "response": 0.8602264590224425,
+    "overall": 0.8887098142628553
+  },
+  "domain_scores": {
+    "bo_y_te": {
+      "retrieval": 0.8135708453348047,
+      "response": 0.8969806805493369,
+      "overall": 0.8972811960745173
+    },
+    "suc_khoe": {
+      "retrieval": 0.836887165464077,
+      "response": 0.8403667073524131,
+      "overall": 0.8878282549522417
+    },
+    "chan_doan_gan": {
+      "retrieval": 0.7818436417673051,
+      "response": 0.8561472203281282,
+      "overall": 0.8837214984992336
+    },
+    "tien_san_giat": {
+      "retrieval": 0.8016607851629581,
+      "response": 0.8474112278598909,
+      "overall": 0.8860083075254285
+    }
+  },
+  "agent_scores": {
+    "document": {
+      "retrieval": 0.8135708453348047,
+      "response": 0.8969806805493369,
+      "overall": 0.8972811960745173
+    },
+    "diagnosis": {
+      "retrieval": 0.836887165464077,
+      "response": 0.8403667073524131,
+      "overall": 0.8878282549522417
+    },
+    "treatment": {
+      "retrieval": 0.7818436417673051,
+      "response": 0.8561472203281282,
+      "overall": 0.8837214984992336
+    },
+    "qa": {
+      "retrieval": 0.8016607851629581,
+      "response": 0.8474112278598909,
+      "overall": 0.8860083075254285
+    }
+  },
+  "detailed_results": [
+    {
+      "test_case_id": 1,
+      "query": "Thông tư mới nhất về quản lý bệnh truyền nhiễm là gì?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8869033220441975,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7892458042564572,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8380745631503274
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8577175531856324,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7616113511677731,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9435973925260996,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8543087656265017
+      },
+      "overall_score": 0.8980958321942072,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.534260675437904
+      }
+    },
+    {
+      "test_case_id": 2,
+      "query": "Làm thế nào để giảm nguy cơ mắc tiểu đường?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8051468036510734,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7836305173242297,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7943886604876516
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9050087308171142,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8292928682390619,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.894767199685392
+      },
+      "overall_score": 0.8887325505741663,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.915774342123622,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.153257682484372
+      }
+    },
+    {
+      "test_case_id": 3,
+      "query": "Những xét nghiệm chẩn đoán bệnh gan nhiễm mỡ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8420021608959164,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6811624515361206,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7615823062160185
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7828713937602939,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8680597506578783,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8669770481393907
+      },
+      "overall_score": 0.8744989354214959,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8894363873305745,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8359664792252757
+      }
+    },
+    {
+      "test_case_id": 4,
+      "query": "Các xét nghiệm chẩn đoán tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7781309802336933,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7782729685372586,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.778201974385476
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8539963799498924,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7150052173051664,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8410167001646865,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8033394324732485
+      },
+      "overall_score": 0.8726419640796803,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9290264494599967,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.853899207056358
+      }
+    },
+    {
+      "test_case_id": 5,
+      "query": "Quy định về sử dụng kháng sinh trong điều trị của Bộ Y tế?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.736061064792195,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8877150472152712,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8118880560037331
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9524312697191696,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.9439852147332468,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9405674641860851,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9456613162128337
+      },
+      "overall_score": 0.9136522655254142,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.94705968988509,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5688279112961194
+      }
+    },
+    {
+      "test_case_id": 6,
+      "query": "Cách phòng tránh thiếu hụt vitamin D?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7572116081358755,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.9124793100476122,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8348454590917438
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8326878597148548,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7109954991764206,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8199070613293721,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.7878634734068825
+      },
+      "overall_score": 0.8806772331246566,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.154533720939288
+      }
+    },
+    {
+      "test_case_id": 7,
+      "query": "Biểu hiện của ung thư gan giai đoạn đầu?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8184424760978516,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.683058212700521,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7507503443991863
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7960639681155445,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.894968903679069,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8803442905982045
+      },
+      "overall_score": 0.8772816107254875,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9659491924984185,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9120826154061408,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9507073048071066
+      }
+    },
+    {
+      "test_case_id": 8,
+      "query": "Các chỉ số sinh hóa bất thường trong tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8301341998098789,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.693873834612352,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7620040172111154
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8883595877263896,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8964549662218283,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.940779564704534,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9085313728842506
+      },
+      "overall_score": 0.8954778412532414,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9794276796650239,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9319482952525754,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6216473170256613
+      }
+    },
+    {
+      "test_case_id": 9,
+      "query": "Thông tư về quản lý thuốc kê đơn?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8025637359850694,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8855480831776664,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8440559095813679
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8995395797296253,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8935024426058819,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9663512507934228,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9197977577096433
+      },
+      "overall_score": 0.903696881740599,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9009338596713852,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7693945450489483
+      }
+    },
+    {
+      "test_case_id": 10,
+      "query": "Cách phòng ngừa loãng xương ở người cao tuổi?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9129997458817569,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8628245366082952,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.887912141245026
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7524522665759531,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8338823749906169,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.818729242310644,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8016879612924047
+      },
+      "overall_score": 0.8809767862155453,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8843070423247507,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9626173537632825
+      }
+    },
+    {
+      "test_case_id": 11,
+      "query": "Các phương pháp chẩn đoán hình ảnh cho bệnh gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.741550316863483,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.670391095291017,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.70597070607725
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8610060351010035,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8251046303623157,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8787035551544399
+      },
+      "overall_score": 0.8688053733012289,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9105472319732256,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5758901342400782
+      }
+    },
+    {
+      "test_case_id": 12,
+      "query": "Cách theo dõi huyết áp ở thai phụ nghi ngờ tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7483164835865662,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7432590365810708,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7457877600838185
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7535983473370427,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7908945389962008,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9270491165266108,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.823847334286618
+      },
+      "overall_score": 0.860339877434396,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9730771422215562,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8986472731455911,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7989718814930566
+      }
+    },
+    {
+      "test_case_id": 13,
+      "query": "Chính sách hỗ trợ y tế vùng cao và vùng khó khăn?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7411587184417106,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8305549865590474,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.785856852500379
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9016793150685575,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.885863260461273,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8683388651950033,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8852938135749445
+      },
+      "overall_score": 0.8899292790266332,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9385664500312093,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5484389057146124
+      }
+    },
+    {
+      "test_case_id": 14,
+      "query": "Tác hại của thuốc lá điện tử đối với sức khỏe?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8880071272714077,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7159556912983294,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8019814092848685
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7707841010687716,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8973164935686698,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9139919885191828,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8606975277188748
+      },
+      "overall_score": 0.8906697342509358,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9997674847216476
+      }
+    },
+    {
+      "test_case_id": 15,
+      "query": "Cách phân biệt gan nhiễm mỡ và viêm gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9124966880520632,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.731976485573068,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8222365868125656
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.940320609649199,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7076714164538066,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8659973420343352
+      },
+      "overall_score": 0.9000302949493413,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9755836654141191,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9363035855363455,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5332281056296146
+      }
+    },
+    {
+      "test_case_id": 16,
+      "query": "Các dấu hiệu cảnh báo trên siêu âm Doppler?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8615068640134091,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8443291855822853,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8529180247978472
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8870559027240489,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7577497208576083,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8649352078605524
+      },
+      "overall_score": 0.9091502264648166,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9687476732008672,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5331155678181083
+      }
+    },
+    {
+      "test_case_id": 17,
+      "query": "Quy định về xử phạt vi phạm trong lĩnh vực y tế?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8154955315770386,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7260495694755504,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7707725505262946
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8859786178335314,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8859223915259664,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8823572052015666,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8847527381870215
+      },
+      "overall_score": 0.8888813221783289,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5755040170838424
+      }
+    },
+    {
+      "test_case_id": 18,
+      "query": "Làm thế nào để giảm stress trong cuộc sống hàng ngày?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9077495140150968,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8595402427126264,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8836448783638616
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9246645066526671,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8383625068592533,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.850651068385262,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8712260272990608
+      },
+      "overall_score": 0.9137177264157306,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9369580968018831
+      }
+    },
+    {
+      "test_case_id": 19,
+      "query": "Tiêu chuẩn chẩn đoán gan nhiễm mỡ không do rượu (NAFLD)?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8776762717136251,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7865941383997692,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8321352050566971
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8141871949679651,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.873527010501091,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8792380684896853
+      },
+      "overall_score": 0.9096696591741285,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.977305363150131,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.652117602685078
+      }
+    },
+    {
+      "test_case_id": 20,
+      "query": "Phác đồ sử dụng Magnesium sulfate trong tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8415694714022556,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8560298328877279,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8487996521449918
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8034969493100975,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8558649807694121,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8697873100265031
+      },
+      "overall_score": 0.8988167247222603,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8966799367175461,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6987888822350037
+      }
+    },
+    {
+      "test_case_id": 21,
+      "query": "Quy định về quản lý và sử dụng vaccine?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8837328442606334,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7919158444575759,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8378243443591047
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8546705035121347,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8945296198255231,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8840457531052516,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8777486254809698
+      },
+      "overall_score": 0.8902344493674264,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8953648276296315,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.75307217755177
+      }
+    },
+    {
+      "test_case_id": 22,
+      "query": "Những phương pháp phòng ngừa bệnh trĩ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9242607507643311,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.849904646243683,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.887082698504007
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7908407114923095,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7440013997430499,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8921618482913894,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8090013198422495
+      },
+      "overall_score": 0.8820849991564538,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8822559782795588,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.085508223632803
+      }
+    },
+    {
+      "test_case_id": 23,
+      "query": "Biểu hiện của bệnh Wilson trên gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7183685490375994,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8188353463116829,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7686019476746411
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8635623356372161,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.743086830140355,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8568233209390268,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8211574955721993
+      },
+      "overall_score": 0.8690069523136839,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9672220373521931,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9190463286557017,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5548668548246547
+      }
+    },
+    {
+      "test_case_id": 24,
+      "query": "Biểu hiện của tiền sản giật trên thai phụ mang thai đôi?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.820642486875076,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8016350675820044,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8111387772285402
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7929309188204673,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7697309536069424,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9211138815997968,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8279252513424021
+      },
+      "overall_score": 0.8786021978499254,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8953447628287594,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5294315624067554
+      }
+    },
+    {
+      "test_case_id": 25,
+      "query": "Hướng dẫn về phòng chống lây nhiễm trong bệnh viện?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.821456291422434,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8215542384874384,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8215052649549361
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9547664531370305,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.9212095218805056,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9698956348934156,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9486238699703172
+      },
+      "overall_score": 0.9159335764420782,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9436051708430597,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5194259615738597
+      }
+    },
+    {
+      "test_case_id": 26,
+      "query": "Cách phòng ngừa bệnh tim mạch hiệu quả?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8441163439214643,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7959832473244497,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.820049795622957
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8965498807471661,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.756312693590099,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8732387840137548,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8420337861170065
+      },
+      "overall_score": 0.8773901461764453,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8974770029658179,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.287238054156676
+      }
+    },
+    {
+      "test_case_id": 27,
+      "query": "Làm thế nào để phát hiện sớm bệnh xơ gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7682983015431265,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6877706090348218,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7280344552889741
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7858731791103082,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7007297740450671,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8122009843851251
+      },
+      "overall_score": 0.8675588599185249,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7722810355209202
+      }
+    },
+    {
+      "test_case_id": 28,
+      "query": "Cách phân biệt tiền sản giật và tăng huyết áp thai kỳ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8246306950676655,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8557446166049776,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8401876558363215
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8087558907636805,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8253124075534966,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8510042515981151,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8283575166384307
+      },
+      "overall_score": 0.8755702390271984,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9500169594624651,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8837188241715761,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5575173980375994
+      }
+    },
+    {
+      "test_case_id": 29,
+      "query": "Thông tư hướng dẫn khám bệnh, chữa bệnh từ xa có những nội dung chính gì?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8767276035551567,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7319911472302131,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8043593753926849
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9107877476919168,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8643187670495256,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9071472527862571,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8940845891758998
+      },
+      "overall_score": 0.8866861133383743,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8983004887849126,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5860789039117105
+      }
+    },
+    {
+      "test_case_id": 30,
+      "query": "Những thực phẩm tốt cho sức khỏe tim mạch?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9394359445661664,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8377718220428987,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8886038833045325
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8042899609986212,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7123571655198023,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8048351237499529,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.7738274167561254
+      },
+      "overall_score": 0.8906078250151646,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.1570720258957192
+      }
+    },
+    {
+      "test_case_id": 31,
+      "query": "Cách phân biệt viêm gan A, B và C?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8596900543938344,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7430853378667914,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8013876961303129
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8997583818440882,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7033573898369118,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8510385905603334
+      },
+      "overall_score": 0.8907059343526462,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9603974507199383,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5737037827786087
+      }
+    },
+    {
+      "test_case_id": 32,
+      "query": "Cách theo dõi thai phụ có nguy cơ tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7399942525628457,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8740038674195527,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8069990599911991
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8958388462484368,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.884768116721905,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.86218558652465,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8809308498316639
+      },
+      "overall_score": 0.8917904830079333,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9773951004410871,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.901836921767783,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6976467430672226
+      }
+    },
+    {
+      "test_case_id": 33,
+      "query": "Quy định về cấp chứng chỉ hành nghề y?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7757400851247107,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.831884125098562,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8038121051116364
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9049079358832297,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7775444530489134,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 1.026,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.902817462977381
+      },
+      "overall_score": 0.8846302463872381,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8818914174599352,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7363416722173861
+      }
+    },
+    {
+      "test_case_id": 34,
+      "query": "Những dấu hiệu cảnh báo sớm của đột quỵ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7869600893894373,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.9099589419520521,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8484595156707446
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8284122310699565,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7075929469055917,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8758852983742728,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.803963492116607
+      },
+      "overall_score": 0.8881057519468378,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.0516701451191315
+      }
+    },
+    {
+      "test_case_id": 35,
+      "query": "Cách đọc kết quả xét nghiệm chức năng gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7934220769763896,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7507065926753222,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7720643348258559
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8135207612451854,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7611605944874784,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8260485599305902,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8002433052210846
+      },
+      "overall_score": 0.8715559455402315,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9339161421139857,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6762156167134834
+      }
+    },
+    {
+      "test_case_id": 36,
+      "query": "Triệu chứng của hội chứng HELLP?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8807884348707826,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6820325273356054,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.781410481103194
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8178419141842787,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7627475804517201,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9072132584946234,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8292675843768741
+      },
+      "overall_score": 0.8851695163700171,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8710903857212506
+      }
+    },
+    {
+      "test_case_id": 37,
+      "query": "Quy định mới về điều kiện hoạt động của phòng khám tư nhân?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8016554099330733,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7784801388406357,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7900677743868545
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8784332744296629,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8465054343128526,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9617337305060041,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8955574797495066
+      },
+      "overall_score": 0.8964063135340903,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.371257614590718
+      }
+    },
+    {
+      "test_case_id": 38,
+      "query": "Làm thế nào để duy trì cân nặng hợp lý?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9545308001513977,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8572715014123282,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.905901150781863
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7787513870497628,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.781867714972868,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8268700449471849,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.7958297156566051
+      },
+      "overall_score": 0.9004327166096171,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9735688537052651
+      }
+    },
+    {
+      "test_case_id": 39,
+      "query": "Phân loại mức độ xơ gan theo Child-Pugh?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7570374387976414,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8383701411753721,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7977037899865067
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8120324644135006,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8134365835180185,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8637909760996706,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8297533413437299
+      },
+      "overall_score": 0.8767433076597317,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9683078360261741,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9112082632825163,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.622058355761782
+      }
+    },
+    {
+      "test_case_id": 40,
+      "query": "Cách đánh giá chức năng gan, thận trong tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9103803041277267,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8664179939077074,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.888399149017717
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7708889475268834,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8479580780133529,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8484340122168462,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8224270125856942
+      },
+      "overall_score": 0.8922207959061786,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9674766223812469,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8905803996400565,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9408683214929978
+      }
+    },
+    {
+      "test_case_id": 41,
+      "query": "Thông tư về quản lý chất thải y tế?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8036785505633577,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7412305359929053,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7724545432781316
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 1.01770920921737,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8868290422654822,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9953769837065121,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9666384117297881
+      },
+      "overall_score": 0.9097732387519799,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6490172898768365
+      }
+    },
+    {
+      "test_case_id": 42,
+      "query": "Các dấu hiệu thiếu hụt vitamin và khoáng chất?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8575228292003316,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8056858316848692,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8316043304426004
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8034915680293251,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.81140045286652,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8549640069652816
+      },
+      "overall_score": 0.8936447845093685,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9380108006295924,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.1666089040883576
+      }
+    },
+    {
+      "test_case_id": 43,
+      "query": "Các dấu hiệu cảnh báo sớm của ung thư gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8016363211017437,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6921010943050894,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7468687077034165
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9265220670210277,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7868468394710282,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9159913946576982,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8764534337165847
+      },
+      "overall_score": 0.8761559151752255,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9673125487477823,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9139889705331184,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5526918271265013
+      }
+    },
+    {
+      "test_case_id": 44,
+      "query": "Những biểu hiện thần kinh trong tiền sản giật nặng?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8571302005122956,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6800695513850487,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7685998759486721
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8020082671767402,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8804279607466673,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9309046892677932,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8711136390637336
+      },
+      "overall_score": 0.8832165374934844,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.913152634961532,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8010056357954949
+      }
+    },
+    {
+      "test_case_id": 45,
+      "query": "Hướng dẫn thực hiện gói dịch vụ y tế cơ bản?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8415156565418784,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7330641586446464,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7872899075932625
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.84355696848177,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7665782886827393,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8962623438325548,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8354658669990215
+      },
+      "overall_score": 0.8706137686439148,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.909699299983376,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.4449390039765908
+      }
+    },
+    {
+      "test_case_id": 46,
+      "query": "Chế độ ăn uống cho người tập thể thao?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9579253205583544,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7303708205025748,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8441480705304647
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8065109176723992,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8260343433121433,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8608484203281809
+      },
+      "overall_score": 0.9012491227146615,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.157530867457756
+      }
+    },
+    {
+      "test_case_id": 47,
+      "query": "Các triệu chứng của viêm đường mật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8952438577519316,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6754780899930567,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7853609738724942
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9348282685028488,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7753441852732971,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8867241512587153
+      },
+      "overall_score": 0.8959921625636269,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9318835251232983,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.752424059723198
+      }
+    },
+    {
+      "test_case_id": 48,
+      "query": "Chiến lược dự phòng tiền sản giật bằng aspirin liều thấp?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8189145142490472,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7759232659141497,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7974188900815984
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7697622099947384,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.882824889345883,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8675290331135406
+      },
+      "overall_score": 0.8987369807987848,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.804858250524916
+      }
+    },
+    {
+      "test_case_id": 49,
+      "query": "Quy định về khám sức khỏe định kỳ cho người lao động?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9177209763023605,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8609965562657867,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8893587662840736
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8997434954634341,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8898768376383894,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9840217133402038,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9245473488140092
+      },
+      "overall_score": 0.9284765287745207,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5935866622545793
+      }
+    },
+    {
+      "test_case_id": 50,
+      "query": "Những thực phẩm nên tránh khi bị viêm khớp?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8770451163081103,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7895477823881145,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8332964493481124
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9498615068177061,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7999518176515895,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9149824885330903,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8882652710007952
+      },
+      "overall_score": 0.8910819432466783,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.892766052637806,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.087944621169407
+      }
+    },
+    {
+      "test_case_id": 51,
+      "query": "Các triệu chứng của bệnh viêm gan B?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7465158096228752,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6832260900651914,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7148709498440333
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9180180168634227,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8300028841853171,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8829110653473299,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8769773221320233
+      },
+      "overall_score": 0.8643166550306087,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.96511906976163,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9002992783847484,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.934516692153045
+      }
+    },
+    {
+      "test_case_id": 52,
+      "query": "Những yếu tố nguy cơ của tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7860797331848753,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7261767281459159,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7561282306653956
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8025749023455251,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8846204352548364,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9040055514290506,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8637336296764707
+      },
+      "overall_score": 0.8744574864454382,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9509745808135165,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9269935046263699,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9024427665681263
+      }
+    },
+    {
+      "test_case_id": 53,
+      "query": "Những quy định về an toàn thực phẩm của Bộ Y tế là gì?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8469657740193164,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8209985039113797,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8339821389653481
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 1.0137595967170112,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.9213773410582717,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9950423697933202,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9767264358562011
+      },
+      "overall_score": 0.9188933270237966,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9148647332736372,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.690829017644155
+      }
+    },
+    {
+      "test_case_id": 54,
+      "query": "Các bài tập thể dục tốt cho người bị đau lưng?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9526191904983012,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7879514981465954,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8702853443224483
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8717516791293222,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.754717629364404,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8599025966493574,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8287906350476946
+      },
+      "overall_score": 0.8824090062341506,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8805600455664595,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8312947046014603
+      }
+    },
+    {
+      "test_case_id": 55,
+      "query": "Triệu chứng của viêm gan tự miễn?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8606278592900585,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8292064538018693,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8449171565459639
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7883992518568383,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8885288366105465,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9297835439100146,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.868903877459133
+      },
+      "overall_score": 0.9109552585012741,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7735145347212131
+      }
+    },
+    {
+      "test_case_id": 56,
+      "query": "Những biến chứng nguy hiểm của tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9141953074024268,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7084687548994635,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8113320311509451
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7922612421284574,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7334644352698134,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8076855563711072,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.7778037445897926
+      },
+      "overall_score": 0.8786562879309008,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9754893759828654,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.93312033109193
+      }
+    },
+    {
+      "test_case_id": 57,
+      "query": "Chính sách về phòng chống dịch bệnh của Bộ Y tế?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8271579536547273,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7003024649960293,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7637302093253784
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8838696010400212,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8298140920223044,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8802106356944233,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8646314429189162
+      },
+      "overall_score": 0.8820904130610736,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7991765215524358
+      }
+    },
+    {
+      "test_case_id": 58,
+      "query": "Chế độ dinh dưỡng phù hợp cho người mắc bệnh gout?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8456024585827988,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7387828617051416,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7921926601439702
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8533846809727496,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7002880699316755,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8929302790690616,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8155343433244955
+      },
+      "overall_score": 0.8728512124086278,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.933677846166046,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.143208413495434
+      }
+    },
+    {
+      "test_case_id": 59,
+      "query": "Những yếu tố rủi ro gây bệnh gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8832517653003353,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6958906720463728,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7895712186733541
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7600796659730705,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7816983313725799,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8305926657818835
+      },
+      "overall_score": 0.8684618276014888,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9676837532906141,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8859996726601037,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6442148739940574
+      }
+    },
+    {
+      "test_case_id": 60,
+      "query": "Cách phòng ngừa tiền sản giật ở thai phụ có yếu tố nguy cơ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9084149155328672,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6822473215396678,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7953311185362675
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8937244856325034,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7099305885082329,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9363548938473651,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8466699893293672
+      },
+      "overall_score": 0.8900113877360045,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.968044443078383,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9030759801230053
+      }
+    },
+    {
+      "test_case_id": 61,
+      "query": "Quy định về quảng cáo thực phẩm chức năng?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8049542057341939,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.803932771184225,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8044434884592094
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9268185939011777,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8569509400983337,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9862904846861439,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.923353339561885
+      },
+      "overall_score": 0.9069492070052736,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.4594807261660587
+      }
+    },
+    {
+      "test_case_id": 62,
+      "query": "Các biện pháp tăng cường hệ miễn dịch?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8924437721542327,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7164010868251323,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8044224294896825
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.859046140467066,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.751591961246789,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8100311098562623,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8068897371900391
+      },
+      "overall_score": 0.8778280416699304,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.1607678435405626
+      }
+    },
+    {
+      "test_case_id": 63,
+      "query": "Tiêu chuẩn chẩn đoán viêm gan siêu vi?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.770233571513463,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6922708354529733,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7312522034832181
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8230437422957892,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7567645851884384,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8900333833811687,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8232805702884655
+      },
+      "overall_score": 0.8595686599915802,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.972890338624109,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.910851527570528,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5222896014828073
+      }
+    },
+    {
+      "test_case_id": 64,
+      "query": "Những thay đổi về nước tiểu trong tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8347777996345791,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7944566330469921,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8146172163407857
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9023572337475017,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8268240274051595,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8930604203842204
+      },
+      "overall_score": 0.9094194091812515,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8430372945083204
+      }
+    },
+    {
+      "test_case_id": 65,
+      "query": "Quy trình tiếp nhận bệnh nhân cấp cứu theo quy định mới?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.852010085348596,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6931964538723102,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7726032696104531
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8545564357195274,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.9296909163514923,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8991101589750208,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8944525036820133
+      },
+      "overall_score": 0.8917639433231166,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.396846350345331
+      }
+    },
+    {
+      "test_case_id": 66,
+      "query": "Cách phòng ngừa bệnh hô hấp trong mùa lạnh?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8771203526125366,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7133849447976138,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7952526487050753
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9459769870844271,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8000191524312777,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8986653798385683
+      },
+      "overall_score": 0.8954117326356653,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9377289019990181,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8812388877301498
+      }
+    },
+    {
+      "test_case_id": 67,
+      "query": "Biểu hiện của tăng áp lực tĩnh mạch cửa?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.91504294249482,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6943484989403682,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8046957207175941
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8730212672424892,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8113999097023514,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8384009717092128,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8409407162180177
+      },
+      "overall_score": 0.87969688201315,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8931510911169883,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6389975222111557
+      }
+    },
+    {
+      "test_case_id": 68,
+      "query": "Mối liên quan giữa tiền sản giật và thai chậm phát triển?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9269285417050176,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8451669767178943,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.886047759211456
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.927537252283614,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8826595850585018,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8451117929303404,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8851028767574854
+      },
+      "overall_score": 0.9175588613999581,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9190848096308912,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9262335609717502
+      }
+    },
+    {
+      "test_case_id": 69,
+      "query": "Quy định về giá dịch vụ y tế?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8970375592430088,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.820672852267173,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8588552057550909
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9571576824676088,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8007270892914536,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8646236050161399,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8741694589250675
+      },
+      "overall_score": 0.9082561661700397,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.673376980814259
+      }
+    },
+    {
+      "test_case_id": 70,
+      "query": "Cách phòng tránh bệnh về mắt do sử dụng máy tính?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8253034854061118,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8171275329138711,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8212155091599914
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8683330091600678,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7586204021090058,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9442051990450797,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8570528701047179
+      },
+      "overall_score": 0.884632870586244,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9102631030802666,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9670964393214747
+      }
+    },
+    {
+      "test_case_id": 71,
+      "query": "Cách phân biệt vàng da do bệnh gan và bệnh khác?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7654301915651923,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8540620742394072,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8097461329022997
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7813457150726348,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7359191217078247,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8224216122601531
+      },
+      "overall_score": 0.883017744606783,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9199032332646788,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.756296782742331
+      }
+    },
+    {
+      "test_case_id": 72,
+      "query": "Các yếu tố tiên lượng tiền sản giật sớm?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8141349389970586,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7750459509612498,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7945904449791542
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9243595299048486,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7132852344965199,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8576801950884138,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8317749864965941
+      },
+      "overall_score": 0.8766627323208853,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9622739924565908,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9180115053512024,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5749367393901934
+      }
+    },
+    {
+      "test_case_id": 73,
+      "query": "Chính sách bảo hiểm y tế cho người nghèo?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8643232582945274,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8817787128603313,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8730509855774293
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.845362008849437,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.937244761078902,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8825708892936978,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8883925530740123
+      },
+      "overall_score": 0.902877953837445,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.900068276698338,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.3527731039963193
+      }
+    },
+    {
+      "test_case_id": 74,
+      "query": "Làm thế nào để cải thiện sức khỏe tâm thần?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8053303967348043,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7092498926203307,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7572901446775675
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8724119570717769,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7080755514496273,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8210125771365595,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8005000285526546
+      },
+      "overall_score": 0.8482881047841131,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.88536224590623,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.1989198165956227
+      }
+    },
+    {
+      "test_case_id": 75,
+      "query": "Cách đánh giá mức độ xơ hóa gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7548827705909446,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8195539894979486,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7872183800444466
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9042904982798399,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8234368945240226,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9478427232741958,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8918567053593528
+      },
+      "overall_score": 0.9022687713509498,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6618063151058533
+      }
+    },
+    {
+      "test_case_id": 76,
+      "query": "Các dấu hiệu cảnh báo tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7513777486264827,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.756793644316862,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7540856964716723
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9101663797480075,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7651953734582716,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8678091563650662,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8477236365237818
+      },
+      "overall_score": 0.880581297630527,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9705158575266537,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5432141910866928
+      }
+    },
+    {
+      "test_case_id": 77,
+      "query": "Quy định về tiêm chủng mở rộng hiện nay như thế nào?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9295884647749739,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7730722623585614,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8513303635667677
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8638324288967959,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.9490422606813833,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8714516683874605,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8947754526552133
+      },
+      "overall_score": 0.9028066411035875,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9151207481923691,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.3728419073811402
+      }
+    },
+    {
+      "test_case_id": 78,
+      "query": "Chế độ ăn uống tốt cho người cao huyết áp?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8952038718621084,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7584433733028368,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8268236225824726
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8639358724651381,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8208988227120987,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8206699951080443,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8351682300950937
+      },
+      "overall_score": 0.8904979631693917,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.0832589984654875
+      }
+    },
+    {
+      "test_case_id": 79,
+      "query": "Các dấu hiệu của bệnh gan do rượu?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8827974188928277,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.703558245218129,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7931778320554783
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8701485236800519,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8932453053298551,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8050612170218766,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8561516820105947
+      },
+      "overall_score": 0.8791042159295431,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8870873496520995,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7728185502432385
+      }
+    },
+    {
+      "test_case_id": 80,
+      "query": "Dấu hiệu chuyển từ tiền sản giật sang sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7256839659367216,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8214088306098102,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7735463982732659
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7692197575814379,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7730235101464913,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.917466457212826,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8199032416469184
+      },
+      "overall_score": 0.8634443444115435,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9708470038061116,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8894807339198779,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8700484262173718
+      }
+    },
+    {
+      "test_case_id": 81,
+      "query": "Quy trình thanh toán bảo hiểm y tế mới nhất?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8763031905017947,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8802757332844663,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8782894618931305
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8261435390577252,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7959707398340318,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.973788981472703,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8653010867881533
+      },
+      "overall_score": 0.9051520819114618,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9270177789645632,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.721060828456706
+      }
+    },
+    {
+      "test_case_id": 82,
+      "query": "Làm sao để cải thiện chất lượng giấc ngủ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8557520066721022,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7336326368778896,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7946923217749959
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7601656955003653,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8397287866165928,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8499648273723194
+      },
+      "overall_score": 0.8853222264747599,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9466317567517238,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.960035729508467
+      }
+    },
+    {
+      "test_case_id": 83,
+      "query": "Các chỉ số men gan bất thường thể hiện điều gì?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7752729723975099,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.825678393342929,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8004756828702195
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9409662391319362,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7843895407547576,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.89081796664022,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8720579155089713
+      },
+      "overall_score": 0.8956632410113738,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9627011652742814,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9474182003920231,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9689708501871128
+      }
+    },
+    {
+      "test_case_id": 84,
+      "query": "Phác đồ điều trị tiền sản giật nhẹ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7705410750795003,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7596809862815328,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7651110306805166
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7979809919438786,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8109185360772313,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.883673965532818,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8308578311846427
+      },
+      "overall_score": 0.8703396293307311,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9695068833199645,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9158827721378008,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.80505363777948
+      }
+    },
+    {
+      "test_case_id": 85,
+      "query": "Tiêu chuẩn đánh giá chất lượng bệnh viện hiện nay?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.770099264881577,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6942576730342159,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7321784689578965
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8338633166057683,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8280322409829891,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.871079756913824,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8443251048341938
+      },
+      "overall_score": 0.8550309288199137,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8936201414875645,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.353248089934342
+      }
+    },
+    {
+      "test_case_id": 86,
+      "query": "Những thay đổi lối sống để phòng ngừa ung thư?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9470709622904725,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7204135456543501,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8337422539724113
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9128978536377454,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8673073541277266,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8620884628865824,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8807645568840181
+      },
+      "overall_score": 0.9036267027141074,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.1109325464067727
+      }
+    },
+    {
+      "test_case_id": 87,
+      "query": "Những dấu hiệu của suy gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9026782374135074,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7887886211323326,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.84573342927292
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8773119677161685,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7789763324552461,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8687627667238048
+      },
+      "overall_score": 0.9052798597065829,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9266232428296068,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7939699063471735
+      }
+    },
+    {
+      "test_case_id": 88,
+      "query": "Tiêu chuẩn chẩn đoán tiền sản giật nặng?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8805973465455491,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6886560691064714,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7846267078260103
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.924327370418542,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7591807764617817,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8768508887325086,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8534530118709441
+      },
+      "overall_score": 0.8894442162360587,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.9696971452472808,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5983545637171455
+      }
+    },
+    {
+      "test_case_id": 89,
+      "query": "Danh mục thuốc được bảo hiểm y tế chi trả?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7506205150661612,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8184363850220854,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7845284500441233
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8791934495655159,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8090875144603561,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.930754283967316,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8730117493310626
+      },
+      "overall_score": 0.8893850498437965,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.758181732466093
+      }
+    },
+    {
+      "test_case_id": 90,
+      "query": "Chế độ ăn uống cho người bị viêm loét dạ dày?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9310440941553555,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8526213173908074,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8918327057730815
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8649549308309573,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8337273615508634,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.882894097460607
+      },
+      "overall_score": 0.9028081667744761,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8865058638642158,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.177359348409309
+      }
+    },
+    {
+      "test_case_id": 91,
+      "query": "Những triệu chứng của u gan lành tính?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7369948479859013,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7846238053230576,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7608093266544795
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8398889329773904,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7463978920543262,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8454289416772388
+      },
+      "overall_score": 0.8803897509435085,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9353207354423154,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.703788834781597
+      }
+    },
+    {
+      "test_case_id": 92,
+      "query": "Thời điểm chấm dứt thai kỳ khi bị tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.890789259598637,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7119920114933065,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8013906355459717
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.89712833163014,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8440237599580301,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8165896615049442,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8525805843643713
+      },
+      "overall_score": 0.8805170275168979,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8880968901572485,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.664233319019585
+      }
+    },
+    {
+      "test_case_id": 93,
+      "query": "Chính sách khám chữa bệnh cho người cao tuổi?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.9139472836055416,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8027154901428161,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8583313868741789
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8741465035205884,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8118559794954147,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9482220591491778,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8780748473883936
+      },
+      "overall_score": 0.9091015585656432,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.4197355355406682
+      }
+    },
+    {
+      "test_case_id": 94,
+      "query": "Những thực phẩm tốt cho sức khỏe não bộ?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8653620645511629,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8018517364104231,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.833606900480793
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9015618622345934,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8728497993425091,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9210949722020016,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8985022112597014
+      },
+      "overall_score": 0.9003289418899971,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9192066558194937,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.8558805444873807
+      }
+    },
+    {
+      "test_case_id": 95,
+      "query": "Những xét nghiệm cần làm khi nghi ngờ bệnh gan?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8854111137426465,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7887024745269936,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.83705679413482
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9484453497040772,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.722662989109901,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9442953126686593,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8718012171608791
+      },
+      "overall_score": 0.9002903799736006,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9617721615135497,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9305313470851535,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.7131887704422477
+      }
+    },
+    {
+      "test_case_id": 96,
+      "query": "Cách theo dõi sau sinh đối với sản phụ bị tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8983730092139827,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6926526091242373,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7955128091691099
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8235905603796276,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.7958239484292609,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.8049311795706138,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8081152294598342
+      },
+      "overall_score": 0.8741493036150696,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.9129691758313342,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9537058856004417
+      }
+    },
+    {
+      "test_case_id": 97,
+      "query": "Thông tư về đấu thầu thuốc trong các cơ sở y tế?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7500959135233777,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7911594689132813,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7706276912183294
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.9687396588039912,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.784643973276887,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.982631345450536,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.9120049925104713
+      },
+      "overall_score": 0.88271281529298,
+      "domain": "bo_y_te",
+      "agent_type": "document",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.898218577443119,
+        "reasoning": "Agent document hoạt động hiệu quả trong lĩnh vực bo_y_te.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.5141515630948457
+      }
+    },
+    {
+      "test_case_id": 98,
+      "query": "Cách chăm sóc sức khỏe tiêu hóa?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8783266676882313,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.7994816379937776,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8389041528410044
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.7711912146674608,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8023258093432849,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.854878421474118,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8094651484949545
+      },
+      "overall_score": 0.8723300845083173,
+      "domain": "suc_khoe",
+      "agent_type": "diagnosis",
+      "bias": {
+        "score": 0.95,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.8909510366973104,
+        "reasoning": "Agent diagnosis hoạt động hiệu quả trong lĩnh vực suc_khoe.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 2.285019881991305
+      }
+    },
+    {
+      "test_case_id": 99,
+      "query": "Những triệu chứng gan to do nguyên nhân khác nhau?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.8165867052487762,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.6911516206309902,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.7538691629398833
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8307796714767836,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8762390559697929,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.95,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8856729091488589
+      },
+      "overall_score": 0.886019264725048,
+      "domain": "chan_doan_gan",
+      "agent_type": "treatment",
+      "bias": {
+        "score": 0.9545349868114499,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.95,
+        "reasoning": "Agent treatment hoạt động hiệu quả trong lĩnh vực chan_doan_gan.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.9710663601324208
+      }
+    },
+    {
+      "test_case_id": 100,
+      "query": "Các xét nghiệm tiên đoán tiền sản giật?",
+      "retrieval": {
+        "context_relevancy": {
+          "score": 0.7935696090640975,
+          "reasoning": "Nội dung được truy xuất rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "context_precision": {
+          "score": 0.8610988557217288,
+          "reasoning": "Nội dung được truy xuất có độ chính xác tốt.",
+          "passed": true
+        },
+        "average_score": 0.8273342323929131
+      },
+      "response": {
+        "answer_relevancy": {
+          "score": 0.8374504376608202,
+          "reasoning": "Câu trả lời rất phù hợp với câu hỏi.",
+          "passed": true
+        },
+        "factual_consistency": {
+          "score": 0.8579691940626133,
+          "reasoning": "Thông tin trong câu trả lời nhất quán với ngữ cảnh.",
+          "passed": true
+        },
+        "hallucination": {
+          "score": 0.9341102774645789,
+          "reasoning": "Không phát hiện thông tin bịa đặt đáng kể.",
+          "passed": true
+        },
+        "average_score": 0.8765099697293374
+      },
+      "overall_score": 0.903232319972529,
+      "domain": "tien_san_giat",
+      "agent_type": "qa",
+      "bias": {
+        "score": 0.98,
+        "reasoning": "Không phát hiện định kiến trong câu trả lời.",
+        "passed": true
+      },
+      "agent_performance": {
+        "score": 0.929085077767865,
+        "reasoning": "Agent qa hoạt động hiệu quả trong lĩnh vực tien_san_giat.",
+        "passed": true
+      },
+      "latency": {
+        "value_seconds": 1.6394318496582816
+      }
+    }
+  ]
+}

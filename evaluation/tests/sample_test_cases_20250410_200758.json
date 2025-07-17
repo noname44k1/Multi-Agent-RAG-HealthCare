@@ -1,0 +1,42 @@
+[
+  {
+    "query": "Triệu chứng của bệnh tiểu đường là gì?",
+    "expected_answer": "Bệnh tiểu đường có các triệu chứng như khát nước, đi tiểu nhiều, mệt mỏi, đói thường xuyên.",
+    "domain": "medical",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Thủ tục đăng ký mã số thuế cá nhân gồm những gì?",
+    "expected_answer": "Thủ tục đăng ký mã số thuế cá nhân bao gồm nộp đơn đăng ký, CMND/CCCD, và các giấy tờ cần thiết khác tại cơ quan thuế.",
+    "domain": "tax",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "ChatGPT là gì và được phát triển bởi ai?",
+    "expected_answer": "ChatGPT là một mô hình ngôn ngữ lớn được phát triển bởi OpenAI, có khả năng tạo ra văn bản giống con người.",
+    "domain": "general",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Triệu chứng của bệnh tiểu đường là gì?",
+    "expected_answer": "Bệnh tiểu đường có các triệu chứng như khát nước, đi tiểu nhiều, mệt mỏi, đói thường xuyên.",
+    "domain": "medical",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  },
+  {
+    "query": "Thủ tục đăng ký mã số thuế cá nhân gồm những gì?",
+    "expected_answer": "Thủ tục đăng ký mã số thuế cá nhân bao gồm nộp đơn đăng ký, CMND/CCCD, và các giấy tờ cần thiết khác tại cơ quan thuế.",
+    "domain": "tax",
+    "response": null,
+    "retrieved_docs": null,
+    "latency_seconds": null
+  }
+]
