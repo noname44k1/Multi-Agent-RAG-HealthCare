@@ -1,10 +1,6 @@
-# 🤖 Building an AI Chatbot with LangChain and Python -
+# 🤖 Building an AI Chatbot with LangChain and Python
 
 ## 🔄 Agentic RAG Architecture 
-
-<p align="center">
-  <img src="RAG.drawio.png" alt="rag" width="600"/>
-</p>
 
 ### 📊 System Architecture
 
@@ -15,12 +11,6 @@ The project utilizes an advanced Agentic RAG (Retrieval-Augmented Generation) ar
 - **Specialized Prompts**: Each agent has its own optimized prompt for its specific medical domain.
 - **Centralized Management**: AgentManager analyzes questions and distributes them to the appropriate agent.
 - **Lazy Initialization**: Agents are created only when needed, saving resources.
-
-<p align="center">
-  <img src="Multi-Agent RAG.drawio.png" alt="Agentic RAG Workflow" width="700"/>
-  <br>
-  <em>Agentic RAG Workflow</em>
-</p>
 
 ## 🚀 Workflow Overview
 
