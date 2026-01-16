@@ -1,0 +1,2 @@
+# Datasets for "A Multi-Agent Framework integrating RAG with Hybrid Search for Medical Question Answering and Diagnostic Support"
+- Dataset: https://drive.google.com/file/d/1TPJFhr_NzHZ5bFdPZO_kc3CVPzU6SnMa/view?usp=sharing
