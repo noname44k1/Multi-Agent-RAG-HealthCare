@@ -332,7 +332,7 @@ Build-An-LLM-RAG-Chatbot-With-LangChain-Python/
 
 ### 2. Docker/Milvus Errors
 
-- **Error:** Không kết nối được Milvus
+- **Error:** Unable to connect to Milvus
 - **Solution:**
   1. Check if Docker Desktop is running
   2. Run command: `docker compose down`
