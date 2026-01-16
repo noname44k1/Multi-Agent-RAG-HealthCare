@@ -1,4 +1,4 @@
-# 🤖 Building an AI Chatbot with LangChain and Python
+# 🤖 A Multi-Agent Framework integrating RAG with Hybrid Search for Medical Question Answering and Diagnostic Support
 
 ## 🔄 Agentic RAG Architecture 
 
