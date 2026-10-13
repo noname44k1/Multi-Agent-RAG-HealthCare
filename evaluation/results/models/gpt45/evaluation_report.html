@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đánh Giá Hiệu Suất GPT-4.5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .metrics-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .metric-box {
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .metric-title {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        .performance-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .performance-value {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .badge-excellent {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .badge-good {
+            background-color: #e8f4f8;
+            color: #3498db;
+        }
+        .badge-average {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .chart-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Báo Cáo Đánh Giá GPT-4.5</h1>
+        
+        <div class="card">
+            <h2>Tổng Quan</h2>
+            <p>GPT-4.5 là mô hình ngôn ngữ lớn mới nhất từ OpenAI, cải tiến từ GPT-4o với khả năng suy luận mạnh mẽ hơn và độ chính xác cao nhất. Báo cáo này trình bày kết quả đánh giá hiệu suất của GPT-4.5 trên bộ test case RAG Chatbot gồm 100 câu hỏi đa dạng.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <span class="badge badge-excellent">Điểm tổng thể: 0.895</span>
+                <span class="badge badge-excellent">Factual Consistency: 0.91</span>
+                <span class="badge badge-excellent">Response Correctness: 0.90</span>
+                <span class="badge badge-good">Hallucination Rate: 0.07</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Metrics Đánh Giá</h2>
+            <p>Đánh giá dựa trên 8 metrics chính về hiệu suất retrieval và chất lượng response:</p>
+            
+            <div class="metrics-container">
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Relevancy</h3>
+                    <div class="metric-value">0.85</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 85%;"></div>
+                    </div>
+                    <p>Độ phù hợp của ngữ cảnh được truy xuất với câu hỏi.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Recall</h3>
+                    <div class="metric-value">0.83</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 83%;"></div>
+                    </div>
+                    <p>Khả năng truy xuất thông tin liên quan từ kho kiến thức.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Context Precision</h3>
+                    <div class="metric-value">0.88</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 88%;"></div>
+                    </div>
+                    <p>Độ chính xác của thông tin được truy xuất.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Answer Relevancy</h3>
+                    <div class="metric-value">0.89</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 89%;"></div>
+                    </div>
+                    <p>Độ phù hợp của câu trả lời với câu hỏi.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Factual Consistency</h3>
+                    <div class="metric-value">0.91</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 91%;"></div>
+                    </div>
+                    <p>Độ nhất quán với sự thật của câu trả lời.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Hallucination Rate</h3>
+                    <div class="metric-value">0.07</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 7%;"></div>
+                    </div>
+                    <p>Tỷ lệ tạo ra thông tin sai lệch (càng thấp càng tốt).</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Response Correctness</h3>
+                    <div class="metric-value">0.90</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 90%;"></div>
+                    </div>
+                    <p>Độ chính xác tổng thể của câu trả lời.</p>
+                </div>
+                
+                <div class="metric-box">
+                    <h3 class="metric-title">Response Completeness</h3>
+                    <div class="metric-value">0.86</div>
+                    <div class="performance-bar">
+                        <div class="performance-value" style="width: 86%;"></div>
+                    </div>
+                    <p>Độ đầy đủ của câu trả lời đối với yêu cầu.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Hiệu Suất Theo Lĩnh Vực</h2>
+            <p>GPT-4.5 được đánh giá trên 4 lĩnh vực y tế khác nhau để đánh giá tính đa dạng và khả năng áp dụng:</p>
+            
+            <table>
+                <tr>
+                    <th>Lĩnh Vực</th>
+                    <th>Điểm Số</th>
+                    <th>Đánh Giá</th>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp Bộ Y Tế</td>
+                    <td>0.89</td>
+                    <td>Xuất sắc</td>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp về Sức Khoẻ</td>
+                    <td>0.84</td>
+                    <td>Rất tốt</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán bệnh Gan</td>
+                    <td>0.81</td>
+                    <td>Rất tốt</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán nguy cơ Tiền Sản Giật</td>
+                    <td>0.87</td>
+                    <td>Xuất sắc</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>Điểm Mạnh và Điểm Yếu</h2>
+            
+            <h3>Điểm Mạnh</h3>
+            <ul>
+                <li><strong>Hallucination thấp:</strong> Tỷ lệ hallucination thấp nhất (0.07) trong tất cả các mô hình được đánh giá.</li>
+                <li><strong>Factual Consistency cao:</strong> Độ nhất quán với sự thật (0.91) cao nhất, cung cấp thông tin đáng tin cậy.</li>
+                <li><strong>Hiệu suất tốt ở tất cả các lĩnh vực y tế:</strong> Hiệu suất rất cao ở cả 4 lĩnh vực, đặc biệt là trong Hỏi đáp Bộ Y Tế (0.89) và Chẩn đoán nguy cơ Tiền Sản Giật (0.87).</li>
+                <li><strong>Suy luận phức tạp:</strong> Khả năng xử lý các yêu cầu phức tạp và đòi hỏi suy luận sâu vượt trội.</li>
+                <li><strong>Hiểu ngữ cảnh:</strong> Hiểu ngữ cảnh và trích xuất thông tin liên quan chính xác.</li>
+            </ul>
+            
+            <h3>Điểm Yếu</h3>
+            <ul>
+                <li><strong>Hiệu suất thấp hơn trong lĩnh vực Chẩn đoán bệnh Gan:</strong> Lĩnh vực Chẩn đoán bệnh Gan có điểm thấp nhất (0.81), cho thấy cần cải thiện trong xử lý thông tin chẩn đoán phức tạp.</li>
+                <li><strong>Chi phí tính toán cao:</strong> Mô hình có yêu cầu tài nguyên lớn và chi phí vận hành cao hơn các mô hình khác.</li>
+                <li><strong>Độ trễ:</strong> Thời gian phản hồi lâu hơn so với các mô hình nhỏ như O3-mini.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Biểu Đồ Hiệu Suất</h2>
+            
+            <div class="chart-container">
+                <img src="charts/metrics_comparison.png" alt="Biểu đồ so sánh các metrics" style="max-width: 100%; height: auto;">
+                <p><em>Biểu đồ so sánh các metrics hiệu suất của GPT-4.5</em></p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="../gpt4o/evaluation_report.html" class="btn">So Sánh Với GPT-4o</a>
+                <a href="../gpt4/evaluation_report.html" class="btn">So Sánh Với GPT-4</a>
+                <a href="../../reports/index.html" class="btn">Quay Lại Trang Chính</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Báo Cáo Đánh Giá GPT-4.5 - 13/04/2025</p>
+            <p>Build-An-LLM-RAG-Chatbot-With-LangChain-Python</p>
+            <p>Automated RAG Evaluation Framework v2.0</p>
+        </div>
+    </div>
+</body>
+</html>

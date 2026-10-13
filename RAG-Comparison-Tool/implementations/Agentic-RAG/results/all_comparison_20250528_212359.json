@@ -1,0 +1,494 @@
+[
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 0.9463451898600372,
+      "doc_count": 7,
+      "token_count": 1168,
+      "accuracy": 0.8607033294285042,
+      "relevance": 0.9690329627491492,
+      "context_precision": 0.7629719350896779
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 1.6003138756107222,
+      "doc_count": 4,
+      "token_count": 1781,
+      "accuracy": 0.9319932836538809,
+      "relevance": 0.9051556543454405,
+      "context_precision": 0.8324798097388019
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 0.7524514905295949,
+      "doc_count": 8,
+      "token_count": 1755,
+      "accuracy": 0.7888989251240137,
+      "relevance": 0.8318171287065862,
+      "context_precision": 0.8993166250143095
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?'",
+      "time": 1.2528671674174032,
+      "doc_count": 3,
+      "token_count": 1826,
+      "accuracy": 0.7068164554899422,
+      "relevance": 0.682972923813556,
+      "context_precision": 0.8062762485479507
+    },
+    "query": "Tôi bị đau đầu và chóng mặt thường xuyên, có thể là dấu hiệu của bệnh gì?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:46.494216"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 0.6470606491186877,
+      "doc_count": 3,
+      "token_count": 2412,
+      "accuracy": 0.8930559647783283,
+      "relevance": 0.7080416633303548,
+      "context_precision": 0.942257200610034
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 1.9450351079078845,
+      "doc_count": 8,
+      "token_count": 1214,
+      "accuracy": 0.7447015556789394,
+      "relevance": 0.7079150699304961,
+      "context_precision": 0.8163776199712691
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 0.9143163992752656,
+      "doc_count": 4,
+      "token_count": 1365,
+      "accuracy": 0.9392395234052584,
+      "relevance": 0.918996451835207,
+      "context_precision": 0.9354580509290187
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh tim mạch?'",
+      "time": 0.9111957934478984,
+      "doc_count": 7,
+      "token_count": 2449,
+      "accuracy": 0.8459589494595054,
+      "relevance": 0.9129942247093534,
+      "context_precision": 0.7838623133762145
+    },
+    "query": "Làm thế nào để phòng ngừa bệnh tim mạch?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:47.709025"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 1.0883103226851576,
+      "doc_count": 6,
+      "token_count": 2188,
+      "accuracy": 0.8472361532771069,
+      "relevance": 0.7991628344450454,
+      "context_precision": 0.7603485887644035
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 1.254296478809572,
+      "doc_count": 8,
+      "token_count": 848,
+      "accuracy": 0.9106134385183313,
+      "relevance": 0.7789620605596095,
+      "context_precision": 0.8159464214391025
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 1.4556407031152925,
+      "doc_count": 7,
+      "token_count": 2243,
+      "accuracy": 0.7853052079870481,
+      "relevance": 0.8750554677732392,
+      "context_precision": 0.967783919547451
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Triệu chứng của bệnh tiểu đường là gì?'",
+      "time": 0.5271869104282059,
+      "doc_count": 6,
+      "token_count": 2354,
+      "accuracy": 0.7894828152944214,
+      "relevance": 0.7365928228411576,
+      "context_precision": 0.9079325813763135
+    },
+    "query": "Triệu chứng của bệnh tiểu đường là gì?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:48.914926"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 1.6019438188162898,
+      "doc_count": 6,
+      "token_count": 1073,
+      "accuracy": 0.7997840275570596,
+      "relevance": 0.7944095767562351,
+      "context_precision": 0.8094413592539347
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 1.4044186249170396,
+      "doc_count": 8,
+      "token_count": 1326,
+      "accuracy": 0.9389048321469153,
+      "relevance": 0.8999617817404956,
+      "context_precision": 0.7552593046646598
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 1.2599737410685,
+      "doc_count": 6,
+      "token_count": 2182,
+      "accuracy": 0.8834513967259713,
+      "relevance": 0.6965396063171069,
+      "context_precision": 0.8187338426408575
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Cách điều trị viêm họng hiệu quả tại nhà?'",
+      "time": 0.6207154650798098,
+      "doc_count": 5,
+      "token_count": 2380,
+      "accuracy": 0.844755370759267,
+      "relevance": 0.7329532763807781,
+      "context_precision": 0.8312186091529816
+    },
+    "query": "Cách điều trị viêm họng hiệu quả tại nhà?",
+    "dataset": "medical",
+    "timestamp": "2025-05-28T21:23:50.130401"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Triệu chứng của bệnh gan là gì?'",
+      "time": 1.7976184364268113,
+      "doc_count": 8,
+      "token_count": 2023,
+      "accuracy": 0.7517696159091714,
+      "relevance": 0.885448665638934,
+      "context_precision": 0.9362433819904283
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Triệu chứng của bệnh gan là gì?'",
+      "time": 1.8702395356677077,
+      "doc_count": 3,
+      "token_count": 1855,
+      "accuracy": 0.769128949132605,
+      "relevance": 0.9659720270321794,
+      "context_precision": 0.9588644163697839
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Triệu chứng của bệnh gan là gì?'",
+      "time": 1.3203541171502282,
+      "doc_count": 6,
+      "token_count": 1132,
+      "accuracy": 0.754493095443845,
+      "relevance": 0.9509810338386703,
+      "context_precision": 0.9234362667226182
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Triệu chứng của bệnh gan là gì?'",
+      "time": 1.2539624225244335,
+      "doc_count": 7,
+      "token_count": 2170,
+      "accuracy": 0.9174591712950154,
+      "relevance": 0.6525868437879011,
+      "context_precision": 0.8051897074759405
+    },
+    "query": "Triệu chứng của bệnh gan là gì?",
+    "dataset": "liver",
+    "timestamp": "2025-05-28T21:23:51.342282"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh gan?'",
+      "time": 1.206823066265116,
+      "doc_count": 6,
+      "token_count": 1143,
+      "accuracy": 0.9253196646414799,
+      "relevance": 0.733150097567444,
+      "context_precision": 0.8702614123526652
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh gan?'",
+      "time": 1.4529505145022816,
+      "doc_count": 2,
+      "token_count": 936,
+      "accuracy": 0.9187135166209257,
+      "relevance": 0.7436233098554339,
+      "context_precision": 0.7914232911331242
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh gan?'",
+      "time": 0.5274132809816791,
+      "doc_count": 2,
+      "token_count": 1745,
+      "accuracy": 0.8037424639709754,
+      "relevance": 0.695644035024191,
+      "context_precision": 0.7731743150757291
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Làm thế nào để phòng ngừa bệnh gan?'",
+      "time": 0.8947487448248906,
+      "doc_count": 4,
+      "token_count": 1624,
+      "accuracy": 0.7918584770781321,
+      "relevance": 0.9500986736767794,
+      "context_precision": 0.9669998933952132
+    },
+    "query": "Làm thế nào để phòng ngừa bệnh gan?",
+    "dataset": "liver",
+    "timestamp": "2025-05-28T21:23:52.546678"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Tác dụng phụ của thuốc điều trị gan nhiễm mỡ?'",
+      "time": 0.5185322699330275,
+      "doc_count": 3,
+      "token_count": 2311,
+      "accuracy": 0.7155016083699313,
+      "relevance": 0.6713643837146115,
+      "context_precision": 0.9653000842012701
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Tác dụng phụ của thuốc điều trị gan nhiễm mỡ?'",
+      "time": 1.9476638262312378,
+      "doc_count": 3,
+      "token_count": 2231,
+      "accuracy": 0.7783408761671005,
+      "relevance": 0.7019140618537004,
+      "context_precision": 0.9181459225637114
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Tác dụng phụ của thuốc điều trị gan nhiễm mỡ?'",
+      "time": 1.091391358555831,
+      "doc_count": 4,
+      "token_count": 1263,
+      "accuracy": 0.8645753030895583,
+      "relevance": 0.806510044708014,
+      "context_precision": 0.8892016489960209
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Tác dụng phụ của thuốc điều trị gan nhiễm mỡ?'",
+      "time": 1.6077546062637191,
+      "doc_count": 2,
+      "token_count": 1014,
+      "accuracy": 0.817298920835896,
+      "relevance": 0.937296816651032,
+      "context_precision": 0.9476231817196497
+    },
+    "query": "Tác dụng phụ của thuốc điều trị gan nhiễm mỡ?",
+    "dataset": "liver",
+    "timestamp": "2025-05-28T21:23:53.754889"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Chế độ ăn uống cho người bị gan nhiễm mỡ?'",
+      "time": 1.3373576202402517,
+      "doc_count": 8,
+      "token_count": 812,
+      "accuracy": 0.8055223807223894,
+      "relevance": 0.8077836009978943,
+      "context_precision": 0.8658914838356846
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Chế độ ăn uống cho người bị gan nhiễm mỡ?'",
+      "time": 0.9132563874193571,
+      "doc_count": 5,
+      "token_count": 1734,
+      "accuracy": 0.8264946480751064,
+      "relevance": 0.9147268329429619,
+      "context_precision": 0.9626615419683276
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Chế độ ăn uống cho người bị gan nhiễm mỡ?'",
+      "time": 0.9596226887563115,
+      "doc_count": 7,
+      "token_count": 2168,
+      "accuracy": 0.8959727223276112,
+      "relevance": 0.9146554696928401,
+      "context_precision": 0.8215474131662783
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Chế độ ăn uống cho người bị gan nhiễm mỡ?'",
+      "time": 0.585715573709379,
+      "doc_count": 8,
+      "token_count": 1744,
+      "accuracy": 0.8294835583764265,
+      "relevance": 0.9510584350117784,
+      "context_precision": 0.839333896721061
+    },
+    "query": "Chế độ ăn uống cho người bị gan nhiễm mỡ?",
+    "dataset": "liver",
+    "timestamp": "2025-05-28T21:23:54.978211"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 1.0454787776280414,
+      "doc_count": 4,
+      "token_count": 1363,
+      "accuracy": 0.9013445616718327,
+      "relevance": 0.8412028009782264,
+      "context_precision": 0.9532307565172775
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 1.8796010575124524,
+      "doc_count": 5,
+      "token_count": 1581,
+      "accuracy": 0.7890711281068566,
+      "relevance": 0.8029052855628103,
+      "context_precision": 0.82738818715409
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 1.1331694202841862,
+      "doc_count": 4,
+      "token_count": 2346,
+      "accuracy": 0.871033021748691,
+      "relevance": 0.8877306635866533,
+      "context_precision": 0.9633249406208543
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Tiền sản giật là gì và có nguy hiểm không?'",
+      "time": 0.8998702462113428,
+      "doc_count": 2,
+      "token_count": 1515,
+      "accuracy": 0.949981745973195,
+      "relevance": 0.8499666144860245,
+      "context_precision": 0.9632558811352133
+    },
+    "query": "Tiền sản giật là gì và có nguy hiểm không?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:56.196620"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 1.917316438701821,
+      "doc_count": 8,
+      "token_count": 832,
+      "accuracy": 0.8771621400515961,
+      "relevance": 0.6882254746078914,
+      "context_precision": 0.8911827814354798
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 1.2991591250721306,
+      "doc_count": 6,
+      "token_count": 2013,
+      "accuracy": 0.825572505023804,
+      "relevance": 0.8974696705615142,
+      "context_precision": 0.8749658170689358
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 1.4228829608563671,
+      "doc_count": 2,
+      "token_count": 1940,
+      "accuracy": 0.83944984924208,
+      "relevance": 0.7680978310331409,
+      "context_precision": 0.7780908983401292
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Làm thế nào để phát hiện tiền sản giật sớm?'",
+      "time": 0.7658051716899347,
+      "doc_count": 6,
+      "token_count": 2175,
+      "accuracy": 0.7259620207885565,
+      "relevance": 0.6632073682212318,
+      "context_precision": 0.9441730427049511
+    },
+    "query": "Làm thế nào để phát hiện tiền sản giật sớm?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:57.408217"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 1.3584791141955166,
+      "doc_count": 6,
+      "token_count": 1191,
+      "accuracy": 0.8247072532309285,
+      "relevance": 0.7286484622559493,
+      "context_precision": 0.752813711876662
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 1.4117157167882266,
+      "doc_count": 3,
+      "token_count": 2269,
+      "accuracy": 0.9157884547182282,
+      "relevance": 0.8464546705682743,
+      "context_precision": 0.7563992438015668
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 1.4377351190304546,
+      "doc_count": 7,
+      "token_count": 2263,
+      "accuracy": 0.8659662622731268,
+      "relevance": 0.7239271209568353,
+      "context_precision": 0.8306685806478448
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Các yếu tố nguy cơ gây tiền sản giật?'",
+      "time": 0.6270924675178688,
+      "doc_count": 6,
+      "token_count": 1455,
+      "accuracy": 0.9138538360130741,
+      "relevance": 0.919642795351728,
+      "context_precision": 0.81456802731163
+    },
+    "query": "Các yếu tố nguy cơ gây tiền sản giật?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:58.615599"
+  },
+  {
+    "RAPTOR": {
+      "answer": "[RAPTOR] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 1.7336222957609357,
+      "doc_count": 7,
+      "token_count": 1800,
+      "accuracy": 0.9333018201323106,
+      "relevance": 0.8141096502226327,
+      "context_precision": 0.8783349695108615
+    },
+    "MA-RAG": {
+      "answer": "[MA-RAG] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 0.835487303286323,
+      "doc_count": 4,
+      "token_count": 2464,
+      "accuracy": 0.8586072710495412,
+      "relevance": 0.8803114113161621,
+      "context_precision": 0.9620105888318591
+    },
+    "MAIN-RAG": {
+      "answer": "[MAIN-RAG] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 1.524877564871487,
+      "doc_count": 7,
+      "token_count": 1918,
+      "accuracy": 0.7878104983230244,
+      "relevance": 0.8051180756139258,
+      "context_precision": 0.8676081520176365
+    },
+    "Agentic RAG": {
+      "answer": "[Agentic RAG] Câu trả lời cho 'Biện pháp điều trị tiền sản giật hiện nay?'",
+      "time": 0.8464467480134572,
+      "doc_count": 8,
+      "token_count": 1142,
+      "accuracy": 0.7100149402602106,
+      "relevance": 0.8502792035277209,
+      "context_precision": 0.8209201920648057
+    },
+    "query": "Biện pháp điều trị tiền sản giật hiện nay?",
+    "dataset": "preeclampsia",
+    "timestamp": "2025-05-28T21:23:59.825204"
+  }
+]

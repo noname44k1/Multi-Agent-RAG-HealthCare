@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Triệu chứng của bệnh tiểu đường là gì?",
+    "expected_answer": "Bệnh tiểu đường có các triệu chứng như khát nước, đi tiểu nhiều, mệt mỏi, sụt cân không rõ nguyên nhân. Ngoài ra có thể bao gồm các triệu chứng như mờ mắt, vết thương lâu lành, nhiễm trùng thường xuyên.",
+    "domain": "medical",
+    "response": "Bệnh tiểu đường có các triệu chứng phổ biến như khát nước, đi tiểu nhiều, mệt mỏi, và sụt cân không rõ nguyên nhân. Bệnh nhân cũng thường gặp các vấn đề như mờ mắt, vết thương lâu lành, và dễ bị nhiễm trùng. Các triệu chứng này có thể xuất hiện nhanh chóng ở bệnh tiểu đường type 1, hoặc phát triển từ từ ở type 2.",
+    "expected_context": [
+      "Bệnh tiểu đường (đái tháo đường) có các triệu chứng như khát nước, đi tiểu nhiều, mệt mỏi, sụt cân không rõ nguyên nhân, mờ mắt, vết thương lâu lành, và nhiễm trùng thường xuyên. Triệu chứng có thể phát triển nhanh chóng trong vài tuần hoặc tháng ở bệnh tiểu đường type 1, trong khi có thể phát triển từ từ hoặc không rõ ràng ở bệnh tiểu đường type 2."
+    ],
+    "retrieved_docs": [
+      {
+        "page_content": "Bệnh tiểu đường (đái tháo đường) có các triệu chứng như khát nước, đi tiểu nhiều, mệt mỏi, sụt cân không rõ nguyên nhân, mờ mắt, vết thương lâu lành, và nhiễm trùng thường xuyên. Triệu chứng có thể phát triển nhanh chóng trong vài tuần hoặc tháng ở bệnh tiểu đường type 1, trong khi có thể phát triển từ từ hoặc không rõ ràng ở bệnh tiểu đường type 2.",
+        "metadata": {"source": "medical_db/diabetes.txt"}
+      }
+    ],
+    "latency_seconds": 1.5
+  },
+  {
+    "query": "Thủ tục đăng ký mã số thuế cá nhân gồm những gì?",
+    "expected_answer": "Thủ tục đăng ký mã số thuế cá nhân bao gồm: (1) Chuẩn bị hồ sơ gồm đơn đăng ký theo mẫu 05-MST, bản sao CMND/CCCD; (2) Nộp hồ sơ tại cơ quan thuế hoặc qua cổng dịch vụ công; (3) Nhận mã số thuế sau 3-5 ngày làm việc.",
+    "domain": "tax",
+    "response": "Thủ tục đăng ký mã số thuế cá nhân bao gồm các bước sau: (1) Chuẩn bị hồ sơ gồm đơn đăng ký theo mẫu 05-MST và bản sao CMND/CCCD có công chứng. (2) Nộp hồ sơ tại cơ quan thuế địa phương hoặc qua cổng dịch vụ công trực tuyến. (3) Nhận mã số thuế sau khoảng 3-5 ngày làm việc. Việc đăng ký mã số thuế cá nhân là bắt buộc đối với người có thu nhập chịu thuế.",
+    "expected_context": [
+      "Thủ tục đăng ký mã số thuế cá nhân bao gồm: Bước 1: Chuẩn bị hồ sơ gồm đơn đăng ký theo mẫu 05-MST và bản sao CMND/CCCD có công chứng. Bước 2: Nộp hồ sơ tại cơ quan thuế địa phương hoặc qua cổng dịch vụ công trực tuyến. Bước 3: Nhận mã số thuế sau khoảng 3-5 ngày làm việc."
+    ],
+    "retrieved_docs": [
+      {
+        "page_content": "Thủ tục đăng ký mã số thuế cá nhân bao gồm: Bước 1: Chuẩn bị hồ sơ gồm đơn đăng ký theo mẫu 05-MST và bản sao CMND/CCCD có công chứng. Bước 2: Nộp hồ sơ tại cơ quan thuế địa phương hoặc qua cổng dịch vụ công trực tuyến. Bước 3: Nhận mã số thuế sau khoảng 3-5 ngày làm việc.",
+        "metadata": {"source": "tax_db/personal_tax.txt"}
+      }
+    ],
+    "latency_seconds": 1.2
+  },
+  {
+    "query": "Quy định về giới hạn nồng độ cồn khi lái xe ở Việt Nam là gì?",
+    "expected_answer": "Tại Việt Nam, quy định về nồng độ cồn khi lái xe là 0 (không uống rượu bia khi lái xe). Cụ thể: người điều khiển xe máy không được phép có nồng độ cồn trong máu hoặc hơi thở, đối với xe ô tô, xe máy và các phương tiện khác cũng áp dụng quy định tương tự.",
+    "domain": "general",
+    "response": "Theo quy định hiện hành tại Việt Nam, giới hạn nồng độ cồn khi lái xe là 0 (tức là không uống rượu bia khi lái xe). Nghị định 100/2019/NĐ-CP và Luật Phòng, chống tác hại của rượu, bia quy định rõ rằng người điều khiển phương tiện giao thông không được phép có nồng độ cồn trong máu và hơi thở. Quy định này áp dụng cho cả xe máy, ô tô và các phương tiện giao thông khác.",
+    "expected_context": [
+      "Theo Nghị định 100/2019/NĐ-CP và Luật Phòng, chống tác hại của rượu, bia, quy định về nồng độ cồn khi lái xe ở Việt Nam hiện nay là 0 (tức không uống rượu bia khi lái xe). Người điều khiển xe mô tô, ô tô và các phương tiện giao thông khác không được phép có nồng độ cồn trong máu và hơi thở khi tham gia giao thông."
+    ],
+    "retrieved_docs": [
+      {
+        "page_content": "Theo Nghị định 100/2019/NĐ-CP và Luật Phòng, chống tác hại của rượu, bia, quy định về nồng độ cồn khi lái xe ở Việt Nam hiện nay là 0 (tức không uống rượu bia khi lái xe). Người điều khiển xe mô tô, ô tô và các phương tiện giao thông khác không được phép có nồng độ cồn trong máu và hơi thở khi tham gia giao thông.",
+        "metadata": {"source": "law_db/traffic_regulations.txt"}
+      }
+    ],
+    "latency_seconds": 0.9
+  },
+  {
+    "query": "Cách điều trị tiền sản giật nặng?",
+    "expected_answer": "Điều trị tiền sản giật nặng bao gồm: (1) Nhập viện ngay để theo dõi; (2) Dùng thuốc chống co giật như MgSO4; (3) Kiểm soát huyết áp bằng thuốc hạ áp; (4) Cân nhắc việc sinh sớm nếu tình trạng nặng. Đây là bệnh lý nguy hiểm cần được điều trị tích cực bởi bác sĩ chuyên khoa.",
+    "domain": "medical",
+    "response": "Điều trị tiền sản giật nặng cần thực hiện ngay các biện pháp sau: (1) Nhập viện ngay lập tức để theo dõi chặt chẽ; (2) Dùng MgSO4 (magiê sulfat) để phòng ngừa và điều trị co giật; (3) Kiểm soát huyết áp bằng thuốc hạ áp như hydralazine, labetalol; (4) Theo dõi chức năng gan, thận và đông máu; (5) Đánh giá tình trạng thai nhi; (6) Cân nhắc việc sinh sớm nếu tình trạng mẹ xấu đi hoặc thai nhi có dấu hiệu nguy hiểm. Tiền sản giật nặng là bệnh lý sản khoa cấp cứu cần được điều trị tích cực bởi bác sĩ chuyên khoa.",
+    "expected_context": [
+      "Điều trị tiền sản giật nặng bao gồm: Nhập viện ngay lập tức để theo dõi chặt chẽ; Dùng MgSO4 (magiê sulfat) để phòng ngừa và điều trị co giật; Kiểm soát huyết áp bằng thuốc hạ áp như hydralazine, labetalol; Theo dõi chức năng gan, thận và đông máu; Đánh giá tình trạng thai nhi; Cân nhắc việc sinh sớm nếu tình trạng mẹ xấu đi hoặc thai nhi có dấu hiệu nguy hiểm. Tiền sản giật nặng là bệnh lý sản khoa cấp cứu cần được điều trị tích cực."
+    ],
+    "retrieved_docs": [
+      {
+        "page_content": "Điều trị tiền sản giật nặng bao gồm: Nhập viện ngay lập tức để theo dõi chặt chẽ; Dùng MgSO4 (magiê sulfat) để phòng ngừa và điều trị co giật; Kiểm soát huyết áp bằng thuốc hạ áp như hydralazine, labetalol; Theo dõi chức năng gan, thận và đông máu; Đánh giá tình trạng thai nhi; Cân nhắc việc sinh sớm nếu tình trạng mẹ xấu đi hoặc thai nhi có dấu hiệu nguy hiểm. Tiền sản giật nặng là bệnh lý sản khoa cấp cứu cần được điều trị tích cực.",
+        "metadata": {"source": "medical_db/pregnancy_complications.txt"}
+      }
+    ],
+    "latency_seconds": 1.8
+  },
+  {
+    "query": "Thời hạn nộp thuế thu nhập cá nhân là khi nào?",
+    "expected_answer": "Thời hạn nộp thuế thu nhập cá nhân (TNCN) tại Việt Nam được quy định như sau: (1) Đối với tổ chức trả thu nhập: nộp thuế TNCN hàng tháng chậm nhất ngày 20 của tháng tiếp theo; (2) Đối với cá nhân tự khai thuế: quyết toán thuế TNCN hàng năm chậm nhất là ngày 30/4 của năm sau.",
+    "domain": "tax",
+    "response": "Thời hạn nộp thuế thu nhập cá nhân (TNCN) tại Việt Nam được quy định cụ thể như sau: (1) Đối với tổ chức trả thu nhập: phải khấu trừ và nộp thuế TNCN hàng tháng chậm nhất là ngày 20 của tháng tiếp theo tháng khấu trừ. (2) Đối với cá nhân tự khai thuế: phải quyết toán thuế TNCN hàng năm chậm nhất là ngày 30/4 của năm tiếp theo. (3) Trường hợp cá nhân có phát sinh hoạt động kinh doanh: phải nộp thuế theo quý, chậm nhất là ngày cuối cùng của tháng đầu quý tiếp theo.",
+    "expected_context": [
+      "Thời hạn nộp thuế thu nhập cá nhân (TNCN) tại Việt Nam được quy định như sau: Đối với tổ chức trả thu nhập: phải khấu trừ và nộp thuế TNCN hàng tháng chậm nhất là ngày 20 của tháng tiếp theo tháng khấu trừ. Đối với cá nhân tự khai thuế: phải quyết toán thuế TNCN hàng năm chậm nhất là ngày 30/4 của năm tiếp theo. Trường hợp cá nhân có phát sinh hoạt động kinh doanh: nộp thuế theo quý, chậm nhất là ngày cuối cùng của tháng đầu quý tiếp theo."
+    ],
+    "retrieved_docs": [
+      {
+        "page_content": "Thời hạn nộp thuế thu nhập cá nhân (TNCN) tại Việt Nam được quy định như sau: Đối với tổ chức trả thu nhập: phải khấu trừ và nộp thuế TNCN hàng tháng chậm nhất là ngày 20 của tháng tiếp theo tháng khấu trừ. Đối với cá nhân tự khai thuế: phải quyết toán thuế TNCN hàng năm chậm nhất là ngày 30/4 của năm tiếp theo. Trường hợp cá nhân có phát sinh hoạt động kinh doanh: nộp thuế theo quý, chậm nhất là ngày cuối cùng của tháng đầu quý tiếp theo.",
+        "metadata": {"source": "tax_db/personal_income_tax.txt"}
+      }
+    ],
+    "latency_seconds": 1.3
+  }
+] 

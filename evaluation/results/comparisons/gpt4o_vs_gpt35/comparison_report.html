@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>So Sánh GPT-4o và GPT-3.5-Turbo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .best {
+            background-color: #d4edda;
+            font-weight: bold;
+        }
+        .chart-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .model-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .model-col {
+            flex: 1;
+            padding: 0 15px;
+        }
+        .model-col h3 {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .diff-highlight {
+            background-color: #f8f4e5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .positive {
+            color: #28a745;
+        }
+        .negative {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>So Sánh Chi Tiết: GPT-4o vs GPT-3.5-Turbo</h1>
+        
+        <div class="card">
+            <h2>Tổng Quan</h2>
+            <p>Báo cáo này trình bày so sánh chi tiết giữa GPT-4o, mô hình mạnh mẽ và đa chức năng của OpenAI, và GPT-3.5-Turbo, mô hình phổ biến và tiết kiệm chi phí. So sánh dựa trên bộ test case RAG Chatbot gồm 100 câu hỏi đa dạng trong lĩnh vực y tế.</p>
+            
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>GPT-4o</th>
+                    <th>GPT-3.5-Turbo</th>
+                    <th>Chênh lệch</th>
+                </tr>
+                <tr>
+                    <td>Điểm tổng thể</td>
+                    <td class="best">0.870</td>
+                    <td>0.793</td>
+                    <td class="positive">+0.077 (9.7%)</td>
+                </tr>
+                <tr>
+                    <td>Context Relevancy</td>
+                    <td class="best">0.83</td>
+                    <td>0.77</td>
+                    <td class="positive">+0.06 (7.8%)</td>
+                </tr>
+                <tr>
+                    <td>Context Recall</td>
+                    <td class="best">0.81</td>
+                    <td>0.75</td>
+                    <td class="positive">+0.06 (8.0%)</td>
+                </tr>
+                <tr>
+                    <td>Context Precision</td>
+                    <td class="best">0.86</td>
+                    <td>0.80</td>
+                    <td class="positive">+0.06 (7.5%)</td>
+                </tr>
+                <tr>
+                    <td>Answer Relevancy</td>
+                    <td class="best">0.87</td>
+                    <td>0.81</td>
+                    <td class="positive">+0.06 (7.4%)</td>
+                </tr>
+                <tr>
+                    <td>Factual Consistency</td>
+                    <td class="best">0.88</td>
+                    <td>0.82</td>
+                    <td class="positive">+0.06 (7.3%)</td>
+                </tr>
+                <tr>
+                    <td>Hallucination Rate</td>
+                    <td class="best">0.09</td>
+                    <td>0.15</td>
+                    <td class="positive">-0.06 (40.0%)</td>
+                </tr>
+                <tr>
+                    <td>Response Correctness</td>
+                    <td class="best">0.87</td>
+                    <td>0.79</td>
+                    <td class="positive">+0.08 (10.1%)</td>
+                </tr>
+                <tr>
+                    <td>Response Completeness</td>
+                    <td class="best">0.84</td>
+                    <td>0.77</td>
+                    <td class="positive">+0.07 (9.1%)</td>
+                </tr>
+                <tr>
+                    <td>Thời gian phản hồi (ms)</td>
+                    <td>1800</td>
+                    <td class="best">1500</td>
+                    <td class="negative">+300 (20.0%)</td>
+                </tr>
+                <tr>
+                    <td>Chi phí tương đối</td>
+                    <td>8</td>
+                    <td class="best">2</td>
+                    <td class="negative">+6 (300%)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Hiệu Suất Theo Lĩnh Vực</h2>
+            
+            <table>
+                <tr>
+                    <th>Lĩnh Vực</th>
+                    <th>GPT-4o</th>
+                    <th>GPT-3.5-Turbo</th>
+                    <th>Chênh lệch</th>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp Bộ Y Tế</td>
+                    <td class="best">0.87</td>
+                    <td>0.81</td>
+                    <td class="positive">+0.06 (7.4%)</td>
+                </tr>
+                <tr>
+                    <td>Hỏi đáp về Sức Khoẻ</td>
+                    <td class="best">0.82</td>
+                    <td>0.76</td>
+                    <td class="positive">+0.06 (7.9%)</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán bệnh Gan</td>
+                    <td class="best">0.79</td>
+                    <td>0.73</td>
+                    <td class="positive">+0.06 (8.2%)</td>
+                </tr>
+                <tr>
+                    <td>Chẩn đoán nguy cơ Tiền Sản Giật</td>
+                    <td class="best">0.85</td>
+                    <td>0.79</td>
+                    <td class="positive">+0.06 (7.6%)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>So Sánh Chi Tiết</h2>
+            
+            <div class="model-comparison">
+                <div class="model-col">
+                    <h3>GPT-4o</h3>
+                    <h4>Điểm mạnh</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Hiệu suất tổng thể tốt hơn (0.870)</span>: Vượt trội 9.7% so với GPT-3.5-Turbo</li>
+                        <li><span class="diff-highlight">Hallucination thấp hơn (0.09)</span>: Giảm 40.0% tỷ lệ tạo thông tin sai lệch</li>
+                        <li><span class="diff-highlight">Factual Consistency cao hơn (0.88)</span>: Độ tin cậy thông tin cao hơn 7.3%</li>
+                        <li><span class="diff-highlight">Response Correctness cao hơn (0.87)</span>: Độ chính xác phản hồi cao hơn 10.1%</li>
+                        <li>Hiệu suất cao hơn trong tất cả các lĩnh vực y tế chuyên biệt</li>
+                    </ul>
+                    
+                    <h4>Điểm yếu</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Thời gian phản hồi chậm hơn (1800ms)</span>: Chậm hơn 20.0% so với GPT-3.5-Turbo</li>
+                        <li><span class="diff-highlight">Chi phí cao hơn 300%</span>: Chi phí vận hành đáng kể hơn</li>
+                        <li>Yêu cầu tài nguyên máy chủ lớn hơn</li>
+                    </ul>
+                </div>
+                
+                <div class="model-col">
+                    <h3>GPT-3.5-Turbo</h3>
+                    <h4>Điểm mạnh</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Phản hồi nhanh hơn (1500ms)</span>: Nhanh hơn 20.0% so với GPT-4o</li>
+                        <li><span class="diff-highlight">Chi phí thấp hơn 300%</span>: Tiết kiệm đáng kể chi phí vận hành</li>
+                        <li>Hiệu quả chi phí/hiệu suất tốt hơn cho các ứng dụng đơn giản</li>
+                        <li>Phù hợp cho triển khai quy mô lớn với ngân sách hạn chế</li>
+                    </ul>
+                    
+                    <h4>Điểm yếu</h4>
+                    <ul>
+                        <li><span class="diff-highlight">Hiệu suất tổng thể thấp hơn (0.793)</span>: Kém 9.7% so với GPT-4o</li>
+                        <li><span class="diff-highlight">Hallucination cao hơn (0.15)</span>: Tỷ lệ tạo thông tin sai lệch cao hơn 40.0%</li>
+                        <li><span class="diff-highlight">Factual Consistency thấp hơn (0.82)</span>: Độ tin cậy thấp hơn 7.3%</li>
+                        <li><span class="diff-highlight">Response Correctness thấp hơn (0.79)</span>: Độ chính xác thấp hơn 10.1%</li>
+                        <li>Hiệu suất thấp hơn đáng kể trong các lĩnh vực y tế chuyên biệt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Phân Tích Chi Phí-Hiệu Suất</h2>
+            
+            <p>Khi so sánh tỷ lệ hiệu suất/chi phí, cả hai mô hình đều có những ưu điểm riêng. Dưới đây là phân tích chi phí-hiệu suất:</p>
+            
+            <table>
+                <tr>
+                    <th>Chỉ số</th>
+                    <th>GPT-4o</th>
+                    <th>GPT-3.5-Turbo</th>
+                </tr>
+                <tr>
+                    <td>Điểm hiệu suất</td>
+                    <td>0.870</td>
+                    <td>0.793</td>
+                </tr>
+                <tr>
+                    <td>Chi phí tương đối</td>
+                    <td>8</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Tỷ lệ hiệu suất/chi phí</td>
+                    <td>0.109</td>
+                    <td class="best">0.397</td>
+                </tr>
+                <tr>
+                    <td>Hiệu quả chi phí</td>
+                    <td>100%</td>
+                    <td class="best">364%</td>
+                </tr>
+            </table>
+            
+            <p>GPT-3.5-Turbo cung cấp hiệu quả chi phí cao hơn 264% so với GPT-4o. Điều này có nghĩa là với cùng một ngân sách, bạn có thể xử lý nhiều yêu cầu hơn đáng kể khi sử dụng GPT-3.5-Turbo, mặc dù với độ chính xác thấp hơn.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Phân Tích Trường Hợp Sử Dụng</h2>
+            
+            <h3>Khi nên sử dụng GPT-4o</h3>
+            <ul>
+                <li><strong>Ứng dụng yêu cầu độ chính xác cao</strong>: Các ứng dụng y tế cần thông tin chính xác và đáng tin cậy</li>
+                <li><strong>Cần giảm thiểu hallucination</strong>: Các ứng dụng mà việc tạo thông tin sai lệch có thể gây hậu quả nghiêm trọng</li>
+                <li><strong>Câu hỏi phức tạp</strong>: Các tình huống đòi hỏi suy luận sâu và phân tích phức tạp</li>
+                <li><strong>Dự án có ngân sách phù hợp</strong>: Các dự án có thể cân bằng giữa chi phí và hiệu suất</li>
+                <li><strong>Chatbot y tế chuyên ngành</strong>: Ứng dụng y tế cần đáp ứng các câu hỏi phức tạp và đa dạng</li>
+            </ul>
+            
+            <h3>Khi nên sử dụng GPT-3.5-Turbo</h3>
+            <ul>
+                <li><strong>Ngân sách hạn chế</strong>: Khi chi phí là yếu tố quan trọng nhất</li>
+                <li><strong>Yêu cầu đơn giản</strong>: Ứng dụng với các câu hỏi đơn giản và không quá chuyên sâu</li>
+                <li><strong>Triển khai quy mô lớn</strong>: Khi cần xử lý số lượng lớn yêu cầu với chi phí tối ưu</li>
+                <li><strong>Ứng dụng nguyên mẫu</strong>: Giai đoạn thử nghiệm trước khi nâng cấp lên mô hình mạnh hơn</li>
+                <li><strong>Chatbot thông tin chung</strong>: Cung cấp thông tin y tế cơ bản không quá phức tạp</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Kết Luận</h2>
+            <p>GPT-4o vượt trội GPT-3.5-Turbo về hiệu suất tổng thể với điểm số cao hơn 9.7% (0.870 so với 0.793). Sự cải thiện đáng kể nhất là trong hallucination rate (giảm 40%), response correctness (tăng 10.1%) và factual consistency (tăng 7.3%).</p>
+            
+            <p>Tuy nhiên, GPT-3.5-Turbo có lợi thế rõ rệt về chi phí (thấp hơn 300%) và tốc độ phản hồi (nhanh hơn 20%). Về hiệu quả chi phí, GPT-3.5-Turbo cung cấp giá trị cao hơn 264% so với GPT-4o.</p>
+            
+            <p>Việc lựa chọn giữa hai mô hình này phụ thuộc vào ưu tiên của từng ứng dụng cụ thể:</p>
+            
+            <ul>
+                <li>Nếu độ chính xác và độ tin cậy là ưu tiên hàng đầu, đặc biệt trong lĩnh vực y tế, GPT-4o là lựa chọn tốt hơn.</li>
+                <li>Nếu chi phí và khả năng mở rộng là yếu tố quan trọng nhất, GPT-3.5-Turbo là lựa chọn phù hợp hơn.</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="../all_models/comparison_report.html" class="btn">Xem So Sánh Tất Cả Các Mô Hình</a>
+            <a href="../../reports/index.html" class="btn">Quay Lại Trang Chính</a>
+        </div>
+        
+        <div class="footer">
+            <p>Báo Cáo So Sánh GPT-4o vs GPT-3.5-Turbo - 13/04/2025</p>
+            <p>Build-An-LLM-RAG-Chatbot-With-LangChain-Python</p>
+            <p>Automated RAG Evaluation Framework v2.0</p>
+        </div>
+    </div>
+</body>
+</html>

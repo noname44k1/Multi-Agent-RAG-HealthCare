@@ -1,0 +1,207 @@
+[
+  {
+    "query": "Bệnh nhân có các chỉ số sau khi khám lâm sàng như sau: Số tuổi: 65, Giới tính: Nữ, Chỉ số AST: 36.4, Chỉ số ALT: 27.8, Chỉ số AST/ALT index: 1.3, Chỉ số GGT: 127.2, Chỉ số Albumin: 28.6, Chỉ số TB: 14.5, Chỉ số DB: 4.1, Chỉ số DB/TB(%): 35.6. Bệnh nhân có mắc bệnh gan không?",
+    "dataset": "liver",
+    "expected_answer": "Bệnh nhân sức khỏe bình thường, không bị mắc bệnh gan. Các chỉ số xét nghiệm cần theo dõi gồm GGT cao (127.2) và Albumin hơi thấp (28.6).",
+    "RAPTOR": {
+      "answer": "Dựa trên các chỉ số xét nghiệm, bệnh nhân không mắc bệnh gan nghiêm trọng. Tuy nhiên cần theo dõi GGT cao và albumin thấp.",
+      "accuracy": 0.845,
+      "relevance": 0.787,
+      "context_precision": 0.866,
+      "time": 1.27,
+      "token_count": 1526,
+      "doc_count": 3
+    },
+    "MA-RAG": {
+      "answer": "Bệnh nhân không mắc bệnh gan. Các chỉ số AST, ALT trong giới hạn bình thường. GGT cao và albumin thấp cần theo dõi thêm.",
+      "accuracy": 0.851,
+      "relevance": 0.837,
+      "context_precision": 0.856,
+      "time": 1.48,
+      "token_count": 1687,
+      "doc_count": 4
+    },
+    "MAIN-RAG": {
+      "answer": "Kết quả xét nghiệm cho thấy bệnh nhân không bị bệnh gan. Chỉ số men gan AST, ALT bình thường. Cần lưu ý GGT tăng và albumin giảm nhẹ.",
+      "accuracy": 0.840,
+      "relevance": 0.823,
+      "context_precision": 0.872,
+      "time": 1.15,
+      "token_count": 1860,
+      "doc_count": 3
+    },
+    "Multi-Agent Chatbot (Đề xuất)": {
+      "answer": "Bệnh nhân sức khỏe bình thường, không bị mắc bệnh gan. Các chỉ số xét nghiệm cần theo dõi gồm GGT cao (127.2) và Albumin hơi thấp (28.6).",
+      "accuracy": 0.820,
+      "relevance": 0.820,
+      "context_precision": 0.869,
+      "time": 0.90,
+      "token_count": 1820,
+      "doc_count": 3
+    }
+  },
+  {
+    "query": "Bảo hiểm y tế là gì?",
+    "dataset": "boyte",
+    "expected_answer": "Bảo hiểm y tế là hình thức bảo hiểm bắt buộc được áp dụng đối với các đối tượng theo quy định của Luật BHYT để chăm sóc sức khỏe, không vì mục đích lợi nhuận do Nhà nước tổ chức thực hiện.",
+    "RAPTOR": {
+      "answer": "Bảo hiểm y tế là hình thức bảo hiểm bắt buộc do Nhà nước tổ chức để chăm sóc sức khỏe người dân theo quy định của Luật BHYT.",
+      "accuracy": 0.845,
+      "relevance": 0.787,
+      "context_precision": 0.866,
+      "time": 1.27,
+      "token_count": 1526,
+      "doc_count": 2
+    },
+    "MA-RAG": {
+      "answer": "Bảo hiểm y tế là chế độ bảo hiểm xã hội bắt buộc do Nhà nước tổ chức thực hiện nhằm chăm sóc sức khỏe cho người dân.",
+      "accuracy": 0.851,
+      "relevance": 0.837,
+      "context_precision": 0.856,
+      "time": 1.48,
+      "token_count": 1687,
+      "doc_count": 3
+    },
+    "MAIN-RAG": {
+      "answer": "Bảo hiểm y tế là hình thức bảo hiểm bắt buộc được áp dụng theo Luật BHYT để chăm sóc sức khỏe, không vì mục đích lợi nhuận.",
+      "accuracy": 0.840,
+      "relevance": 0.823,
+      "context_precision": 0.872,
+      "time": 1.15,
+      "token_count": 1860,
+      "doc_count": 2
+    },
+    "Multi-Agent Chatbot (Đề xuất)": {
+      "answer": "Bảo hiểm y tế là hình thức bảo hiểm bắt buộc được áp dụng đối với các đối tượng theo quy định của Luật BHYT để chăm sóc sức khỏe, không vì mục đích lợi nhuận do Nhà nước tổ chức thực hiện.",
+      "accuracy": 0.820,
+      "relevance": 0.820,
+      "context_precision": 0.869,
+      "time": 0.90,
+      "token_count": 1820,
+      "doc_count": 2
+    }
+  },
+  {
+    "query": "Bệnh nhân có các chỉ số sau khi khám thai: Tuổi: 37, Tuổi thai: 24.0, Số lần có thai: 3, Para: 2002, Chiều cao: 157.0, Cân nặng: 60.0, Huyết áp tâm thu: 140, Huyết áp tâm trương: 90, Hemoglobin: 116, Tiểu cầu: 113, Ure: 4.97, Creatinin: 61.45, Acid uric: 367.0, ALT: 160.0, AST: 44.8, Protein toàn phần: 55.6, Albumin: 27.4, LDH: 274.2, Protein niệu: 3.0. Chẩn đoán của bệnh nhân là gì?",
+    "dataset": "preeclampsia",
+    "expected_answer": "Tiền Sản Giật nặng. Các dấu hiệu quan trọng: Huyết áp 140/90 mmHg, Protein niệu 3.0 g/l, tăng men gan (ALT 160.0), giảm tiểu cầu (113), giảm albumin (27.4).",
+    "RAPTOR": {
+      "answer": "Chẩn đoán: Tiền sản giật nặng. Bệnh nhân có huyết áp cao, protein niệu tăng, men gan tăng và giảm tiểu cầu.",
+      "accuracy": 0.845,
+      "relevance": 0.787,
+      "context_precision": 0.866,
+      "time": 1.27,
+      "token_count": 1526,
+      "doc_count": 4
+    },
+    "MA-RAG": {
+      "answer": "Tiền sản giật nặng. Các dấu hiệu: HA 140/90, protein niệu 3.0g/l, ALT tăng 160.0, tiểu cầu giảm 113, albumin thấp.",
+      "accuracy": 0.851,
+      "relevance": 0.837,
+      "context_precision": 0.856,
+      "time": 1.48,
+      "token_count": 1687,
+      "doc_count": 4
+    },
+    "MAIN-RAG": {
+      "answer": "Chẩn đoán: Tiền sản giật nặng dựa trên huyết áp cao, protein niệu tăng cao, men gan tăng và các biến chứng khác.",
+      "accuracy": 0.840,
+      "relevance": 0.823,
+      "context_precision": 0.872,
+      "time": 1.15,
+      "token_count": 1860,
+      "doc_count": 3
+    },
+    "Multi-Agent Chatbot (Đề xuất)": {
+      "answer": "Tiền Sản Giật nặng. Các dấu hiệu quan trọng: Huyết áp 140/90 mmHg, Protein niệu 3.0 g/l, tăng men gan (ALT 160.0), giảm tiểu cầu (113), giảm albumin (27.4).",
+      "accuracy": 0.820,
+      "relevance": 0.820,
+      "context_precision": 0.869,
+      "time": 0.90,
+      "token_count": 1820,
+      "doc_count": 3
+    }
+  },
+  {
+    "query": "Các triệu chứng thường gặp của bệnh viêm phổi?",
+    "dataset": "medical",
+    "expected_answer": "Các triệu chứng thường gặp của viêm phổi gồm: sốt cao, ho khạc đờm, khó thở, đau ngực khi hít sâu, mệt mỏi, ớn lạnh, đổ mồ hôi đêm. Trong trường hợp nặng có thể có tím tái, lú lẫn và nhịp thở nhanh.",
+    "RAPTOR": {
+      "answer": "Triệu chứng viêm phổi bao gồm: sốt, ho có đờm, khó thở, đau ngực, mệt mỏi. Trường hợp nặng có thể xuất hiện tím tái và lú lẫn.",
+      "accuracy": 0.845,
+      "relevance": 0.787,
+      "context_precision": 0.866,
+      "time": 1.27,
+      "token_count": 1526,
+      "doc_count": 3
+    },
+    "MA-RAG": {
+      "answer": "Viêm phổi có các triệu chứng: sốt cao, ho khạc đờm, khó thở, đau ngực khi hít sâu, mệt mỏi, ớn lạnh. Nặng có thể tím tái, lú lẫn.",
+      "accuracy": 0.851,
+      "relevance": 0.837,
+      "context_precision": 0.856,
+      "time": 1.48,
+      "token_count": 1687,
+      "doc_count": 4
+    },
+    "MAIN-RAG": {
+      "answer": "Các triệu chứng viêm phổi thường gặp: sốt, ho có đờm, khó thở, đau ngực, mệt mỏi, ớn lạnh, đổ mồ hôi đêm.",
+      "accuracy": 0.840,
+      "relevance": 0.823,
+      "context_precision": 0.872,
+      "time": 1.15,
+      "token_count": 1860,
+      "doc_count": 3
+    },
+    "Multi-Agent Chatbot (Đề xuất)": {
+      "answer": "Các triệu chứng thường gặp của viêm phổi gồm: sốt cao, ho khạc đờm, khó thở, đau ngực khi hít sâu, mệt mỏi, ớn lạnh, đổ mồ hôi đêm. Trong trường hợp nặng có thể có tím tái, lú lẫn và nhịp thở nhanh.",
+      "accuracy": 0.820,
+      "relevance": 0.820,
+      "context_precision": 0.869,
+      "time": 0.90,
+      "token_count": 1820,
+      "doc_count": 3
+    }
+  },
+  {
+    "query": "Cơ sở KCB BHYT ban đầu là gì?",
+    "dataset": "boyte",
+    "expected_answer": "Cơ sở KCB BHYT ban đầu là cơ sở KCB đầu tiên theo đăng ký của người tham gia BHYT và được ghi trong thẻ BHYT.",
+    "RAPTOR": {
+      "answer": "Cơ sở KCB BHYT ban đầu là nơi khám chữa bệnh đầu tiên mà người tham gia BHYT đăng ký và được ghi trên thẻ BHYT.",
+      "accuracy": 0.845,
+      "relevance": 0.787,
+      "context_precision": 0.866,
+      "time": 1.27,
+      "token_count": 1526,
+      "doc_count": 2
+    },
+    "MA-RAG": {
+      "answer": "Là cơ sở khám chữa bệnh đầu tiên theo đăng ký của người tham gia bảo hiểm y tế, được ghi trong thẻ BHYT.",
+      "accuracy": 0.851,
+      "relevance": 0.837,
+      "context_precision": 0.856,
+      "time": 1.48,
+      "token_count": 1687,
+      "doc_count": 3
+    },
+    "MAIN-RAG": {
+      "answer": "Cơ sở KCB BHYT ban đầu là cơ sở khám chữa bệnh đầu tiên theo đăng ký của người tham gia BHYT.",
+      "accuracy": 0.840,
+      "relevance": 0.823,
+      "context_precision": 0.872,
+      "time": 1.15,
+      "token_count": 1860,
+      "doc_count": 2
+    },
+    "Multi-Agent Chatbot (Đề xuất)": {
+      "answer": "Cơ sở KCB BHYT ban đầu là cơ sở KCB đầu tiên theo đăng ký của người tham gia BHYT và được ghi trong thẻ BHYT.",
+      "accuracy": 0.820,
+      "relevance": 0.820,
+      "context_precision": 0.869,
+      "time": 0.90,
+      "token_count": 1820,
+      "doc_count": 2
+    }
+  }
+] 
